@@ -1,0 +1,493 @@
+[0.082s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.082s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x73935506d960>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x73935506cee0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x73935506cee0>>, mixin_verb=('build',))
+[0.192s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.193s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.193s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.193s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.193s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.193s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.193s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/rover/rover_workspace'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/bno055) by extensions ['ignore', 'ignore_ament_install']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/bno055) by extension 'ignore'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/bno055) by extension 'ignore_ament_install'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/bno055) by extensions ['colcon_pkg']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/bno055) by extension 'colcon_pkg'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/bno055) by extensions ['colcon_meta']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/bno055) by extension 'colcon_meta'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/bno055) by extensions ['ros']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/bno055) by extension 'ros'
+[0.207s] DEBUG:colcon.colcon_core.package_identification:Package 'src/bno055' with type 'ros.ament_python' and name 'bno055'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/greenhouse_navigation) by extensions ['ignore', 'ignore_ament_install']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/greenhouse_navigation) by extension 'ignore'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/greenhouse_navigation) by extension 'ignore_ament_install'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/greenhouse_navigation) by extensions ['colcon_pkg']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/greenhouse_navigation) by extension 'colcon_pkg'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/greenhouse_navigation) by extensions ['colcon_meta']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/greenhouse_navigation) by extension 'colcon_meta'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/greenhouse_navigation) by extensions ['ros']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/greenhouse_navigation) by extension 'ros'
+[0.209s] DEBUG:colcon.colcon_core.package_identification:Package 'src/greenhouse_navigation' with type 'ros.ament_python' and name 'greenhouse_navigation'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_description) by extensions ['ignore', 'ignore_ament_install']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_description) by extension 'ignore'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_description) by extension 'ignore_ament_install'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_description) by extensions ['colcon_pkg']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_description) by extension 'colcon_pkg'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_description) by extensions ['colcon_meta']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_description) by extension 'colcon_meta'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_description) by extensions ['ros']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_description) by extension 'ros'
+[0.210s] DEBUG:colcon.colcon_core.package_identification:Package 'src/roverrobotics_description' with type 'ros.ament_cmake' and name 'roverrobotics_description'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_driver) by extension 'ignore'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_driver) by extension 'ignore_ament_install'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_driver) by extensions ['colcon_pkg']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_driver) by extension 'colcon_pkg'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_driver) by extensions ['colcon_meta']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_driver) by extension 'colcon_meta'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_driver) by extensions ['ros']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_driver) by extension 'ros'
+[0.211s] DEBUG:colcon.colcon_core.package_identification:Package 'src/roverrobotics_driver' with type 'ros.ament_cmake' and name 'roverrobotics_driver'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_gazebo) by extension 'ignore'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_gazebo) by extension 'ignore_ament_install'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_gazebo) by extensions ['colcon_pkg']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_gazebo) by extension 'colcon_pkg'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_gazebo) by extensions ['colcon_meta']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_gazebo) by extension 'colcon_meta'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_gazebo) by extensions ['ros']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_gazebo) by extension 'ros'
+[0.213s] DEBUG:colcon.colcon_core.package_identification:Package 'src/roverrobotics_gazebo' with type 'ros.ament_cmake' and name 'roverrobotics_gazebo'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_input_manager) by extensions ['ignore', 'ignore_ament_install']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_input_manager) by extension 'ignore'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_input_manager) by extension 'ignore_ament_install'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_input_manager) by extensions ['colcon_pkg']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_input_manager) by extension 'colcon_pkg'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_input_manager) by extensions ['colcon_meta']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_input_manager) by extension 'colcon_meta'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_input_manager) by extensions ['ros']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/roverrobotics_input_manager) by extension 'ros'
+[0.214s] DEBUG:colcon.colcon_core.package_identification:Package 'src/roverrobotics_input_manager' with type 'ros.ament_cmake' and name 'roverrobotics_input_manager'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'ignore'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'ignore_ament_install'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['colcon_pkg']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'colcon_pkg'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['colcon_meta']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'colcon_meta'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['ros']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'ros'
+[0.214s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rplidar_ros' with type 'ros.ament_cmake' and name 'rplidar_ros'
+[0.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.215s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.215s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.215s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.215s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.240s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.240s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.241s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/rover/rover_workspace/install
+[0.242s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 328 installed packages in /opt/ros/humble
+[0.243s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.273s] Level 5:colcon.colcon_core.verb:set package 'bno055' build argument 'cmake_args' from command line to 'None'
+[0.273s] Level 5:colcon.colcon_core.verb:set package 'bno055' build argument 'cmake_target' from command line to 'None'
+[0.273s] Level 5:colcon.colcon_core.verb:set package 'bno055' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.273s] Level 5:colcon.colcon_core.verb:set package 'bno055' build argument 'cmake_clean_cache' from command line to 'False'
+[0.273s] Level 5:colcon.colcon_core.verb:set package 'bno055' build argument 'cmake_clean_first' from command line to 'False'
+[0.274s] Level 5:colcon.colcon_core.verb:set package 'bno055' build argument 'cmake_force_configure' from command line to 'False'
+[0.274s] Level 5:colcon.colcon_core.verb:set package 'bno055' build argument 'ament_cmake_args' from command line to 'None'
+[0.274s] Level 5:colcon.colcon_core.verb:set package 'bno055' build argument 'catkin_cmake_args' from command line to 'None'
+[0.274s] Level 5:colcon.colcon_core.verb:set package 'bno055' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.274s] DEBUG:colcon.colcon_core.verb:Building package 'bno055' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rover/rover_workspace/build/bno055', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rover/rover_workspace/install/bno055', 'merge_install': False, 'path': '/home/rover/rover_workspace/src/bno055', 'symlink_install': False, 'test_result_base': None}
+[0.274s] Level 5:colcon.colcon_core.verb:set package 'greenhouse_navigation' build argument 'cmake_args' from command line to 'None'
+[0.274s] Level 5:colcon.colcon_core.verb:set package 'greenhouse_navigation' build argument 'cmake_target' from command line to 'None'
+[0.274s] Level 5:colcon.colcon_core.verb:set package 'greenhouse_navigation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.274s] Level 5:colcon.colcon_core.verb:set package 'greenhouse_navigation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.274s] Level 5:colcon.colcon_core.verb:set package 'greenhouse_navigation' build argument 'cmake_clean_first' from command line to 'False'
+[0.274s] Level 5:colcon.colcon_core.verb:set package 'greenhouse_navigation' build argument 'cmake_force_configure' from command line to 'False'
+[0.274s] Level 5:colcon.colcon_core.verb:set package 'greenhouse_navigation' build argument 'ament_cmake_args' from command line to 'None'
+[0.274s] Level 5:colcon.colcon_core.verb:set package 'greenhouse_navigation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.274s] Level 5:colcon.colcon_core.verb:set package 'greenhouse_navigation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.274s] DEBUG:colcon.colcon_core.verb:Building package 'greenhouse_navigation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rover/rover_workspace/build/greenhouse_navigation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rover/rover_workspace/install/greenhouse_navigation', 'merge_install': False, 'path': '/home/rover/rover_workspace/src/greenhouse_navigation', 'symlink_install': False, 'test_result_base': None}
+[0.274s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_description' build argument 'cmake_args' from command line to 'None'
+[0.274s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_description' build argument 'cmake_target' from command line to 'None'
+[0.274s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.274s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.274s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.274s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.274s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.274s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.274s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.274s] DEBUG:colcon.colcon_core.verb:Building package 'roverrobotics_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rover/rover_workspace/build/roverrobotics_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rover/rover_workspace/install/roverrobotics_description', 'merge_install': False, 'path': '/home/rover/rover_workspace/src/roverrobotics_description', 'symlink_install': False, 'test_result_base': None}
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_driver' build argument 'cmake_args' from command line to 'None'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_driver' build argument 'cmake_target' from command line to 'None'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.275s] DEBUG:colcon.colcon_core.verb:Building package 'roverrobotics_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rover/rover_workspace/build/roverrobotics_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rover/rover_workspace/install/roverrobotics_driver', 'merge_install': False, 'path': '/home/rover/rover_workspace/src/roverrobotics_driver', 'symlink_install': False, 'test_result_base': None}
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_input_manager' build argument 'cmake_args' from command line to 'None'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_input_manager' build argument 'cmake_target' from command line to 'None'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_input_manager' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_input_manager' build argument 'cmake_clean_cache' from command line to 'False'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_input_manager' build argument 'cmake_clean_first' from command line to 'False'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_input_manager' build argument 'cmake_force_configure' from command line to 'False'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_input_manager' build argument 'ament_cmake_args' from command line to 'None'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_input_manager' build argument 'catkin_cmake_args' from command line to 'None'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_input_manager' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.275s] DEBUG:colcon.colcon_core.verb:Building package 'roverrobotics_input_manager' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rover/rover_workspace/build/roverrobotics_input_manager', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rover/rover_workspace/install/roverrobotics_input_manager', 'merge_install': False, 'path': '/home/rover/rover_workspace/src/roverrobotics_input_manager', 'symlink_install': False, 'test_result_base': None}
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_args' from command line to 'None'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_target' from command line to 'None'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_clean_cache' from command line to 'False'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_clean_first' from command line to 'False'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_force_configure' from command line to 'False'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'ament_cmake_args' from command line to 'None'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'catkin_cmake_args' from command line to 'None'
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.275s] DEBUG:colcon.colcon_core.verb:Building package 'rplidar_ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rover/rover_workspace/build/rplidar_ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rover/rover_workspace/install/rplidar_ros', 'merge_install': False, 'path': '/home/rover/rover_workspace/src/rplidar_ros', 'symlink_install': False, 'test_result_base': None}
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_gazebo' build argument 'cmake_args' from command line to 'None'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_gazebo' build argument 'cmake_target' from command line to 'None'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'roverrobotics_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.276s] DEBUG:colcon.colcon_core.verb:Building package 'roverrobotics_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rover/rover_workspace/build/roverrobotics_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rover/rover_workspace/install/roverrobotics_gazebo', 'merge_install': False, 'path': '/home/rover/rover_workspace/src/roverrobotics_gazebo', 'symlink_install': False, 'test_result_base': None}
+[0.276s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.277s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.277s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rover/rover_workspace/src/roverrobotics_description' with build type 'ament_cmake'
+[0.277s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rover/rover_workspace/src/roverrobotics_description'
+[0.278s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.279s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.279s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.281s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/rover/rover_workspace/src/bno055' with build type 'ament_python'
+[0.281s] Level 1:colcon.colcon_core.shell:create_environment_hook('bno055', 'ament_prefix_path')
+[0.281s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/bno055/share/bno055/hook/ament_prefix_path.ps1'
+[0.282s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rover/rover_workspace/install/bno055/share/bno055/hook/ament_prefix_path.dsv'
+[0.282s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/bno055/share/bno055/hook/ament_prefix_path.sh'
+[0.282s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.282s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.284s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/rover/rover_workspace/src/greenhouse_navigation' with build type 'ament_python'
+[0.285s] Level 1:colcon.colcon_core.shell:create_environment_hook('greenhouse_navigation', 'ament_prefix_path')
+[0.285s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/greenhouse_navigation/share/greenhouse_navigation/hook/ament_prefix_path.ps1'
+[0.285s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rover/rover_workspace/install/greenhouse_navigation/share/greenhouse_navigation/hook/ament_prefix_path.dsv'
+[0.285s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/greenhouse_navigation/share/greenhouse_navigation/hook/ament_prefix_path.sh'
+[0.286s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.286s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.288s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rover/rover_workspace/src/roverrobotics_driver' with build type 'ament_cmake'
+[0.288s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rover/rover_workspace/src/roverrobotics_driver'
+[0.288s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.288s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.290s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rover/rover_workspace/src/roverrobotics_input_manager' with build type 'ament_cmake'
+[0.290s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rover/rover_workspace/src/roverrobotics_input_manager'
+[0.290s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.290s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.292s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rover/rover_workspace/src/rplidar_ros' with build type 'ament_cmake'
+[0.292s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rover/rover_workspace/src/rplidar_ros'
+[0.293s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.293s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.298s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rover/rover_workspace/build/roverrobotics_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --build /home/rover/rover_workspace/build/roverrobotics_description -- -j8 -l8
+[0.465s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/rover/rover_workspace/src/bno055'
+[0.466s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.466s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.645s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/rover/rover_workspace/src/greenhouse_navigation'
+[0.645s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.645s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.649s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rover/rover_workspace/build/roverrobotics_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --build /home/rover/rover_workspace/build/roverrobotics_driver -- -j8 -l8
+[0.652s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rover/rover_workspace/build/roverrobotics_input_manager': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --build /home/rover/rover_workspace/build/roverrobotics_input_manager -- -j8 -l8
+[0.655s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rover/rover_workspace/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --build /home/rover/rover_workspace/build/rplidar_ros -- -j8 -l8
+[0.656s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rover/rover_workspace/build/roverrobotics_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --build /home/rover/rover_workspace/build/roverrobotics_description -- -j8 -l8
+[0.663s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rover/rover_workspace/build/roverrobotics_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --install /home/rover/rover_workspace/build/roverrobotics_description
+[0.684s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rover/rover_workspace/build/roverrobotics_input_manager' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --build /home/rover/rover_workspace/build/roverrobotics_input_manager -- -j8 -l8
+[0.686s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rover/rover_workspace/build/roverrobotics_input_manager': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --install /home/rover/rover_workspace/build/roverrobotics_input_manager
+[0.687s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(roverrobotics_description)
+[0.687s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rover/rover_workspace/build/roverrobotics_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --install /home/rover/rover_workspace/build/roverrobotics_description
+[0.690s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_description' for CMake module files
+[0.691s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_description' for CMake config files
+[0.691s] Level 1:colcon.colcon_core.shell:create_environment_hook('roverrobotics_description', 'cmake_prefix_path')
+[0.691s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/hook/cmake_prefix_path.ps1'
+[0.692s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/hook/cmake_prefix_path.dsv'
+[0.692s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/hook/cmake_prefix_path.sh'
+[0.693s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_description/bin'
+[0.693s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_description/lib/pkgconfig/roverrobotics_description.pc'
+[0.693s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_description/lib/python3.10/site-packages'
+[0.694s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_description/bin'
+[0.697s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/package.ps1'
+[0.699s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/package.dsv'
+[0.701s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/package.sh'
+[0.701s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/package.bash'
+[0.702s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/package.zsh'
+[0.703s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rover/rover_workspace/install/roverrobotics_description/share/colcon-core/packages/roverrobotics_description)
+[0.704s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(roverrobotics_description)
+[0.704s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_description' for CMake module files
+[0.705s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_description' for CMake config files
+[0.705s] Level 1:colcon.colcon_core.shell:create_environment_hook('roverrobotics_description', 'cmake_prefix_path')
+[0.706s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/hook/cmake_prefix_path.ps1'
+[0.706s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/hook/cmake_prefix_path.dsv'
+[0.707s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/hook/cmake_prefix_path.sh'
+[0.707s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_description/bin'
+[0.708s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_description/lib/pkgconfig/roverrobotics_description.pc'
+[0.708s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_description/lib/python3.10/site-packages'
+[0.708s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_description/bin'
+[0.709s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/package.ps1'
+[0.710s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/package.dsv'
+[0.710s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/package.sh'
+[0.711s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/package.bash'
+[0.711s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/package.zsh'
+[0.712s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rover/rover_workspace/install/roverrobotics_description/share/colcon-core/packages/roverrobotics_description)
+[0.713s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rover/rover_workspace/src/roverrobotics_gazebo' with build type 'ament_cmake'
+[0.713s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rover/rover_workspace/src/roverrobotics_gazebo'
+[0.713s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.713s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.720s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(roverrobotics_input_manager)
+[0.720s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_input_manager' for CMake module files
+[0.721s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_input_manager' for CMake config files
+[0.721s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rover/rover_workspace/build/roverrobotics_input_manager' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --install /home/rover/rover_workspace/build/roverrobotics_input_manager
+[0.722s] Level 1:colcon.colcon_core.shell:create_environment_hook('roverrobotics_input_manager', 'cmake_prefix_path')
+[0.722s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/hook/cmake_prefix_path.ps1'
+[0.723s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/hook/cmake_prefix_path.dsv'
+[0.723s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/hook/cmake_prefix_path.sh'
+[0.724s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_input_manager/lib'
+[0.724s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_input_manager/bin'
+[0.724s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_input_manager/lib/pkgconfig/roverrobotics_input_manager.pc'
+[0.724s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_input_manager/lib/python3.10/site-packages'
+[0.724s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_input_manager/bin'
+[0.725s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/package.ps1'
+[0.725s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/package.dsv'
+[0.725s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/package.sh'
+[0.725s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/package.bash'
+[0.726s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/package.zsh'
+[0.726s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rover/rover_workspace/install/roverrobotics_input_manager/share/colcon-core/packages/roverrobotics_input_manager)
+[0.726s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(roverrobotics_input_manager)
+[0.727s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_input_manager' for CMake module files
+[0.727s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_input_manager' for CMake config files
+[0.727s] Level 1:colcon.colcon_core.shell:create_environment_hook('roverrobotics_input_manager', 'cmake_prefix_path')
+[0.728s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/hook/cmake_prefix_path.ps1'
+[0.728s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/hook/cmake_prefix_path.dsv'
+[0.728s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/hook/cmake_prefix_path.sh'
+[0.729s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_input_manager/lib'
+[0.729s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_input_manager/bin'
+[0.729s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_input_manager/lib/pkgconfig/roverrobotics_input_manager.pc'
+[0.729s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_input_manager/lib/python3.10/site-packages'
+[0.729s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_input_manager/bin'
+[0.730s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/package.ps1'
+[0.730s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/package.dsv'
+[0.731s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/package.sh'
+[0.731s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/package.bash'
+[0.732s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/package.zsh'
+[0.732s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rover/rover_workspace/install/roverrobotics_input_manager/share/colcon-core/packages/roverrobotics_input_manager)
+[0.735s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rover/rover_workspace/build/roverrobotics_gazebo': CMAKE_PREFIX_PATH=/home/rover/rover_workspace/install/roverrobotics_description:/home/rover/rover_workspace/install/rplidar_ros:/home/rover/rover_workspace/install/roverrobotics_input_manager:/home/rover/rover_workspace/install/roverrobotics_gazebo:/home/rover/rover_workspace/install/roverrobotics_driver:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --build /home/rover/rover_workspace/build/roverrobotics_gazebo -- -j8 -l8
+[0.736s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rover/rover_workspace/build/roverrobotics_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --build /home/rover/rover_workspace/build/roverrobotics_driver -- -j8 -l8
+[0.738s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rover/rover_workspace/build/roverrobotics_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --install /home/rover/rover_workspace/build/roverrobotics_driver
+[0.739s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rover/rover_workspace/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --build /home/rover/rover_workspace/build/rplidar_ros -- -j8 -l8
+[0.742s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rover/rover_workspace/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --install /home/rover/rover_workspace/build/rplidar_ros
+[0.765s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rplidar_ros)
+[0.766s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/rplidar_ros' for CMake module files
+[0.766s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rover/rover_workspace/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --install /home/rover/rover_workspace/build/rplidar_ros
+[0.766s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/rplidar_ros' for CMake config files
+[0.767s] Level 1:colcon.colcon_core.shell:create_environment_hook('rplidar_ros', 'cmake_prefix_path')
+[0.767s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.ps1'
+[0.768s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rover/rover_workspace/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.dsv'
+[0.768s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.sh'
+[0.768s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/rplidar_ros/lib'
+[0.769s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/rplidar_ros/bin'
+[0.769s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/rplidar_ros/lib/pkgconfig/rplidar_ros.pc'
+[0.769s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/rplidar_ros/lib/python3.10/site-packages'
+[0.769s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/rplidar_ros/bin'
+[0.769s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/rplidar_ros/share/rplidar_ros/package.ps1'
+[0.770s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rover/rover_workspace/install/rplidar_ros/share/rplidar_ros/package.dsv'
+[0.770s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/rplidar_ros/share/rplidar_ros/package.sh'
+[0.771s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/rplidar_ros/share/rplidar_ros/package.bash'
+[0.771s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/rplidar_ros/share/rplidar_ros/package.zsh'
+[0.771s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rover/rover_workspace/install/rplidar_ros/share/colcon-core/packages/rplidar_ros)
+[0.772s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rplidar_ros)
+[0.772s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/rplidar_ros' for CMake module files
+[0.773s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/rplidar_ros' for CMake config files
+[0.773s] Level 1:colcon.colcon_core.shell:create_environment_hook('rplidar_ros', 'cmake_prefix_path')
+[0.773s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.ps1'
+[0.773s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rover/rover_workspace/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.dsv'
+[0.774s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.sh'
+[0.774s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/rplidar_ros/lib'
+[0.774s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/rplidar_ros/bin'
+[0.774s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/rplidar_ros/lib/pkgconfig/rplidar_ros.pc'
+[0.774s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/rplidar_ros/lib/python3.10/site-packages'
+[0.775s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/rplidar_ros/bin'
+[0.775s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/rplidar_ros/share/rplidar_ros/package.ps1'
+[0.775s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rover/rover_workspace/install/rplidar_ros/share/rplidar_ros/package.dsv'
+[0.776s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/rplidar_ros/share/rplidar_ros/package.sh'
+[0.776s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/rplidar_ros/share/rplidar_ros/package.bash'
+[0.777s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/rplidar_ros/share/rplidar_ros/package.zsh'
+[0.777s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rover/rover_workspace/install/rplidar_ros/share/colcon-core/packages/rplidar_ros)
+[0.778s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rover/rover_workspace/build/roverrobotics_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/rover/rover_workspace/install/roverrobotics_description:/home/rover/rover_workspace/install/rplidar_ros:/home/rover/rover_workspace/install/roverrobotics_input_manager:/home/rover/rover_workspace/install/roverrobotics_gazebo:/home/rover/rover_workspace/install/roverrobotics_driver:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --build /home/rover/rover_workspace/build/roverrobotics_gazebo -- -j8 -l8
+[0.780s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rover/rover_workspace/build/roverrobotics_gazebo': CMAKE_PREFIX_PATH=/home/rover/rover_workspace/install/roverrobotics_description:/home/rover/rover_workspace/install/rplidar_ros:/home/rover/rover_workspace/install/roverrobotics_input_manager:/home/rover/rover_workspace/install/roverrobotics_gazebo:/home/rover/rover_workspace/install/roverrobotics_driver:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --install /home/rover/rover_workspace/build/roverrobotics_gazebo
+[0.780s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(roverrobotics_driver)
+[0.781s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_driver' for CMake module files
+[0.781s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rover/rover_workspace/build/roverrobotics_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --install /home/rover/rover_workspace/build/roverrobotics_driver
+[0.781s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_driver' for CMake config files
+[0.781s] Level 1:colcon.colcon_core.shell:create_environment_hook('roverrobotics_driver', 'cmake_prefix_path')
+[0.781s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/hook/cmake_prefix_path.ps1'
+[0.782s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/hook/cmake_prefix_path.dsv'
+[0.782s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/hook/cmake_prefix_path.sh'
+[0.782s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_driver/lib'
+[0.782s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_driver/bin'
+[0.782s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_driver/lib/pkgconfig/roverrobotics_driver.pc'
+[0.783s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_driver/lib/python3.10/site-packages'
+[0.783s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_driver/bin'
+[0.783s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/package.ps1'
+[0.783s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/package.dsv'
+[0.784s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/package.sh'
+[0.784s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/package.bash'
+[0.784s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/package.zsh'
+[0.784s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rover/rover_workspace/install/roverrobotics_driver/share/colcon-core/packages/roverrobotics_driver)
+[0.785s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(roverrobotics_driver)
+[0.785s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_driver' for CMake module files
+[0.785s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_driver' for CMake config files
+[0.785s] Level 1:colcon.colcon_core.shell:create_environment_hook('roverrobotics_driver', 'cmake_prefix_path')
+[0.785s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/hook/cmake_prefix_path.ps1'
+[0.786s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/hook/cmake_prefix_path.dsv'
+[0.786s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/hook/cmake_prefix_path.sh'
+[0.786s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_driver/lib'
+[0.786s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_driver/bin'
+[0.786s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_driver/lib/pkgconfig/roverrobotics_driver.pc'
+[0.787s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_driver/lib/python3.10/site-packages'
+[0.787s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_driver/bin'
+[0.787s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/package.ps1'
+[0.788s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/package.dsv'
+[0.789s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/package.sh'
+[0.790s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/package.bash'
+[0.790s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/package.zsh'
+[0.791s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rover/rover_workspace/install/roverrobotics_driver/share/colcon-core/packages/roverrobotics_driver)
+[0.797s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(roverrobotics_gazebo)
+[0.798s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_gazebo' for CMake module files
+[0.798s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rover/rover_workspace/build/roverrobotics_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/rover/rover_workspace/install/roverrobotics_description:/home/rover/rover_workspace/install/rplidar_ros:/home/rover/rover_workspace/install/roverrobotics_input_manager:/home/rover/rover_workspace/install/roverrobotics_gazebo:/home/rover/rover_workspace/install/roverrobotics_driver:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --install /home/rover/rover_workspace/build/roverrobotics_gazebo
+[0.798s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_gazebo' for CMake config files
+[0.799s] Level 1:colcon.colcon_core.shell:create_environment_hook('roverrobotics_gazebo', 'cmake_prefix_path')
+[0.799s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/hook/cmake_prefix_path.ps1'
+[0.799s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/hook/cmake_prefix_path.dsv'
+[0.800s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/hook/cmake_prefix_path.sh'
+[0.800s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_gazebo/bin'
+[0.800s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_gazebo/lib/pkgconfig/roverrobotics_gazebo.pc'
+[0.800s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_gazebo/lib/python3.10/site-packages'
+[0.801s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_gazebo/bin'
+[0.801s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/package.ps1'
+[0.801s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/package.dsv'
+[0.802s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/package.sh'
+[0.802s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/package.bash'
+[0.802s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/package.zsh'
+[0.803s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rover/rover_workspace/install/roverrobotics_gazebo/share/colcon-core/packages/roverrobotics_gazebo)
+[0.803s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(roverrobotics_gazebo)
+[0.804s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_gazebo' for CMake module files
+[0.804s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_gazebo' for CMake config files
+[0.804s] Level 1:colcon.colcon_core.shell:create_environment_hook('roverrobotics_gazebo', 'cmake_prefix_path')
+[0.804s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/hook/cmake_prefix_path.ps1'
+[0.805s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/hook/cmake_prefix_path.dsv'
+[0.805s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/hook/cmake_prefix_path.sh'
+[0.806s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_gazebo/bin'
+[0.806s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_gazebo/lib/pkgconfig/roverrobotics_gazebo.pc'
+[0.806s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_gazebo/lib/python3.10/site-packages'
+[0.806s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/roverrobotics_gazebo/bin'
+[0.806s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/package.ps1'
+[0.807s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/package.dsv'
+[0.807s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/package.sh'
+[0.808s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/package.bash'
+[0.808s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/package.zsh'
+[0.808s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rover/rover_workspace/install/roverrobotics_gazebo/share/colcon-core/packages/roverrobotics_gazebo)
+[0.930s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rover/rover_workspace/src/bno055': PYTHONPATH=/home/rover/rover_workspace/build/bno055/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rover/rover_workspace/install/bno055/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/bno055 build --build-base /home/rover/rover_workspace/build/bno055/build install --record /home/rover/rover_workspace/build/bno055/install.log --single-version-externally-managed install_data
+[0.935s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rover/rover_workspace/src/greenhouse_navigation': PYTHONPATH=/home/rover/rover_workspace/build/greenhouse_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rover/rover_workspace/install/greenhouse_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/greenhouse_navigation build --build-base /home/rover/rover_workspace/build/greenhouse_navigation/build install --record /home/rover/rover_workspace/build/greenhouse_navigation/install.log --single-version-externally-managed install_data
+[1.135s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/bno055' for CMake module files
+[1.135s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rover/rover_workspace/src/bno055' returned '0': PYTHONPATH=/home/rover/rover_workspace/build/bno055/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rover/rover_workspace/install/bno055/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/bno055 build --build-base /home/rover/rover_workspace/build/bno055/build install --record /home/rover/rover_workspace/build/bno055/install.log --single-version-externally-managed install_data
+[1.136s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/bno055' for CMake config files
+[1.136s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/bno055/lib'
+[1.136s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/bno055/bin'
+[1.136s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/bno055/lib/pkgconfig/bno055.pc'
+[1.136s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/bno055/lib/python3.10/site-packages'
+[1.136s] Level 1:colcon.colcon_core.shell:create_environment_hook('bno055', 'pythonpath')
+[1.137s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/bno055/share/bno055/hook/pythonpath.ps1'
+[1.137s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rover/rover_workspace/install/bno055/share/bno055/hook/pythonpath.dsv'
+[1.137s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/bno055/share/bno055/hook/pythonpath.sh'
+[1.138s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/bno055/bin'
+[1.138s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bno055)
+[1.138s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/bno055/share/bno055/package.ps1'
+[1.138s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rover/rover_workspace/install/bno055/share/bno055/package.dsv'
+[1.139s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/bno055/share/bno055/package.sh'
+[1.139s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/bno055/share/bno055/package.bash'
+[1.139s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/bno055/share/bno055/package.zsh'
+[1.139s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rover/rover_workspace/install/bno055/share/colcon-core/packages/bno055)
+[1.140s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/greenhouse_navigation' for CMake module files
+[1.140s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rover/rover_workspace/src/greenhouse_navigation' returned '0': PYTHONPATH=/home/rover/rover_workspace/build/greenhouse_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rover/rover_workspace/install/greenhouse_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/greenhouse_navigation build --build-base /home/rover/rover_workspace/build/greenhouse_navigation/build install --record /home/rover/rover_workspace/build/greenhouse_navigation/install.log --single-version-externally-managed install_data
+[1.141s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/greenhouse_navigation' for CMake config files
+[1.141s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/greenhouse_navigation/lib'
+[1.141s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/greenhouse_navigation/bin'
+[1.141s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/greenhouse_navigation/lib/pkgconfig/greenhouse_navigation.pc'
+[1.141s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/greenhouse_navigation/lib/python3.10/site-packages'
+[1.141s] Level 1:colcon.colcon_core.shell:create_environment_hook('greenhouse_navigation', 'pythonpath')
+[1.141s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/greenhouse_navigation/share/greenhouse_navigation/hook/pythonpath.ps1'
+[1.142s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rover/rover_workspace/install/greenhouse_navigation/share/greenhouse_navigation/hook/pythonpath.dsv'
+[1.142s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rover/rover_workspace/install/greenhouse_navigation/share/greenhouse_navigation/hook/pythonpath.sh'
+[1.142s] Level 1:colcon.colcon_core.environment:checking '/home/rover/rover_workspace/install/greenhouse_navigation/bin'
+[1.142s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(greenhouse_navigation)
+[1.142s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/greenhouse_navigation/share/greenhouse_navigation/package.ps1'
+[1.143s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rover/rover_workspace/install/greenhouse_navigation/share/greenhouse_navigation/package.dsv'
+[1.143s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/greenhouse_navigation/share/greenhouse_navigation/package.sh'
+[1.143s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/greenhouse_navigation/share/greenhouse_navigation/package.bash'
+[1.143s] INFO:colcon.colcon_core.shell:Creating package script '/home/rover/rover_workspace/install/greenhouse_navigation/share/greenhouse_navigation/package.zsh'
+[1.143s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rover/rover_workspace/install/greenhouse_navigation/share/colcon-core/packages/greenhouse_navigation)
+[1.144s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.144s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.144s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.144s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.150s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.150s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.150s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.157s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.157s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rover/rover_workspace/install/local_setup.ps1'
+[1.158s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rover/rover_workspace/install/_local_setup_util_ps1.py'
+[1.159s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rover/rover_workspace/install/setup.ps1'
+[1.160s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rover/rover_workspace/install/local_setup.sh'
+[1.160s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rover/rover_workspace/install/_local_setup_util_sh.py'
+[1.160s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rover/rover_workspace/install/setup.sh'
+[1.161s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rover/rover_workspace/install/local_setup.bash'
+[1.161s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rover/rover_workspace/install/setup.bash'
+[1.162s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rover/rover_workspace/install/local_setup.zsh'
+[1.163s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rover/rover_workspace/install/setup.zsh'

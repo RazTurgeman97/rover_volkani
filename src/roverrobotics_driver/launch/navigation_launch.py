@@ -19,7 +19,7 @@ from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import (DeclareLaunchArgument, GroupAction,
                             IncludeLaunchDescription, SetEnvironmentVariable)
-from launch.conditions import IfCondition
+from launch.conditions import IfCondition, UnlessCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration, PythonExpression, PathJoinSubstitution
 from launch_ros.actions import Node
@@ -87,7 +87,7 @@ def generate_launch_description():
 
     declare_map_yaml_cmd = DeclareLaunchArgument(
         'map',
-        default_value='/home/rover/rover_workspace/office_map.yaml',
+        default_value='/home/rover/rover_workspace/src/roverrobotics_driver/maps/indoor_abc_lab.yaml',
         description='Full path to map yaml file to load')
 
     declare_use_sim_time_cmd = DeclareLaunchArgument(
@@ -145,17 +145,17 @@ def generate_launch_description():
                               'use_respawn': use_respawn,
                               'params_file': params_file}.items()),
 
-        #IncludeLaunchDescription(
-        #    PythonLaunchDescriptionSource(os.path.join(launch_dir,
-        #                                               'localization_launch.py')),
-        #    condition=IfCondition(PythonExpression(['not ', slam])),
-        #    launch_arguments={'map': map_yaml_file,
-        #                      'use_sim_time': use_sim_time,
-        #                      'autostart': autostart,
-        #                      'params_file': params_file,
-        #                      'use_composition': use_composition,
-        #                      'use_respawn': use_respawn,
-        #                      'container_name': 'nav2_container'}.items()),
+        IncludeLaunchDescription(
+           PythonLaunchDescriptionSource(os.path.join(launch_dir,
+                                                      'localization_launch.py')),
+           condition=UnlessCondition(slam),
+           launch_arguments={'map': map_yaml_file,
+                             'use_sim_time': use_sim_time,
+                             'autostart': autostart,  #automatically start the nav2 stack - true by default
+                             'params_file': params_file,
+                             'use_composition': use_composition,
+                             'use_respawn': use_respawn,
+                             'container_name': 'nav2_container'}.items()),
 
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(os.path.join(rover_dir, 'launch', 'nav2_backend.py')),
