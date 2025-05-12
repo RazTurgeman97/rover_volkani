@@ -1,0 +1,35 @@
+[0.188s] Invoking command in '/home/rover/rover_workspace/build/roverrobotics_input_manager': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/NUC-1/install/variable_autonomy:/home/rover/NUC-1/install/bno055:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake /home/rover/rover_workspace/src/roverrobotics_input_manager -DCMAKE_INSTALL_PREFIX=/home/rover/rover_workspace/install/roverrobotics_input_manager
+[0.197s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.298s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.364s] -- Configuring done
+[0.366s] -- Generating done
+[0.368s] -- Build files have been written to: /home/rover/rover_workspace/build/roverrobotics_input_manager
+[0.370s] Invoked command in '/home/rover/rover_workspace/build/roverrobotics_input_manager' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/NUC-1/install/variable_autonomy:/home/rover/NUC-1/install/bno055:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake /home/rover/rover_workspace/src/roverrobotics_input_manager -DCMAKE_INSTALL_PREFIX=/home/rover/rover_workspace/install/roverrobotics_input_manager
+[0.372s] Invoking command in '/home/rover/rover_workspace/build/roverrobotics_input_manager': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/NUC-1/install/variable_autonomy:/home/rover/NUC-1/install/bno055:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --build /home/rover/rover_workspace/build/roverrobotics_input_manager -- -j8 -l8
+[0.396s] Invoked command in '/home/rover/rover_workspace/build/roverrobotics_input_manager' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/NUC-1/install/variable_autonomy:/home/rover/NUC-1/install/bno055:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --build /home/rover/rover_workspace/build/roverrobotics_input_manager -- -j8 -l8
+[0.398s] Invoking command in '/home/rover/rover_workspace/build/roverrobotics_input_manager': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/NUC-1/install/variable_autonomy:/home/rover/NUC-1/install/bno055:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --install /home/rover/rover_workspace/build/roverrobotics_input_manager
+[0.403s] -- Install configuration: ""
+[0.403s] -- Execute custom install script
+[0.404s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_input_manager/lib/roverrobotics_input_manager/modules/Controller.py
+[0.404s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_input_manager/lib/roverrobotics_input_manager/modules/Topics.py
+[0.404s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_input_manager/lib/roverrobotics_input_manager/modules/__pycache__/Controller.cpython-310.pyc
+[0.404s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_input_manager/lib/roverrobotics_input_manager/modules/__pycache__/Controller.cpython-38.pyc
+[0.404s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_input_manager/lib/roverrobotics_input_manager/modules/__pycache__/Topics.cpython-310.pyc
+[0.405s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_input_manager/lib/roverrobotics_input_manager/modules/__pycache__/Topics.cpython-38.pyc
+[0.405s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_input_manager/lib/roverrobotics_input_manager/joys_manager.py
+[0.405s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_input_manager/share/ament_index/resource_index/package_run_dependencies/roverrobotics_input_manager
+[0.405s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_input_manager/share/ament_index/resource_index/parent_prefix_path/roverrobotics_input_manager
+[0.405s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/environment/ament_prefix_path.sh
+[0.406s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/environment/ament_prefix_path.dsv
+[0.406s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/environment/path.sh
+[0.406s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/environment/path.dsv
+[0.406s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/local_setup.bash
+[0.406s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/local_setup.sh
+[0.406s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/local_setup.zsh
+[0.406s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/local_setup.dsv
+[0.406s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/package.dsv
+[0.413s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_input_manager/share/ament_index/resource_index/packages/roverrobotics_input_manager
+[0.413s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/cmake/roverrobotics_input_managerConfig.cmake
+[0.413s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/cmake/roverrobotics_input_managerConfig-version.cmake
+[0.413s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_input_manager/share/roverrobotics_input_manager/package.xml
+[0.416s] Invoked command in '/home/rover/rover_workspace/build/roverrobotics_input_manager' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/NUC-1/install/variable_autonomy:/home/rover/NUC-1/install/bno055:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --install /home/rover/rover_workspace/build/roverrobotics_input_manager

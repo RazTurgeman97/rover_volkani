@@ -1,0 +1,98 @@
+[0.194s] Invoking command in '/home/rover/rover_workspace/build/roverrobotics_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/NUC-1/install/variable_autonomy:/home/rover/NUC-1/install/bno055:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake /home/rover/rover_workspace/src/roverrobotics_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rover/rover_workspace/install/roverrobotics_driver
+[0.204s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.314s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.321s] -- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+[0.341s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.343s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.346s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.354s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.366s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.388s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.389s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.401s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.440s] -- Found geometry_msgs: 4.8.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.448s] -- Found nav_msgs: 4.8.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.460s] -- Found tf2_geometry_msgs: 0.25.12 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[0.462s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.463s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.529s] -- Found sensor_msgs: 4.8.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.591s] -- Configuring done
+[0.603s] -- Generating done
+[0.608s] -- Build files have been written to: /home/rover/rover_workspace/build/roverrobotics_driver
+[0.614s] Invoked command in '/home/rover/rover_workspace/build/roverrobotics_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/NUC-1/install/variable_autonomy:/home/rover/NUC-1/install/bno055:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake /home/rover/rover_workspace/src/roverrobotics_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rover/rover_workspace/install/roverrobotics_driver
+[0.615s] Invoking command in '/home/rover/rover_workspace/build/roverrobotics_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/NUC-1/install/variable_autonomy:/home/rover/NUC-1/install/bno055:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --build /home/rover/rover_workspace/build/roverrobotics_driver -- -j8 -l8
+[0.644s] [35m[1mConsolidate compiler generated dependencies of target roverrobotics_driver[0m
+[0.660s] [100%] Built target roverrobotics_driver
+[0.669s] Invoked command in '/home/rover/rover_workspace/build/roverrobotics_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/NUC-1/install/variable_autonomy:/home/rover/NUC-1/install/bno055:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --build /home/rover/rover_workspace/build/roverrobotics_driver -- -j8 -l8
+[0.669s] Invoking command in '/home/rover/rover_workspace/build/roverrobotics_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/NUC-1/install/variable_autonomy:/home/rover/NUC-1/install/bno055:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --install /home/rover/rover_workspace/build/roverrobotics_driver
+[0.674s] -- Install configuration: ""
+[0.674s] -- Execute custom install script
+[0.675s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/accessories.launch.py
+[0.675s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/max.launch.py
+[0.675s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/max_teleop.launch.py
+[0.675s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/mini.launch.py
+[0.675s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/mini_teleop.launch.py
+[0.675s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/miti.launch.py
+[0.675s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/miti_65.launch.py
+[0.676s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/miti_65_teleop.launch.py
+[0.676s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/miti_teleop.launch.py
+[0.676s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/nav2_backend.py
+[0.676s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/navigation_launch.py
+[0.676s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/outdoor_navigation_launch.py
+[0.676s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/pro.launch.py
+[0.676s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/pro_teleop.launch.py
+[0.676s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/ps4_controller.launch.py
+[0.676s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/ps5_controller.launch.py
+[0.677s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/robot_localizer.launch.py
+[0.677s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/robot_localizer_outdoor.launch.py
+[0.677s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/slam_launch.py
+[0.677s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/zero.launch.py
+[0.677s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/zero_teleop.launch.py
+[0.677s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/accessories.yaml
+[0.677s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/localization_ekf.yaml
+[0.677s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/localization_outdoor_ekf.yaml
+[0.677s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/max_100_config.yaml
+[0.677s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/max_130_config.yaml
+[0.677s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/max_150_config.yaml
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/max_65_config.yaml
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/mini_config.yaml
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/miti_65_config.yaml
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/miti_config.yaml
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/nav2_params.yaml
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/pro_config.yaml
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/ps4_controller_config.yaml
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/ps4_controller_config_jp6.yaml
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/ps5_controller_config.yaml
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/ps5_controller_config_jp6.yaml
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/realsense_config.yaml
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/rviz_configs/nav2_default_view.rviz
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/rviz_configs/realsense_rviz_layout.rviz
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/rviz_configs/slam_rviz_layout.rviz
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/slam_configs/mapper_params_lifelong.yaml
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/slam_configs/mapper_params_localization.yaml
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/slam_configs/mapper_params_offline.yaml
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/slam_configs/mapper_params_online_async.yaml
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/slam_configs/mapper_params_online_sync.yaml
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/topics.yaml
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/zero_config.yaml
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/maze_map.data
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/maze_map.pgm
+[0.678s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/maze_map.posegraph
+[0.679s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/maze_map.yaml
+[0.679s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/lib/roverrobotics_driver/roverrobotics_driver
+[0.679s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/ament_index/resource_index/package_run_dependencies/roverrobotics_driver
+[0.679s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/ament_index/resource_index/parent_prefix_path/roverrobotics_driver
+[0.679s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/environment/ament_prefix_path.sh
+[0.679s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/environment/ament_prefix_path.dsv
+[0.679s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/environment/path.sh
+[0.679s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/environment/path.dsv
+[0.679s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/local_setup.bash
+[0.679s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/local_setup.sh
+[0.679s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/local_setup.zsh
+[0.679s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/local_setup.dsv
+[0.679s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/package.dsv
+[0.686s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/ament_index/resource_index/packages/roverrobotics_driver
+[0.686s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/cmake/roverrobotics_driverConfig.cmake
+[0.686s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/cmake/roverrobotics_driverConfig-version.cmake
+[0.686s] -- Up-to-date symlink: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/package.xml
+[0.694s] Invoked command in '/home/rover/rover_workspace/build/roverrobotics_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/NUC-1/install/variable_autonomy:/home/rover/NUC-1/install/bno055:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --install /home/rover/rover_workspace/build/roverrobotics_driver

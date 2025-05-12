@@ -1,0 +1,70 @@
+[0.018s] Invoking command in '/home/rover/rover_workspace/build/roverrobotics_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/rover_workspace/install/bno055:/home/rover/NUC-1/install/variable_autonomy:/home/rover/NUC-1/install/bno055:/opt/ros/humble /usr/bin/cmake /home/rover/rover_workspace/src/roverrobotics_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rover/rover_workspace/install/roverrobotics_description
+[0.198s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.198s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.204s] -- Configuring done
+[0.207s] -- Generating done
+[0.209s] -- Build files have been written to: /home/rover/rover_workspace/build/roverrobotics_description
+[0.212s] Invoked command in '/home/rover/rover_workspace/build/roverrobotics_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/rover_workspace/install/bno055:/home/rover/NUC-1/install/variable_autonomy:/home/rover/NUC-1/install/bno055:/opt/ros/humble /usr/bin/cmake /home/rover/rover_workspace/src/roverrobotics_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rover/rover_workspace/install/roverrobotics_description
+[0.214s] Invoking command in '/home/rover/rover_workspace/build/roverrobotics_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/rover_workspace/install/bno055:/home/rover/NUC-1/install/variable_autonomy:/home/rover/NUC-1/install/bno055:/opt/ros/humble /usr/bin/cmake --build /home/rover/rover_workspace/build/roverrobotics_description -- -j8 -l8
+[0.257s] Invoked command in '/home/rover/rover_workspace/build/roverrobotics_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/rover_workspace/install/bno055:/home/rover/NUC-1/install/variable_autonomy:/home/rover/NUC-1/install/bno055:/opt/ros/humble /usr/bin/cmake --build /home/rover/rover_workspace/build/roverrobotics_description -- -j8 -l8
+[0.265s] Invoking command in '/home/rover/rover_workspace/build/roverrobotics_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/rover_workspace/install/bno055:/home/rover/NUC-1/install/variable_autonomy:/home/rover/NUC-1/install/bno055:/opt/ros/humble /usr/bin/cmake --install /home/rover/rover_workspace/build/roverrobotics_description
+[0.272s] -- Install configuration: ""
+[0.272s] -- Execute custom install script
+[0.272s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/rviz/urdf.rviz
+[0.282s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/launch/display_2wd_rover.launch.py
+[0.291s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/launch/display_4wd_rover.launch.py
+[0.301s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/launch/display_flipper.launch.py
+[0.308s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/launch/display_max.launch.py
+[0.315s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/launch/display_mini.launch.py
+[0.322s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/launch/display_miti.launch.py
+[0.329s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/launch/display_miti_65.launch.py
+[0.335s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/meshes/65wheels.dae
+[0.346s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/meshes/castor.dae
+[0.353s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/meshes/castor_housing.dae
+[0.359s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/meshes/flipper.dae
+[0.365s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/meshes/flipper_chassis.dae
+[0.373s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/meshes/flipper_track.dae
+[0.380s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/meshes/hub_10in.dae
+[0.386s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/meshes/hub_6.5in.dae
+[0.392s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/meshes/max_chassis.dae
+[0.398s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/meshes/max_wheels_10in.dae
+[0.404s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/meshes/max_wheels_13in.dae
+[0.409s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/meshes/max_wheels_15in.dae
+[0.417s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/meshes/mini_chassis.dae
+[0.423s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/meshes/mini_chassis_new.dae
+[0.429s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/meshes/miti_chassis.dae
+[0.441s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/meshes/miti_chassis_new.dae
+[0.449s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/meshes/pro_tire.dae
+[0.455s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/meshes/rover_2wd_core.dae
+[0.461s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/meshes/rover_payload.dae
+[0.468s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/meshes/rplidar_s2.dae
+[0.474s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/urdf/accessories/imu.urdf
+[0.480s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/urdf/accessories/rover_dev_payload.urdf
+[0.487s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/urdf/accessories/rplidar_s2.urdf
+[0.496s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/urdf/flipper.urdf
+[0.503s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/urdf/max.urdf
+[0.510s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/urdf/max_100.urdf
+[0.517s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/urdf/max_130.urdf
+[0.523s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/urdf/max_150.urdf
+[0.535s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/urdf/max_65.urdf
+[0.542s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/urdf/mini.urdf
+[0.548s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/urdf/miti.urdf
+[0.554s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/urdf/miti_65.urdf
+[0.562s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/urdf/rover_2wd.urdf
+[0.567s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/urdf/rover_4wd.urdf
+[0.574s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/ament_index/resource_index/package_run_dependencies/roverrobotics_description
+[0.581s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/ament_index/resource_index/parent_prefix_path/roverrobotics_description
+[0.589s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/environment/ament_prefix_path.sh
+[0.598s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/environment/ament_prefix_path.dsv
+[0.605s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/environment/path.sh
+[0.611s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/environment/path.dsv
+[0.617s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/local_setup.bash
+[0.623s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/local_setup.sh
+[0.633s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/local_setup.zsh
+[0.640s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/local_setup.dsv
+[0.646s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/package.dsv
+[0.651s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/ament_index/resource_index/packages/roverrobotics_description
+[0.657s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/cmake/roverrobotics_descriptionConfig.cmake
+[0.664s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/cmake/roverrobotics_descriptionConfig-version.cmake
+[0.670s] -- Symlinking: /home/rover/rover_workspace/install/roverrobotics_description/share/roverrobotics_description/package.xml
+[0.677s] Invoked command in '/home/rover/rover_workspace/build/roverrobotics_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rover/rover_workspace/install/bno055:/home/rover/NUC-1/install/variable_autonomy:/home/rover/NUC-1/install/bno055:/opt/ros/humble /usr/bin/cmake --install /home/rover/rover_workspace/build/roverrobotics_description

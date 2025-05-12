@@ -1,0 +1,23 @@
+[0.513s] Invoking command in '/home/rover/rover_workspace/build/bno055': PYTHONPATH=/home/rover/rover_workspace/build/bno055/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rover/rover_workspace/install/bno055/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rover/rover_workspace/build/bno055/build --no-deps symlink_data --force
+[0.752s] running develop
+[0.909s] running egg_info
+[0.909s] writing bno055.egg-info/PKG-INFO
+[0.910s] writing dependency_links to bno055.egg-info/dependency_links.txt
+[0.910s] writing entry points to bno055.egg-info/entry_points.txt
+[0.910s] writing requirements to bno055.egg-info/requires.txt
+[0.910s] writing top-level names to bno055.egg-info/top_level.txt
+[0.913s] reading manifest file 'bno055.egg-info/SOURCES.txt'
+[0.914s] writing manifest file 'bno055.egg-info/SOURCES.txt'
+[0.916s] running build_ext
+[0.916s] Creating /home/rover/rover_workspace/install/bno055/lib/python3.10/site-packages/bno055.egg-link (link to .)
+[0.917s] Installing bno055 script to /home/rover/rover_workspace/install/bno055/lib/bno055
+[0.918s] 
+[0.919s] Installed /home/rover/rover_workspace/build/bno055
+[0.919s] running symlink_data
+[0.919s] symbolically linking /home/rover/rover_workspace/build/bno055/resource/bno055 -> /home/rover/rover_workspace/install/bno055/share/ament_index/resource_index/packages
+[0.919s] symbolically linking /home/rover/rover_workspace/build/bno055/package.xml -> /home/rover/rover_workspace/install/bno055/share/bno055
+[0.919s] symbolically linking /home/rover/rover_workspace/build/bno055/launch/bno055.launch.py -> /home/rover/rover_workspace/install/bno055/share/bno055/launch
+[0.919s] symbolically linking /home/rover/rover_workspace/build/bno055/bno055/params/bno055_params_i2c.yaml -> /home/rover/rover_workspace/install/bno055/share/bno055/config
+[0.919s] symbolically linking /home/rover/rover_workspace/build/bno055/bno055/params/bno055_params.yaml -> /home/rover/rover_workspace/install/bno055/share/bno055/config
+[0.919s] symbolically linking /home/rover/rover_workspace/build/bno055/bno055/params/bno055_params_test.yaml -> /home/rover/rover_workspace/install/bno055/share/bno055/config
+[0.998s] Invoked command in '/home/rover/rover_workspace/build/bno055' returned '0': PYTHONPATH=/home/rover/rover_workspace/build/bno055/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rover/rover_workspace/install/bno055/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rover/rover_workspace/build/bno055/build --no-deps symlink_data --force
