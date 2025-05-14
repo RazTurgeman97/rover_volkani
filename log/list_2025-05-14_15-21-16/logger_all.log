@@ -1,0 +1,124 @@
+[0.065s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'list', '-p', '--base-paths', '/home/raz/volcani/rover_volkani']
+[0.065s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='list', build_base='build', ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['/home/raz/volcani/rover_volkani'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], topological_order=False, names_only=False, paths_only=True, topological_graph=False, topological_graph_dot=False, topological_graph_density=False, topological_graph_legend=False, topological_graph_dot_cluster=False, topological_graph_dot_include_skipped=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7ec9dc908a90>, verb_extension=<colcon_package_information.verb.list.ListVerb object at 0x7ec9dc8cfa30>, main=<bound method ListVerb.main of <colcon_package_information.verb.list.ListVerb object at 0x7ec9dc8cfa30>>, mixin_verb=('list',))
+[0.195s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.195s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.195s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.195s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.195s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.195s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/raz/volcani/rover_volkani'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani) by extensions ['ignore', 'ignore_ament_install']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani) by extension 'ignore'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani) by extension 'ignore_ament_install'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani) by extensions ['colcon_pkg']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani) by extension 'colcon_pkg'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani) by extensions ['colcon_meta']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani) by extension 'colcon_meta'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani) by extensions ['ros']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani) by extension 'ros'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani) by extensions ['cmake', 'python']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani) by extension 'cmake'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani) by extension 'python'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani) by extensions ['python_setup_py']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani) by extension 'python_setup_py'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/build) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/build) by extension 'ignore'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/build) ignored
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/install) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/install) by extension 'ignore'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/install) ignored
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/log) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/log) by extension 'ignore'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/log) ignored
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src) by extension 'ignore'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src) by extension 'ignore_ament_install'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src) by extensions ['colcon_pkg']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src) by extension 'colcon_pkg'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src) by extensions ['colcon_meta']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src) by extension 'colcon_meta'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src) by extensions ['ros']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src) by extension 'ros'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src) by extensions ['cmake', 'python']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src) by extension 'cmake'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src) by extension 'python'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src) by extensions ['python_setup_py']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src) by extension 'python_setup_py'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/bno055) by extensions ['ignore', 'ignore_ament_install']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/bno055) by extension 'ignore'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/bno055) by extension 'ignore_ament_install'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/bno055) by extensions ['colcon_pkg']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/bno055) by extension 'colcon_pkg'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/bno055) by extensions ['colcon_meta']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/bno055) by extension 'colcon_meta'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/bno055) by extensions ['ros']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/bno055) by extension 'ros'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/bno055) by extensions ['cmake', 'python']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/bno055) by extension 'cmake'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/bno055) by extension 'python'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/bno055) by extensions ['python_setup_py']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/bno055) by extension 'python_setup_py'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/greenhouse_navigation) by extensions ['ignore', 'ignore_ament_install']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/greenhouse_navigation) by extension 'ignore'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/greenhouse_navigation) by extension 'ignore_ament_install'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/greenhouse_navigation) by extensions ['colcon_pkg']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/greenhouse_navigation) by extension 'colcon_pkg'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/greenhouse_navigation) by extensions ['colcon_meta']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/greenhouse_navigation) by extension 'colcon_meta'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/greenhouse_navigation) by extensions ['ros']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/greenhouse_navigation) by extension 'ros'
+[0.211s] DEBUG:colcon.colcon_core.package_identification:Package '/home/raz/volcani/rover_volkani/src/greenhouse_navigation' with type 'ros.ament_python' and name 'greenhouse_navigation'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_description) by extensions ['ignore', 'ignore_ament_install']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_description) by extension 'ignore'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_description) by extension 'ignore_ament_install'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_description) by extensions ['colcon_pkg']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_description) by extension 'colcon_pkg'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_description) by extensions ['colcon_meta']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_description) by extension 'colcon_meta'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_description) by extensions ['ros']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_description) by extension 'ros'
+[0.212s] DEBUG:colcon.colcon_core.package_identification:Package '/home/raz/volcani/rover_volkani/src/roverrobotics_description' with type 'ros.ament_cmake' and name 'roverrobotics_description'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_driver) by extension 'ignore'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_driver) by extension 'ignore_ament_install'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_driver) by extensions ['colcon_pkg']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_driver) by extension 'colcon_pkg'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_driver) by extensions ['colcon_meta']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_driver) by extension 'colcon_meta'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_driver) by extensions ['ros']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_driver) by extension 'ros'
+[0.213s] DEBUG:colcon.colcon_core.package_identification:Package '/home/raz/volcani/rover_volkani/src/roverrobotics_driver' with type 'ros.ament_cmake' and name 'roverrobotics_driver'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_gazebo) by extension 'ignore'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_gazebo) by extension 'ignore_ament_install'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_gazebo) by extensions ['colcon_pkg']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_gazebo) by extension 'colcon_pkg'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_gazebo) by extensions ['colcon_meta']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_gazebo) by extension 'colcon_meta'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_gazebo) by extensions ['ros']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_gazebo) by extension 'ros'
+[0.213s] DEBUG:colcon.colcon_core.package_identification:Package '/home/raz/volcani/rover_volkani/src/roverrobotics_gazebo' with type 'ros.ament_cmake' and name 'roverrobotics_gazebo'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager) by extensions ['ignore', 'ignore_ament_install']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager) by extension 'ignore'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager) by extension 'ignore_ament_install'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager) by extensions ['colcon_pkg']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager) by extension 'colcon_pkg'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager) by extensions ['colcon_meta']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager) by extension 'colcon_meta'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager) by extensions ['ros']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager) by extension 'ros'
+[0.214s] DEBUG:colcon.colcon_core.package_identification:Package '/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager' with type 'ros.ament_cmake' and name 'roverrobotics_input_manager'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/rplidar_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/rplidar_ros) by extension 'ignore'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/rplidar_ros) by extension 'ignore_ament_install'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/rplidar_ros) by extensions ['colcon_pkg']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/rplidar_ros) by extension 'colcon_pkg'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/rplidar_ros) by extensions ['colcon_meta']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/rplidar_ros) by extension 'colcon_meta'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/rplidar_ros) by extensions ['ros']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/rplidar_ros) by extension 'ros'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/rplidar_ros) by extensions ['cmake', 'python']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/rplidar_ros) by extension 'cmake'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/rplidar_ros) by extension 'python'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/rplidar_ros) by extensions ['python_setup_py']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/raz/volcani/rover_volkani/src/rplidar_ros) by extension 'python_setup_py'
+[0.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
