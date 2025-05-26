@@ -1,0 +1,3 @@
+[35m[1mConsolidate compiler generated dependencies of target greenhouse_experiment_node[0m
+[ 15%] [32mBuilding CXX object CMakeFiles/greenhouse_experiment_node.dir/src/greenhouse_experiment_node.cpp.o[0m
+[ 92%] Built target roverrobotics_driver

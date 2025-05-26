@@ -1,0 +1,19 @@
+[0.777s] Invoking command in '/home/rover/rover_workspace/build/greenhouse_navigation': PYTHONPATH=/home/rover/rover_workspace/build/greenhouse_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rover/rover_workspace/install/greenhouse_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rover/rover_workspace/build/greenhouse_navigation/build --no-deps symlink_data --force
+[1.043s] running develop
+[1.286s] running egg_info
+[1.286s] writing greenhouse_navigation.egg-info/PKG-INFO
+[1.287s] writing dependency_links to greenhouse_navigation.egg-info/dependency_links.txt
+[1.287s] writing entry points to greenhouse_navigation.egg-info/entry_points.txt
+[1.287s] writing requirements to greenhouse_navigation.egg-info/requires.txt
+[1.289s] writing top-level names to greenhouse_navigation.egg-info/top_level.txt
+[1.294s] reading manifest file 'greenhouse_navigation.egg-info/SOURCES.txt'
+[1.295s] writing manifest file 'greenhouse_navigation.egg-info/SOURCES.txt'
+[1.298s] running build_ext
+[1.299s] Creating /home/rover/rover_workspace/install/greenhouse_navigation/lib/python3.10/site-packages/greenhouse-navigation.egg-link (link to .)
+[1.302s] Installing navigator script to /home/rover/rover_workspace/install/greenhouse_navigation/lib/greenhouse_navigation
+[1.302s] 
+[1.302s] Installed /home/rover/rover_workspace/build/greenhouse_navigation
+[1.302s] running symlink_data
+[1.302s] symbolically linking /home/rover/rover_workspace/build/greenhouse_navigation/resource/greenhouse_navigation -> /home/rover/rover_workspace/install/greenhouse_navigation/share/ament_index/resource_index/packages
+[1.305s] symbolically linking /home/rover/rover_workspace/build/greenhouse_navigation/package.xml -> /home/rover/rover_workspace/install/greenhouse_navigation/share/greenhouse_navigation
+[1.414s] Invoked command in '/home/rover/rover_workspace/build/greenhouse_navigation' returned '0': PYTHONPATH=/home/rover/rover_workspace/build/greenhouse_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rover/rover_workspace/install/greenhouse_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rover/rover_workspace/build/greenhouse_navigation/build --no-deps symlink_data --force

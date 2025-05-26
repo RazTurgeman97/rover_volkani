@@ -1,5 +1,6 @@
 /home/rover/rover_workspace/build/roverrobotics_driver/CMakeFiles/uninstall.dir
 /home/rover/rover_workspace/build/roverrobotics_driver/CMakeFiles/roverrobotics_driver_uninstall.dir
+/home/rover/rover_workspace/build/roverrobotics_driver/CMakeFiles/greenhouse_experiment_node.dir
 /home/rover/rover_workspace/build/roverrobotics_driver/CMakeFiles/roverrobotics_driver.dir
 /home/rover/rover_workspace/build/roverrobotics_driver/CMakeFiles/test.dir
 /home/rover/rover_workspace/build/roverrobotics_driver/CMakeFiles/edit_cache.dir

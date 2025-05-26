@@ -1,0 +1,160 @@
+[0.000000] (-) TimerEvent: {}
+[0.000149] (-) JobUnselected: {'identifier': 'bno055'}
+[0.000247] (-) JobUnselected: {'identifier': 'greenhouse_navigation'}
+[0.000260] (-) JobUnselected: {'identifier': 'roverrobotics_description'}
+[0.000270] (-) JobUnselected: {'identifier': 'roverrobotics_gazebo'}
+[0.000280] (-) JobUnselected: {'identifier': 'roverrobotics_input_manager'}
+[0.000290] (-) JobUnselected: {'identifier': 'rplidar_ros'}
+[0.000302] (roverrobotics_driver) JobQueued: {'identifier': 'roverrobotics_driver', 'dependencies': OrderedDict()}
+[0.000477] (roverrobotics_driver) JobStarted: {'identifier': 'roverrobotics_driver'}
+[0.008555] (roverrobotics_driver) JobProgress: {'identifier': 'roverrobotics_driver', 'progress': 'cmake'}
+[0.009423] (roverrobotics_driver) JobProgress: {'identifier': 'roverrobotics_driver', 'progress': 'build'}
+[0.009440] (roverrobotics_driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/rover/rover_workspace/build/roverrobotics_driver', '--', '-j8', '-l8'], 'cwd': '/home/rover/rover_workspace/build/roverrobotics_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IL:en'), ('USER', 'rover'), ('SSH_CLIENT', '192.168.1.127 45778 22'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/rover'), ('OLDPWD', '/home/rover'), ('SSH_TTY', '/dev/pts/2'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'en_US.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/rover/rover_workspace/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'rover'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '11'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/rover/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'en_US.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:11.0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '53'), ('AMENT_PREFIX_PATH', '/home/rover/rover_workspace/install/rplidar_ros:/home/rover/rover_workspace/install/roverrobotics_input_manager:/home/rover/rover_workspace/install/roverrobotics_gazebo:/home/rover/rover_workspace/install/roverrobotics_driver:/home/rover/rover_workspace/install/roverrobotics_description:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('PWD', '/home/rover/rover_workspace/build/roverrobotics_driver'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.127 45778 192.168.1.106 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/rover/rover_workspace/build/greenhouse_navigation:/home/rover/rover_workspace/install/greenhouse_navigation/lib/python3.10/site-packages:/home/rover/rover_workspace/build/bno055:/home/rover/rover_workspace/install/bno055/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/rover/rover_workspace/install/rplidar_ros:/home/rover/rover_workspace/install/roverrobotics_input_manager:/home/rover/rover_workspace/install/roverrobotics_gazebo:/home/rover/rover_workspace/install/roverrobotics_driver:/home/rover/rover_workspace/install/roverrobotics_description:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble')]), 'shell': False}
+[0.055245] (roverrobotics_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target greenhouse_experiment_node\x1b[0m\n'}
+[0.067045] (roverrobotics_driver) StdoutLine: {'line': b'[ 84%] Built target roverrobotics_driver\n'}
+[0.069238] (roverrobotics_driver) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding CXX object CMakeFiles/greenhouse_experiment_node.dir/src/greenhouse_experiment_node.cpp.o\x1b[0m\n'}
+[0.099843] (-) TimerEvent: {}
+[0.200103] (-) TimerEvent: {}
+[0.300348] (-) TimerEvent: {}
+[0.400583] (-) TimerEvent: {}
+[0.500816] (-) TimerEvent: {}
+[0.601083] (-) TimerEvent: {}
+[0.701357] (-) TimerEvent: {}
+[0.801670] (-) TimerEvent: {}
+[0.901917] (-) TimerEvent: {}
+[1.002171] (-) TimerEvent: {}
+[1.102442] (-) TimerEvent: {}
+[1.202747] (-) TimerEvent: {}
+[1.303045] (-) TimerEvent: {}
+[1.403341] (-) TimerEvent: {}
+[1.503623] (-) TimerEvent: {}
+[1.603899] (-) TimerEvent: {}
+[1.704145] (-) TimerEvent: {}
+[1.804447] (-) TimerEvent: {}
+[1.904751] (-) TimerEvent: {}
+[2.005018] (-) TimerEvent: {}
+[2.105298] (-) TimerEvent: {}
+[2.205585] (-) TimerEvent: {}
+[2.305903] (-) TimerEvent: {}
+[2.406183] (-) TimerEvent: {}
+[2.506468] (-) TimerEvent: {}
+[2.606777] (-) TimerEvent: {}
+[2.707056] (-) TimerEvent: {}
+[2.807366] (-) TimerEvent: {}
+[2.907671] (-) TimerEvent: {}
+[3.007909] (-) TimerEvent: {}
+[3.108176] (-) TimerEvent: {}
+[3.208442] (-) TimerEvent: {}
+[3.308748] (-) TimerEvent: {}
+[3.409023] (-) TimerEvent: {}
+[3.509302] (-) TimerEvent: {}
+[3.609605] (-) TimerEvent: {}
+[3.709891] (-) TimerEvent: {}
+[3.810153] (-) TimerEvent: {}
+[3.910406] (-) TimerEvent: {}
+[4.010673] (-) TimerEvent: {}
+[4.110908] (-) TimerEvent: {}
+[4.211135] (-) TimerEvent: {}
+[4.311362] (-) TimerEvent: {}
+[4.411632] (-) TimerEvent: {}
+[4.511924] (-) TimerEvent: {}
+[4.609159] (roverrobotics_driver) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable greenhouse_experiment_node\x1b[0m\n'}
+[4.612041] (-) TimerEvent: {}
+[4.712305] (-) TimerEvent: {}
+[4.812570] (-) TimerEvent: {}
+[4.856533] (roverrobotics_driver) StdoutLine: {'line': b'[100%] Built target greenhouse_experiment_node\n'}
+[4.864325] (roverrobotics_driver) CommandEnded: {'returncode': 0}
+[4.864780] (roverrobotics_driver) JobProgress: {'identifier': 'roverrobotics_driver', 'progress': 'install'}
+[4.871702] (roverrobotics_driver) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/rover/rover_workspace/build/roverrobotics_driver'], 'cwd': '/home/rover/rover_workspace/build/roverrobotics_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IL:en'), ('USER', 'rover'), ('SSH_CLIENT', '192.168.1.127 45778 22'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/rover'), ('OLDPWD', '/home/rover'), ('SSH_TTY', '/dev/pts/2'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'en_US.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/rover/rover_workspace/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'rover'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '11'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/rover/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'en_US.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:11.0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '53'), ('AMENT_PREFIX_PATH', '/home/rover/rover_workspace/install/rplidar_ros:/home/rover/rover_workspace/install/roverrobotics_input_manager:/home/rover/rover_workspace/install/roverrobotics_gazebo:/home/rover/rover_workspace/install/roverrobotics_driver:/home/rover/rover_workspace/install/roverrobotics_description:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('PWD', '/home/rover/rover_workspace/build/roverrobotics_driver'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.127 45778 192.168.1.106 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/rover/rover_workspace/build/greenhouse_navigation:/home/rover/rover_workspace/install/greenhouse_navigation/lib/python3.10/site-packages:/home/rover/rover_workspace/build/bno055:/home/rover/rover_workspace/install/bno055/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/rover/rover_workspace/install/rplidar_ros:/home/rover/rover_workspace/install/roverrobotics_input_manager:/home/rover/rover_workspace/install/roverrobotics_gazebo:/home/rover/rover_workspace/install/roverrobotics_driver:/home/rover/rover_workspace/install/roverrobotics_description:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble')]), 'shell': False}
+[4.878093] (roverrobotics_driver) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.879116] (roverrobotics_driver) StdoutLine: {'line': b'-- Installing: /home/rover/rover_workspace/install/roverrobotics_driver/lib/roverrobotics_driver/greenhouse_experiment_node\n'}
+[4.881259] (roverrobotics_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/rover/rover_workspace/install/roverrobotics_driver/lib/roverrobotics_driver/greenhouse_experiment_node" to ""\n'}
+[4.881383] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch\n'}
+[4.881430] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/nav2_backend.py\n'}
+[4.881468] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/navigation_launch_indoor.py\n'}
+[4.882242] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/zero_teleop.launch.py\n'}
+[4.882383] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/mini_teleop.launch.py\n'}
+[4.882426] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/robot_localizer_outdoor.launch.py\n'}
+[4.882465] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/slam_launch.py\n'}
+[4.882505] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/miti.launch.py\n'}
+[4.882542] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/mini.launch.py\n'}
+[4.882579] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/miti_65.launch.py\n'}
+[4.882616] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/ps4_controller.launch.py\n'}
+[4.882653] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/navigation_launch.py\n'}
+[4.882689] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/accessories.launch.py\n'}
+[4.882725] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/max_teleop.launch.py\n'}
+[4.882760] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/pro_teleop.launch.py\n'}
+[4.882796] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/robot_localizer.launch.py\n'}
+[4.882832] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/miti_65_teleop.launch.py\n'}
+[4.882883] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/ps5_controller.launch.py\n'}
+[4.883025] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/outdoor_navigation_launch.py\n'}
+[4.883064] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/miti_teleop.launch.py\n'}
+[4.883101] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/zero.launch.py\n'}
+[4.883138] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/greenhouse_nav.launch.py\n'}
+[4.883175] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/experiments_launch.py\n'}
+[4.883212] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/greenhouse_nav_amcl.launch.py\n'}
+[4.883248] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/pro.launch.py\n'}
+[4.883284] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/max.launch.py\n'}
+[4.883321] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config\n'}
+[4.883357] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/miti_config.yaml\n'}
+[4.883434] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/slam_configs\n'}
+[4.883470] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/slam_configs/mapper_params_localization.yaml\n'}
+[4.883505] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/slam_configs/mapper_params_lifelong.yaml\n'}
+[4.883539] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/slam_configs/mapper_params_offline.yaml\n'}
+[4.883574] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/slam_configs/mapper_params_online_sync.yaml\n'}
+[4.883609] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/slam_configs/mapper_params_online_async.yaml\n'}
+[4.883646] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/mini_config.yaml\n'}
+[4.883682] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/ps5_controller_config_jp6.yaml\n'}
+[4.883718] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/miti_65_config.yaml\n'}
+[4.883754] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/localization_outdoor_ekf.yaml\n'}
+[4.883790] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/indoor_configs\n'}
+[4.883826] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/indoor_configs/plants.yaml\n'}
+[4.883903] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/accessories.yaml\n'}
+[4.883944] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/ps5_controller_config.yaml\n'}
+[4.883980] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/max_130_config.yaml\n'}
+[4.884017] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/rviz_configs\n'}
+[4.884053] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/rviz_configs/custom_slam.rviz\n'}
+[4.884088] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/rviz_configs/nav2_default_view.rviz\n'}
+[4.884124] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/rviz_configs/slam_rviz_layout.rviz\n'}
+[4.884180] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/rviz_configs/realsense_rviz_layout.rviz\n'}
+[4.884215] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/realsense_config.yaml\n'}
+[4.884255] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/pro_config.yaml\n'}
+[4.884305] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/ps4_controller_config.yaml\n'}
+[4.884358] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/ps4_controller_config_jp6.yaml\n'}
+[4.884414] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/max_150_config.yaml\n'}
+[4.884464] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/topics.yaml\n'}
+[4.884515] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/nav2_params.yaml\n'}
+[4.884570] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/localization_ekf.yaml\n'}
+[4.884619] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/max_100_config.yaml\n'}
+[4.884655] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/max_65_config.yaml\n'}
+[4.884690] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/zero_config.yaml\n'}
+[4.884731] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps\n'}
+[4.884767] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/my_map.pgm\n'}
+[4.884803] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/maze_map.pgm\n'}
+[4.884839] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/maze_map.yaml\n'}
+[4.884881] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab2.posegraph\n'}
+[4.884917] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab2.data\n'}
+[4.884952] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab2.yaml\n'}
+[4.884985] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/my_map.yaml\n'}
+[4.885019] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab2.pgm\n'}
+[4.885055] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/maze_map.data\n'}
+[4.885107] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/maze_map.posegraph\n'}
+[4.885142] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/lib/roverrobotics_driver/roverrobotics_driver\n'}
+[4.885178] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/ament_index/resource_index/package_run_dependencies/roverrobotics_driver\n'}
+[4.885217] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/ament_index/resource_index/parent_prefix_path/roverrobotics_driver\n'}
+[4.885254] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/environment/ament_prefix_path.sh\n'}
+[4.885291] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/environment/ament_prefix_path.dsv\n'}
+[4.885328] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/environment/path.sh\n'}
+[4.885364] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/environment/path.dsv\n'}
+[4.885400] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/local_setup.bash\n'}
+[4.885463] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/local_setup.sh\n'}
+[4.885503] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/local_setup.zsh\n'}
+[4.885541] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/local_setup.dsv\n'}
+[4.885576] (roverrobotics_driver) StdoutLine: {'line': b'-- Installing: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/package.dsv\n'}
+[4.885613] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/ament_index/resource_index/packages/roverrobotics_driver\n'}
+[4.885723] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/cmake/roverrobotics_driverConfig.cmake\n'}
+[4.885787] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/cmake/roverrobotics_driverConfig-version.cmake\n'}
+[4.885849] (roverrobotics_driver) StdoutLine: {'line': b'-- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/package.xml\n'}
+[4.886298] (roverrobotics_driver) CommandEnded: {'returncode': 0}
+[4.897882] (roverrobotics_driver) JobEnded: {'identifier': 'roverrobotics_driver', 'rc': 0}
+[4.898277] (-) EventReactorShutdown: {}

@@ -1,4 +1,6 @@
+/home/rover/rover_workspace/install/roverrobotics_driver/lib/roverrobotics_driver/greenhouse_experiment_node
 /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/accessories.launch.py
+/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/experiments_launch.py
 /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/greenhouse_nav.launch.py
 /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/greenhouse_nav_amcl.launch.py
 /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/max.launch.py
@@ -11,6 +13,7 @@
 /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/miti_teleop.launch.py
 /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/nav2_backend.py
 /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/navigation_launch.py
+/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/navigation_launch_indoor.py
 /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/outdoor_navigation_launch.py
 /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/pro.launch.py
 /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/pro_teleop.launch.py
@@ -22,6 +25,7 @@
 /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/zero.launch.py
 /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/launch/zero_teleop.launch.py
 /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/accessories.yaml
+/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/indoor_configs/plants.yaml
 /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/localization_ekf.yaml
 /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/localization_outdoor_ekf.yaml
 /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/max_100_config.yaml
@@ -49,14 +53,10 @@
 /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/slam_configs/mapper_params_online_sync.yaml
 /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/topics.yaml
 /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/config/zero_config.yaml
-/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/greenhouse_map.data
-/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/greenhouse_map.pgm
-/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/greenhouse_map.posegraph
-/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/greenhouse_map.yaml
-/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab.data
-/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab.pgm
-/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab.posegraph
-/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab.yaml
+/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab2.data
+/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab2.pgm
+/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab2.posegraph
+/home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab2.yaml
 /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/maze_map.data
 /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/maze_map.pgm
 /home/rover/rover_workspace/install/roverrobotics_driver/share/roverrobotics_driver/maps/maze_map.posegraph

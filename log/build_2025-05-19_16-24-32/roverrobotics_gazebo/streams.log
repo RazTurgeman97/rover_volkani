@@ -1,0 +1,42 @@
+[0.028s] Invoking command in '/home/rover/rover_workspace/build/roverrobotics_gazebo': CMAKE_PREFIX_PATH=/home/rover/rover_workspace/install/roverrobotics_description:/home/rover/rover_workspace/install/rplidar_ros:/home/rover/rover_workspace/install/roverrobotics_input_manager:/home/rover/rover_workspace/install/roverrobotics_gazebo:/home/rover/rover_workspace/install/roverrobotics_driver:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --build /home/rover/rover_workspace/build/roverrobotics_gazebo -- -j8 -l8
+[0.057s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.164s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.221s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.223s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.223s] -- Added test 'lint_cmake' to check CMake code style
+[0.224s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.225s] -- Added test 'xmllint' to check XML markup files
+[0.226s] -- Configuring done
+[0.229s] -- Generating done
+[0.230s] -- Build files have been written to: /home/rover/rover_workspace/build/roverrobotics_gazebo
+[0.247s] Invoked command in '/home/rover/rover_workspace/build/roverrobotics_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/rover/rover_workspace/install/roverrobotics_description:/home/rover/rover_workspace/install/rplidar_ros:/home/rover/rover_workspace/install/roverrobotics_input_manager:/home/rover/rover_workspace/install/roverrobotics_gazebo:/home/rover/rover_workspace/install/roverrobotics_driver:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --build /home/rover/rover_workspace/build/roverrobotics_gazebo -- -j8 -l8
+[0.248s] Invoking command in '/home/rover/rover_workspace/build/roverrobotics_gazebo': CMAKE_PREFIX_PATH=/home/rover/rover_workspace/install/roverrobotics_description:/home/rover/rover_workspace/install/rplidar_ros:/home/rover/rover_workspace/install/roverrobotics_input_manager:/home/rover/rover_workspace/install/roverrobotics_gazebo:/home/rover/rover_workspace/install/roverrobotics_driver:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --install /home/rover/rover_workspace/build/roverrobotics_gazebo
+[0.253s] -- Install configuration: ""
+[0.253s] -- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/launch
+[0.253s] -- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/launch/miti_gazebo.launch.py
+[0.253s] -- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/launch/flipper_gazebo.launch.py
+[0.253s] -- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/launch/4wd_rover_gazebo.launch.py
+[0.253s] -- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/launch/mini_gazebo.launch.py
+[0.253s] -- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/launch/max_gazebo.launch.py
+[0.254s] -- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/launch/2wd_rover_gazebo.launch.py
+[0.254s] -- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/launch/miti_65_gazebo.launch.py
+[0.254s] -- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/worlds
+[0.254s] -- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/worlds/warehouse.sdf
+[0.254s] -- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/worlds/depot.sdf
+[0.254s] -- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/worlds/maze.sdf
+[0.254s] -- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/ament_index/resource_index/package_run_dependencies/roverrobotics_gazebo
+[0.254s] -- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/ament_index/resource_index/parent_prefix_path/roverrobotics_gazebo
+[0.254s] -- Installing: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/environment/ament_prefix_path.sh
+[0.254s] -- Installing: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/environment/ament_prefix_path.dsv
+[0.254s] -- Installing: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/environment/path.sh
+[0.254s] -- Installing: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/environment/path.dsv
+[0.254s] -- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/local_setup.bash
+[0.254s] -- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/local_setup.sh
+[0.254s] -- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/local_setup.zsh
+[0.254s] -- Installing: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/local_setup.dsv
+[0.254s] -- Installing: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/package.dsv
+[0.255s] -- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/ament_index/resource_index/packages/roverrobotics_gazebo
+[0.255s] -- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/cmake/roverrobotics_gazeboConfig.cmake
+[0.255s] -- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/cmake/roverrobotics_gazeboConfig-version.cmake
+[0.255s] -- Up-to-date: /home/rover/rover_workspace/install/roverrobotics_gazebo/share/roverrobotics_gazebo/package.xml
+[0.256s] Invoked command in '/home/rover/rover_workspace/build/roverrobotics_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/rover/rover_workspace/install/roverrobotics_description:/home/rover/rover_workspace/install/rplidar_ros:/home/rover/rover_workspace/install/roverrobotics_input_manager:/home/rover/rover_workspace/install/roverrobotics_gazebo:/home/rover/rover_workspace/install/roverrobotics_driver:/home/rover/rover_workspace/install/greenhouse_navigation:/home/rover/rover_workspace/install/bno055:/opt/ros/humble /usr/bin/cmake --install /home/rover/rover_workspace/build/roverrobotics_gazebo

@@ -23,6 +23,18 @@
   <depend>nav_msgs</depend>
   <depend>sensor_msgs</depend>
 
+  <!-- development -->
+
+  <!-- ROS 2 API -->
+  <depend>rclcpp_action</depend>
+  <depend>nav2_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>tf2_ros</depend>
+  <depend>ament_index_cpp</depend>
+
+  <!-- YAML-CPP for config parsing -->
+  <depend>yaml-cpp</depend>
+
 
   <export>
     <build_type>ament_cmake</build_type>

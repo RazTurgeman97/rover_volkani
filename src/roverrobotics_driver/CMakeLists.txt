@@ -19,6 +19,41 @@ find_package(tf2_geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 #find_package(diagnostic_updater REQUIRED)
 
+############### development ###############
+
+find_package(rclcpp_action REQUIRED)
+find_package(nav2_msgs REQUIRED)
+find_package(tf2_ros REQUIRED)
+find_package(ament_index_cpp REQUIRED)
+find_package(yaml-cpp REQUIRED)
+
+add_executable(greenhouse_experiment_node
+  src/greenhouse_experiment_node.cpp
+)
+
+ament_target_dependencies(greenhouse_experiment_node
+  rclcpp
+  rclcpp_action
+  nav2_msgs
+  geometry_msgs
+  std_msgs
+  tf2_ros
+  ament_index_cpp
+  yaml-cpp
+)
+
+# Link yaml-cpp library so YAML::LoadFile, Node::as<>() etc. are resolved:
+target_link_libraries(greenhouse_experiment_node
+  yaml-cpp
+)
+
+install(TARGETS greenhouse_experiment_node
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+
+############### development ###############
+
 #include_directories(include/)
 #file(GLOB_RECURSE AllHeaders ${PROJECT_SOURCE_DIR}/*.hpp)
 

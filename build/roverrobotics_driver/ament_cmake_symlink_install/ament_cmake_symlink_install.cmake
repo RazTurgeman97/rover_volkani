@@ -310,11 +310,14 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
+# install("TARGETS" "greenhouse_experiment_node" "DESTINATION" "lib/roverrobotics_driver")
+include("/home/rover/rover_workspace/build/roverrobotics_driver/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
 # install(DIRECTORY "launch" "config" "maps" "DESTINATION" "share/roverrobotics_driver")
 ament_cmake_symlink_install_directory("/home/rover/rover_workspace/src/roverrobotics_driver" DIRECTORY "launch" "config" "maps" "DESTINATION" "share/roverrobotics_driver")
 
 # install("TARGETS" "roverrobotics_driver" "DESTINATION" "lib/roverrobotics_driver")
-include("/home/rover/rover_workspace/build/roverrobotics_driver/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/rover/rover_workspace/build/roverrobotics_driver/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(FILES "/home/rover/rover_workspace/build/roverrobotics_driver/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/roverrobotics_driver" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/rover/rover_workspace/src/roverrobotics_driver" FILES "/home/rover/rover_workspace/build/roverrobotics_driver/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/roverrobotics_driver" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

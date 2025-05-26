@@ -1,0 +1,17 @@
+running develop
+running egg_info
+writing greenhouse_navigation.egg-info/PKG-INFO
+writing dependency_links to greenhouse_navigation.egg-info/dependency_links.txt
+writing entry points to greenhouse_navigation.egg-info/entry_points.txt
+writing requirements to greenhouse_navigation.egg-info/requires.txt
+writing top-level names to greenhouse_navigation.egg-info/top_level.txt
+reading manifest file 'greenhouse_navigation.egg-info/SOURCES.txt'
+writing manifest file 'greenhouse_navigation.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/rover/rover_workspace/install/greenhouse_navigation/lib/python3.10/site-packages/greenhouse-navigation.egg-link (link to .)
+Installing navigator script to /home/rover/rover_workspace/install/greenhouse_navigation/lib/greenhouse_navigation
+
+Installed /home/rover/rover_workspace/build/greenhouse_navigation
+running symlink_data
+symbolically linking /home/rover/rover_workspace/build/greenhouse_navigation/resource/greenhouse_navigation -> /home/rover/rover_workspace/install/greenhouse_navigation/share/ament_index/resource_index/packages
+symbolically linking /home/rover/rover_workspace/build/greenhouse_navigation/package.xml -> /home/rover/rover_workspace/install/greenhouse_navigation/share/greenhouse_navigation

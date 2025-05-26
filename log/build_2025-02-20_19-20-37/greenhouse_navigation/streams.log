@@ -1,0 +1,37 @@
+[0.732s] Invoking command in '/home/rover/rover_workspace/src/greenhouse_navigation': PYTHONPATH=/home/rover/rover_workspace/build/greenhouse_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rover/rover_workspace/install/greenhouse_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/greenhouse_navigation build --build-base /home/rover/rover_workspace/build/greenhouse_navigation/build install --record /home/rover/rover_workspace/build/greenhouse_navigation/install.log --single-version-externally-managed install_data
+[1.006s] running egg_info
+[1.007s] creating ../../build/greenhouse_navigation/greenhouse_navigation.egg-info
+[1.007s] writing ../../build/greenhouse_navigation/greenhouse_navigation.egg-info/PKG-INFO
+[1.007s] writing dependency_links to ../../build/greenhouse_navigation/greenhouse_navigation.egg-info/dependency_links.txt
+[1.008s] writing entry points to ../../build/greenhouse_navigation/greenhouse_navigation.egg-info/entry_points.txt
+[1.008s] writing requirements to ../../build/greenhouse_navigation/greenhouse_navigation.egg-info/requires.txt
+[1.008s] writing top-level names to ../../build/greenhouse_navigation/greenhouse_navigation.egg-info/top_level.txt
+[1.008s] writing manifest file '../../build/greenhouse_navigation/greenhouse_navigation.egg-info/SOURCES.txt'
+[1.010s] reading manifest file '../../build/greenhouse_navigation/greenhouse_navigation.egg-info/SOURCES.txt'
+[1.010s] writing manifest file '../../build/greenhouse_navigation/greenhouse_navigation.egg-info/SOURCES.txt'
+[1.011s] running build
+[1.011s] running build_py
+[1.011s] creating /home/rover/rover_workspace/build/greenhouse_navigation/build
+[1.011s] creating /home/rover/rover_workspace/build/greenhouse_navigation/build/lib
+[1.011s] creating /home/rover/rover_workspace/build/greenhouse_navigation/build/lib/greenhouse_navigation
+[1.011s] copying greenhouse_navigation/__init__.py -> /home/rover/rover_workspace/build/greenhouse_navigation/build/lib/greenhouse_navigation
+[1.011s] copying greenhouse_navigation/greenhouse_navigator.py -> /home/rover/rover_workspace/build/greenhouse_navigation/build/lib/greenhouse_navigation
+[1.011s] running install
+[1.012s] running install_lib
+[1.013s] creating /home/rover/rover_workspace/install/greenhouse_navigation/lib/python3.10/site-packages/greenhouse_navigation
+[1.013s] copying /home/rover/rover_workspace/build/greenhouse_navigation/build/lib/greenhouse_navigation/__init__.py -> /home/rover/rover_workspace/install/greenhouse_navigation/lib/python3.10/site-packages/greenhouse_navigation
+[1.014s] copying /home/rover/rover_workspace/build/greenhouse_navigation/build/lib/greenhouse_navigation/greenhouse_navigator.py -> /home/rover/rover_workspace/install/greenhouse_navigation/lib/python3.10/site-packages/greenhouse_navigation
+[1.014s] byte-compiling /home/rover/rover_workspace/install/greenhouse_navigation/lib/python3.10/site-packages/greenhouse_navigation/__init__.py to __init__.cpython-310.pyc
+[1.014s] byte-compiling /home/rover/rover_workspace/install/greenhouse_navigation/lib/python3.10/site-packages/greenhouse_navigation/greenhouse_navigator.py to greenhouse_navigator.cpython-310.pyc
+[1.015s] running install_data
+[1.015s] creating /home/rover/rover_workspace/install/greenhouse_navigation/share/ament_index
+[1.015s] creating /home/rover/rover_workspace/install/greenhouse_navigation/share/ament_index/resource_index
+[1.015s] creating /home/rover/rover_workspace/install/greenhouse_navigation/share/ament_index/resource_index/packages
+[1.015s] copying resource/greenhouse_navigation -> /home/rover/rover_workspace/install/greenhouse_navigation/share/ament_index/resource_index/packages
+[1.015s] copying package.xml -> /home/rover/rover_workspace/install/greenhouse_navigation/share/greenhouse_navigation
+[1.015s] running install_egg_info
+[1.017s] Copying ../../build/greenhouse_navigation/greenhouse_navigation.egg-info to /home/rover/rover_workspace/install/greenhouse_navigation/lib/python3.10/site-packages/greenhouse_navigation-0.0.0-py3.10.egg-info
+[1.018s] running install_scripts
+[1.036s] Installing navigator script to /home/rover/rover_workspace/install/greenhouse_navigation/lib/greenhouse_navigation
+[1.036s] writing list of installed files to '/home/rover/rover_workspace/build/greenhouse_navigation/install.log'
+[1.079s] Invoked command in '/home/rover/rover_workspace/src/greenhouse_navigation' returned '0': PYTHONPATH=/home/rover/rover_workspace/build/greenhouse_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rover/rover_workspace/install/greenhouse_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/greenhouse_navigation build --build-base /home/rover/rover_workspace/build/greenhouse_navigation/build install --record /home/rover/rover_workspace/build/greenhouse_navigation/install.log --single-version-externally-managed install_data

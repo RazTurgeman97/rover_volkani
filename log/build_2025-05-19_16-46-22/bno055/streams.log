@@ -1,0 +1,23 @@
+[0.658s] Invoking command in '/home/rover/rover_workspace/src/bno055': PYTHONPATH=/home/rover/rover_workspace/build/bno055/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rover/rover_workspace/install/bno055/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/bno055 build --build-base /home/rover/rover_workspace/build/bno055/build install --record /home/rover/rover_workspace/build/bno055/install.log --single-version-externally-managed install_data
+[0.834s] running egg_info
+[0.835s] writing ../../build/bno055/bno055.egg-info/PKG-INFO
+[0.835s] writing dependency_links to ../../build/bno055/bno055.egg-info/dependency_links.txt
+[0.836s] writing entry points to ../../build/bno055/bno055.egg-info/entry_points.txt
+[0.836s] writing requirements to ../../build/bno055/bno055.egg-info/requires.txt
+[0.836s] writing top-level names to ../../build/bno055/bno055.egg-info/top_level.txt
+[0.837s] reading manifest file '../../build/bno055/bno055.egg-info/SOURCES.txt'
+[0.838s] adding license file 'LICENSE'
+[0.838s] adding license file 'AUTHORS'
+[0.838s] writing manifest file '../../build/bno055/bno055.egg-info/SOURCES.txt'
+[0.838s] running build
+[0.838s] running build_py
+[0.839s] running install
+[0.840s] running install_lib
+[0.842s] running install_data
+[0.842s] running install_egg_info
+[0.844s] removing '/home/rover/rover_workspace/install/bno055/lib/python3.10/site-packages/bno055-0.5.0-py3.10.egg-info' (and everything under it)
+[0.844s] Copying ../../build/bno055/bno055.egg-info to /home/rover/rover_workspace/install/bno055/lib/python3.10/site-packages/bno055-0.5.0-py3.10.egg-info
+[0.845s] running install_scripts
+[0.860s] Installing bno055 script to /home/rover/rover_workspace/install/bno055/lib/bno055
+[0.861s] writing list of installed files to '/home/rover/rover_workspace/build/bno055/install.log'
+[0.880s] Invoked command in '/home/rover/rover_workspace/src/bno055' returned '0': PYTHONPATH=/home/rover/rover_workspace/build/bno055/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rover/rover_workspace/install/bno055/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/bno055 build --build-base /home/rover/rover_workspace/build/bno055/build install --record /home/rover/rover_workspace/build/bno055/install.log --single-version-externally-managed install_data

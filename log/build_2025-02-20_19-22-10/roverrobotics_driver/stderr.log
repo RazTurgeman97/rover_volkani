@@ -1,0 +1,8 @@
+gmake[2]: Warning: File '/usr/include/linux/errno.h' has modification time 4332169 s in the future
+gmake[2]: Warning: File '/home/rover/rover_workspace/src/roverrobotics_driver/include/roverrobotics_ros2_driver.hpp' has modification time 5684049 s in the future
+[01m[K/home/rover/rover_workspace/src/roverrobotics_driver/library/librover/src/vesc.cpp:[m[K In member function ‘[01m[Kvesc::vescChannelStatus vesc::BridgedVescArray::parseReceivedMessage(std::vector<unsigned char>)[m[K’:
+[01m[K/home/rover/rover_workspace/src/roverrobotics_driver/library/librover/src/vesc.cpp:76:5:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+   76 |     [01;35m[K}[m[K
+      |     [01;35m[K^[m[K
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.

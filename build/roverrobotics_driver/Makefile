@@ -198,6 +198,19 @@ roverrobotics_driver_uninstall/fast:
 .PHONY : roverrobotics_driver_uninstall/fast
 
 #=============================================================================
+# Target rules for targets named greenhouse_experiment_node
+
+# Build rule for target.
+greenhouse_experiment_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 greenhouse_experiment_node
+.PHONY : greenhouse_experiment_node
+
+# fast build rule for target.
+greenhouse_experiment_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/greenhouse_experiment_node.dir/build.make CMakeFiles/greenhouse_experiment_node.dir/build
+.PHONY : greenhouse_experiment_node/fast
+
+#=============================================================================
 # Target rules for targets named roverrobotics_driver
 
 # Build rule for target.
@@ -426,6 +439,30 @@ library/librover/src/vesc.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roverrobotics_driver.dir/build.make CMakeFiles/roverrobotics_driver.dir/library/librover/src/vesc.cpp.s
 .PHONY : library/librover/src/vesc.cpp.s
 
+src/greenhouse_experiment_node.o: src/greenhouse_experiment_node.cpp.o
+.PHONY : src/greenhouse_experiment_node.o
+
+# target to build an object file
+src/greenhouse_experiment_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/greenhouse_experiment_node.dir/build.make CMakeFiles/greenhouse_experiment_node.dir/src/greenhouse_experiment_node.cpp.o
+.PHONY : src/greenhouse_experiment_node.cpp.o
+
+src/greenhouse_experiment_node.i: src/greenhouse_experiment_node.cpp.i
+.PHONY : src/greenhouse_experiment_node.i
+
+# target to preprocess a source file
+src/greenhouse_experiment_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/greenhouse_experiment_node.dir/build.make CMakeFiles/greenhouse_experiment_node.dir/src/greenhouse_experiment_node.cpp.i
+.PHONY : src/greenhouse_experiment_node.cpp.i
+
+src/greenhouse_experiment_node.s: src/greenhouse_experiment_node.cpp.s
+.PHONY : src/greenhouse_experiment_node.s
+
+# target to generate assembly for a file
+src/greenhouse_experiment_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/greenhouse_experiment_node.dir/build.make CMakeFiles/greenhouse_experiment_node.dir/src/greenhouse_experiment_node.cpp.s
+.PHONY : src/greenhouse_experiment_node.cpp.s
+
 src/roverrobotics_ros2_driver.o: src/roverrobotics_ros2_driver.cpp.o
 .PHONY : src/roverrobotics_ros2_driver.o
 
@@ -465,6 +502,7 @@ help:
 	@echo "... test"
 	@echo "... roverrobotics_driver_uninstall"
 	@echo "... uninstall"
+	@echo "... greenhouse_experiment_node"
 	@echo "... roverrobotics_driver"
 	@echo "... library/librover/src/comm_can.o"
 	@echo "... library/librover/src/comm_can.i"
@@ -493,6 +531,9 @@ help:
 	@echo "... library/librover/src/vesc.o"
 	@echo "... library/librover/src/vesc.i"
 	@echo "... library/librover/src/vesc.s"
+	@echo "... src/greenhouse_experiment_node.o"
+	@echo "... src/greenhouse_experiment_node.i"
+	@echo "... src/greenhouse_experiment_node.s"
 	@echo "... src/roverrobotics_ros2_driver.o"
 	@echo "... src/roverrobotics_ros2_driver.i"
 	@echo "... src/roverrobotics_ros2_driver.s"
