@@ -1,0 +1,17 @@
+[0.421s] Invoking command in '/home/raz/volcani/rover_volkani/build/greenhouse_navigation': PYTHONPATH=/home/raz/volcani/rover_volkani/build/greenhouse_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/raz/volcani/rover_volkani/install/greenhouse_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/raz/volcani/rover_volkani/build/greenhouse_navigation/build --no-deps symlink_data
+[0.590s] running develop
+[0.708s] running egg_info
+[0.708s] writing greenhouse_navigation.egg-info/PKG-INFO
+[0.708s] writing dependency_links to greenhouse_navigation.egg-info/dependency_links.txt
+[0.708s] writing entry points to greenhouse_navigation.egg-info/entry_points.txt
+[0.708s] writing requirements to greenhouse_navigation.egg-info/requires.txt
+[0.708s] writing top-level names to greenhouse_navigation.egg-info/top_level.txt
+[0.709s] reading manifest file 'greenhouse_navigation.egg-info/SOURCES.txt'
+[0.710s] writing manifest file 'greenhouse_navigation.egg-info/SOURCES.txt'
+[0.711s] running build_ext
+[0.711s] Creating /home/raz/volcani/rover_volkani/install/greenhouse_navigation/lib/python3.10/site-packages/greenhouse-navigation.egg-link (link to .)
+[0.711s] Installing navigator script to /home/raz/volcani/rover_volkani/install/greenhouse_navigation/lib/greenhouse_navigation
+[0.712s] 
+[0.712s] Installed /home/raz/volcani/rover_volkani/build/greenhouse_navigation
+[0.712s] running symlink_data
+[0.729s] Invoked command in '/home/raz/volcani/rover_volkani/build/greenhouse_navigation' returned '0': PYTHONPATH=/home/raz/volcani/rover_volkani/build/greenhouse_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/raz/volcani/rover_volkani/install/greenhouse_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/raz/volcani/rover_volkani/build/greenhouse_navigation/build --no-deps symlink_data

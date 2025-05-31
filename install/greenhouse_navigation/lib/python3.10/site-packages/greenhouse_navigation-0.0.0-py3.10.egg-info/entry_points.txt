@@ -1,0 +1,3 @@
+[console_scripts]
+navigator = greenhouse_navigation.greenhouse_navigator:main
+

@@ -1,1 +1,1 @@
-/home/rover/rover_workspace/src/roverrobotics_description/launch/display_max.launch.py
+/home/raz/volcani/rover_volkani/src/roverrobotics_description/launch/display_max.launch.py

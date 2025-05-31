@@ -1,1 +1,1 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/rover/rover_workspace/build/roverrobotics_driver/greenhouse_experiment_node" "TARGETS" "greenhouse_experiment_node" "DESTINATION" "lib/roverrobotics_driver")
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/raz/volcani/rover_volkani/build/roverrobotics_driver/greenhouse_experiment_node" "TARGETS" "greenhouse_experiment_node" "DESTINATION" "lib/roverrobotics_driver")

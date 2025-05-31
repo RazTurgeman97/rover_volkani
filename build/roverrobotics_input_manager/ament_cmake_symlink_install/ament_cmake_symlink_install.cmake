@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/rover/rover_workspace/install/roverrobotics_input_manager/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/raz/volcani/rover_volkani/install/roverrobotics_input_manager/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +123,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/rover/rover_workspace/install/roverrobotics_input_manager/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/raz/volcani/rover_volkani/install/roverrobotics_input_manager/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +181,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/rover/rover_workspace/install/roverrobotics_input_manager/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/raz/volcani/rover_volkani/install/roverrobotics_input_manager/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +251,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/rover/rover_workspace/install/roverrobotics_input_manager/${destination}")
+      set(destination "/home/raz/volcani/rover_volkani/install/roverrobotics_input_manager/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -311,49 +311,49 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install(DIRECTORY "scripts/modules" "DESTINATION" "lib/roverrobotics_input_manager")
-ament_cmake_symlink_install_directory("/home/rover/rover_workspace/src/roverrobotics_input_manager" DIRECTORY "scripts/modules" "DESTINATION" "lib/roverrobotics_input_manager")
+ament_cmake_symlink_install_directory("/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager" DIRECTORY "scripts/modules" "DESTINATION" "lib/roverrobotics_input_manager")
 
 # install(PROGRAMS "scripts/joys_manager.py" "DESTINATION" "lib/roverrobotics_input_manager")
-ament_cmake_symlink_install_programs("/home/rover/rover_workspace/src/roverrobotics_input_manager" PROGRAMS "scripts/joys_manager.py" "DESTINATION" "lib/roverrobotics_input_manager")
+ament_cmake_symlink_install_programs("/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager" PROGRAMS "scripts/joys_manager.py" "DESTINATION" "lib/roverrobotics_input_manager")
 
-# install(FILES "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/roverrobotics_input_manager" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/rover/rover_workspace/src/roverrobotics_input_manager" FILES "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/roverrobotics_input_manager" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/roverrobotics_input_manager" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager" FILES "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/roverrobotics_input_manager" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/roverrobotics_input_manager" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/rover/rover_workspace/src/roverrobotics_input_manager" FILES "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/roverrobotics_input_manager" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/roverrobotics_input_manager" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager" FILES "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/roverrobotics_input_manager" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/roverrobotics_input_manager/environment")
-ament_cmake_symlink_install_files("/home/rover/rover_workspace/src/roverrobotics_input_manager" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/roverrobotics_input_manager/environment")
+ament_cmake_symlink_install_files("/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/roverrobotics_input_manager/environment")
 
-# install(FILES "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/roverrobotics_input_manager/environment")
-ament_cmake_symlink_install_files("/home/rover/rover_workspace/src/roverrobotics_input_manager" FILES "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/roverrobotics_input_manager/environment")
+# install(FILES "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/roverrobotics_input_manager/environment")
+ament_cmake_symlink_install_files("/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager" FILES "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/roverrobotics_input_manager/environment")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/roverrobotics_input_manager/environment")
-ament_cmake_symlink_install_files("/home/rover/rover_workspace/src/roverrobotics_input_manager" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/roverrobotics_input_manager/environment")
+ament_cmake_symlink_install_files("/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/roverrobotics_input_manager/environment")
 
-# install(FILES "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/roverrobotics_input_manager/environment")
-ament_cmake_symlink_install_files("/home/rover/rover_workspace/src/roverrobotics_input_manager" FILES "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/roverrobotics_input_manager/environment")
+# install(FILES "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/roverrobotics_input_manager/environment")
+ament_cmake_symlink_install_files("/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager" FILES "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/roverrobotics_input_manager/environment")
 
-# install(FILES "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/roverrobotics_input_manager")
-ament_cmake_symlink_install_files("/home/rover/rover_workspace/src/roverrobotics_input_manager" FILES "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/roverrobotics_input_manager")
+# install(FILES "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/roverrobotics_input_manager")
+ament_cmake_symlink_install_files("/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager" FILES "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/roverrobotics_input_manager")
 
-# install(FILES "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/roverrobotics_input_manager")
-ament_cmake_symlink_install_files("/home/rover/rover_workspace/src/roverrobotics_input_manager" FILES "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/roverrobotics_input_manager")
+# install(FILES "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/roverrobotics_input_manager")
+ament_cmake_symlink_install_files("/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager" FILES "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/roverrobotics_input_manager")
 
-# install(FILES "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/roverrobotics_input_manager")
-ament_cmake_symlink_install_files("/home/rover/rover_workspace/src/roverrobotics_input_manager" FILES "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/roverrobotics_input_manager")
+# install(FILES "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/roverrobotics_input_manager")
+ament_cmake_symlink_install_files("/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager" FILES "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/roverrobotics_input_manager")
 
-# install(FILES "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/roverrobotics_input_manager")
-ament_cmake_symlink_install_files("/home/rover/rover_workspace/src/roverrobotics_input_manager" FILES "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/roverrobotics_input_manager")
+# install(FILES "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/roverrobotics_input_manager")
+ament_cmake_symlink_install_files("/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager" FILES "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/roverrobotics_input_manager")
 
-# install(FILES "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/roverrobotics_input_manager")
-ament_cmake_symlink_install_files("/home/rover/rover_workspace/src/roverrobotics_input_manager" FILES "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/roverrobotics_input_manager")
+# install(FILES "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/roverrobotics_input_manager")
+ament_cmake_symlink_install_files("/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager" FILES "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/roverrobotics_input_manager")
 
-# install(FILES "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_index/share/ament_index/resource_index/packages/roverrobotics_input_manager" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/rover/rover_workspace/src/roverrobotics_input_manager" FILES "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_index/share/ament_index/resource_index/packages/roverrobotics_input_manager" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_index/share/ament_index/resource_index/packages/roverrobotics_input_manager" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager" FILES "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_index/share/ament_index/resource_index/packages/roverrobotics_input_manager" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_core/roverrobotics_input_managerConfig.cmake" "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_core/roverrobotics_input_managerConfig-version.cmake" "DESTINATION" "share/roverrobotics_input_manager/cmake")
-ament_cmake_symlink_install_files("/home/rover/rover_workspace/src/roverrobotics_input_manager" FILES "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_core/roverrobotics_input_managerConfig.cmake" "/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_core/roverrobotics_input_managerConfig-version.cmake" "DESTINATION" "share/roverrobotics_input_manager/cmake")
+# install(FILES "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_core/roverrobotics_input_managerConfig.cmake" "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_core/roverrobotics_input_managerConfig-version.cmake" "DESTINATION" "share/roverrobotics_input_manager/cmake")
+ament_cmake_symlink_install_files("/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager" FILES "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_core/roverrobotics_input_managerConfig.cmake" "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_core/roverrobotics_input_managerConfig-version.cmake" "DESTINATION" "share/roverrobotics_input_manager/cmake")
 
-# install(FILES "/home/rover/rover_workspace/src/roverrobotics_input_manager/package.xml" "DESTINATION" "share/roverrobotics_input_manager")
-ament_cmake_symlink_install_files("/home/rover/rover_workspace/src/roverrobotics_input_manager" FILES "/home/rover/rover_workspace/src/roverrobotics_input_manager/package.xml" "DESTINATION" "share/roverrobotics_input_manager")
+# install(FILES "/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager/package.xml" "DESTINATION" "share/roverrobotics_input_manager")
+ament_cmake_symlink_install_files("/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager" FILES "/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager/package.xml" "DESTINATION" "share/roverrobotics_input_manager")

@@ -1,9 +1,0 @@
-[  7%] [32mBuilding CXX object CMakeFiles/greenhouse_experiment_node.dir/src/greenhouse_experiment_node.cpp.o[0m
-[ 92%] Built target roverrobotics_driver
-[01m[K/home/rover/rover_workspace/src/roverrobotics_driver/src/greenhouse_experiment_node.cpp:[m[K In lambda function:
-[01m[K/home/rover/rover_workspace/src/roverrobotics_driver/src/greenhouse_experiment_node.cpp:118:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kw[m[K’
-  118 |       [01;31m[Kw[m[K.pose.position.x = px;
-      |       [01;31m[K^[m[K
-gmake[2]: *** [CMakeFiles/greenhouse_experiment_node.dir/build.make:76: CMakeFiles/greenhouse_experiment_node.dir/src/greenhouse_experiment_node.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/greenhouse_experiment_node.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

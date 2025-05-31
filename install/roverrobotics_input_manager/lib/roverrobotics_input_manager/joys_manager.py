@@ -1,1 +1,1 @@
-/home/rover/rover_workspace/src/roverrobotics_input_manager/scripts/joys_manager.py
+/home/raz/volcani/rover_volkani/src/roverrobotics_input_manager/scripts/joys_manager.py

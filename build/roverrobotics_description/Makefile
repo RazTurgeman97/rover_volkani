@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rover/rover_workspace/src/roverrobotics_description
+CMAKE_SOURCE_DIR = /home/raz/volcani/rover_volkani/src/roverrobotics_description
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rover/rover_workspace/build/roverrobotics_description
+CMAKE_BINARY_DIR = /home/raz/volcani/rover_volkani/build/roverrobotics_description
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rover/rover_workspace/build/roverrobotics_description/CMakeFiles /home/rover/rover_workspace/build/roverrobotics_description//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/raz/volcani/rover_volkani/build/roverrobotics_description/CMakeFiles /home/raz/volcani/rover_volkani/build/roverrobotics_description//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rover/rover_workspace/build/roverrobotics_description/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/raz/volcani/rover_volkani/build/roverrobotics_description/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

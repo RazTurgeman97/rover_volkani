@@ -1,1 +1,1 @@
-/home/rover/rover_workspace/build/roverrobotics_gazebo/ament_cmake_environment_hooks/local_setup.bash
+/home/raz/volcani/rover_volkani/build/roverrobotics_gazebo/ament_cmake_environment_hooks/local_setup.bash

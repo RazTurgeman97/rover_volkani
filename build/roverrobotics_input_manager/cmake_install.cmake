@@ -1,8 +1,8 @@
-# Install script for directory: /home/rover/rover_workspace/src/roverrobotics_input_manager
+# Install script for directory: /home/raz/volcani/rover_volkani/src/roverrobotics_input_manager
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rover/rover_workspace/install/roverrobotics_input_manager")
+  set(CMAKE_INSTALL_PREFIX "/home/raz/volcani/rover_volkani/install/roverrobotics_input_manager")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,7 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/rover/rover_workspace/build/roverrobotics_input_manager/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  include("/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -54,5 +54,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/rover/rover_workspace/build/roverrobotics_input_manager/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/raz/volcani/rover_volkani/build/roverrobotics_input_manager/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

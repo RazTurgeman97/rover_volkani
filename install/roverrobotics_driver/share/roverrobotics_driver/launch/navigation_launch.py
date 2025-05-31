@@ -1,1 +1,1 @@
-/home/rover/rover_workspace/src/roverrobotics_driver/launch/navigation_launch.py
+/home/raz/volcani/rover_volkani/src/roverrobotics_driver/launch/navigation_launch.py

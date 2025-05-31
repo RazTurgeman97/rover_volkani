@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rover/rover_workspace/src/roverrobotics_description
+CMAKE_SOURCE_DIR = /home/raz/volcani/rover_volkani/src/roverrobotics_description
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rover/rover_workspace/build/roverrobotics_description
+CMAKE_BINARY_DIR = /home/raz/volcani/rover_volkani/build/roverrobotics_description
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/rover/rover_workspace/build/roverrobotics_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rover/rover_workspace/src/roverrobotics_description /home/rover/rover_workspace/src/roverrobotics_description /home/rover/rover_workspace/build/roverrobotics_description /home/rover/rover_workspace/build/roverrobotics_description /home/rover/rover_workspace/build/roverrobotics_description/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/raz/volcani/rover_volkani/build/roverrobotics_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/raz/volcani/rover_volkani/src/roverrobotics_description /home/raz/volcani/rover_volkani/src/roverrobotics_description /home/raz/volcani/rover_volkani/build/roverrobotics_description /home/raz/volcani/rover_volkani/build/roverrobotics_description /home/raz/volcani/rover_volkani/build/roverrobotics_description/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

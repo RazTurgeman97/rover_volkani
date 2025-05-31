@@ -1,7 +1,7 @@
 CMakeFiles/roverrobotics_driver.dir/library/librover/src/vesc.cpp.o: \
- /home/rover/rover_workspace/src/roverrobotics_driver/library/librover/src/vesc.cpp \
+ /home/raz/volcani/rover_volkani/src/roverrobotics_driver/library/librover/src/vesc.cpp \
  /usr/include/stdc-predef.h \
- /home/rover/rover_workspace/src/roverrobotics_driver/library/librover/include/vesc.hpp \
+ /home/raz/volcani/rover_volkani/src/roverrobotics_driver/library/librover/include/vesc.hpp \
  /usr/include/c++/11/cstdint \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
