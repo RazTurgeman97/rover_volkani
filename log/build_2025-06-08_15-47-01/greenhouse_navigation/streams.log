@@ -1,0 +1,19 @@
+[0.436s] Invoking command in '/home/raz/volcani/rover_volkani/build/greenhouse_navigation': PYTHONPATH=/home/raz/volcani/rover_volkani/build/greenhouse_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/raz/volcani/rover_volkani/install/greenhouse_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/raz/volcani/rover_volkani/build/greenhouse_navigation/build --no-deps symlink_data --force
+[0.603s] running develop
+[0.719s] running egg_info
+[0.719s] writing greenhouse_navigation.egg-info/PKG-INFO
+[0.720s] writing dependency_links to greenhouse_navigation.egg-info/dependency_links.txt
+[0.720s] writing entry points to greenhouse_navigation.egg-info/entry_points.txt
+[0.720s] writing requirements to greenhouse_navigation.egg-info/requires.txt
+[0.720s] writing top-level names to greenhouse_navigation.egg-info/top_level.txt
+[0.721s] reading manifest file 'greenhouse_navigation.egg-info/SOURCES.txt'
+[0.721s] writing manifest file 'greenhouse_navigation.egg-info/SOURCES.txt'
+[0.722s] running build_ext
+[0.722s] Creating /home/raz/volcani/rover_volkani/install/greenhouse_navigation/lib/python3.10/site-packages/greenhouse-navigation.egg-link (link to .)
+[0.723s] Installing navigator script to /home/raz/volcani/rover_volkani/install/greenhouse_navigation/lib/greenhouse_navigation
+[0.723s] 
+[0.723s] Installed /home/raz/volcani/rover_volkani/build/greenhouse_navigation
+[0.724s] running symlink_data
+[0.724s] symbolically linking /home/raz/volcani/rover_volkani/build/greenhouse_navigation/resource/greenhouse_navigation -> /home/raz/volcani/rover_volkani/install/greenhouse_navigation/share/ament_index/resource_index/packages
+[0.724s] symbolically linking /home/raz/volcani/rover_volkani/build/greenhouse_navigation/package.xml -> /home/raz/volcani/rover_volkani/install/greenhouse_navigation/share/greenhouse_navigation
+[0.740s] Invoked command in '/home/raz/volcani/rover_volkani/build/greenhouse_navigation' returned '0': PYTHONPATH=/home/raz/volcani/rover_volkani/build/greenhouse_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/raz/volcani/rover_volkani/install/greenhouse_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/raz/volcani/rover_volkani/build/greenhouse_navigation/build --no-deps symlink_data --force

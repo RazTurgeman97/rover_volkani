@@ -10,7 +10,11 @@ setup.py
 ../../build/greenhouse_navigation/greenhouse_navigation.egg-info/zip-safe
 greenhouse_navigation/__init__.py
 greenhouse_navigation/greenhouse_navigator.py
+greenhouse_navigation.egg-info/PKG-INFO
+greenhouse_navigation.egg-info/SOURCES.txt
+greenhouse_navigation.egg-info/dependency_links.txt
+greenhouse_navigation.egg-info/entry_points.txt
+greenhouse_navigation.egg-info/requires.txt
+greenhouse_navigation.egg-info/top_level.txt
+greenhouse_navigation.egg-info/zip-safe
 resource/greenhouse_navigation
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py

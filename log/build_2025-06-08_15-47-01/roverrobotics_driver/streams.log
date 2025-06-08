@@ -1,0 +1,118 @@
+[0.181s] Invoking command in '/home/raz/volcani/rover_volkani/build/roverrobotics_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/raz/volcani/rover_volkani/install/greenhouse_navigation:/opt/ros/humble /usr/bin/cmake /home/raz/volcani/rover_volkani/src/roverrobotics_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/raz/volcani/rover_volkani/install/roverrobotics_driver
+[0.187s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.270s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.275s] -- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+[0.301s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.303s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.308s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.317s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.329s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.361s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.362s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.442s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.480s] -- Found geometry_msgs: 4.8.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.489s] -- Found nav_msgs: 4.8.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.501s] -- Found tf2_geometry_msgs: 0.25.12 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[0.504s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.505s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.567s] -- Found sensor_msgs: 4.8.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.579s] -- Found nav2_msgs: 1.1.18 (/opt/ros/humble/share/nav2_msgs/cmake)
+[0.640s] -- Configuring done
+[0.651s] -- Generating done
+[0.655s] -- Build files have been written to: /home/raz/volcani/rover_volkani/build/roverrobotics_driver
+[0.661s] Invoked command in '/home/raz/volcani/rover_volkani/build/roverrobotics_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/raz/volcani/rover_volkani/install/greenhouse_navigation:/opt/ros/humble /usr/bin/cmake /home/raz/volcani/rover_volkani/src/roverrobotics_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/raz/volcani/rover_volkani/install/roverrobotics_driver
+[0.662s] Invoking command in '/home/raz/volcani/rover_volkani/build/roverrobotics_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/raz/volcani/rover_volkani/install/greenhouse_navigation:/opt/ros/humble /usr/bin/cmake --build /home/raz/volcani/rover_volkani/build/roverrobotics_driver -- -j24 -l24
+[0.687s] [35m[1mConsolidate compiler generated dependencies of target greenhouse_experiment_node[0m
+[0.691s] [35m[1mConsolidate compiler generated dependencies of target roverrobotics_driver[0m
+[0.698s] [ 15%] Built target greenhouse_experiment_node
+[0.712s] [100%] Built target roverrobotics_driver
+[0.721s] Invoked command in '/home/raz/volcani/rover_volkani/build/roverrobotics_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/raz/volcani/rover_volkani/install/greenhouse_navigation:/opt/ros/humble /usr/bin/cmake --build /home/raz/volcani/rover_volkani/build/roverrobotics_driver -- -j24 -l24
+[0.721s] Invoking command in '/home/raz/volcani/rover_volkani/build/roverrobotics_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/raz/volcani/rover_volkani/install/greenhouse_navigation:/opt/ros/humble /usr/bin/cmake --install /home/raz/volcani/rover_volkani/build/roverrobotics_driver
+[0.725s] -- Install configuration: ""
+[0.726s] -- Execute custom install script
+[0.726s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/lib/roverrobotics_driver/greenhouse_experiment_node
+[0.726s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/accessories.launch.py
+[0.726s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/experiments_launch.py
+[0.727s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/greenhouse_nav.launch.py
+[0.727s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/greenhouse_nav_amcl.launch.py
+[0.727s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/max.launch.py
+[0.727s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/max_teleop.launch.py
+[0.727s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/mini.launch.py
+[0.727s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/mini_teleop.launch.py
+[0.727s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/miti.launch.py
+[0.727s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/miti_65.launch.py
+[0.727s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/miti_65_teleop.launch.py
+[0.727s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/miti_teleop.launch.py
+[0.728s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/nav2_backend.py
+[0.728s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/navigation_launch.py
+[0.728s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/navigation_launch_indoor.py
+[0.728s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/outdoor_navigation_launch.py
+[0.728s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/pro.launch.py
+[0.728s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/pro_teleop.launch.py
+[0.728s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/ps4_controller.launch.py
+[0.728s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/ps5_controller.launch.py
+[0.728s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/robot_localizer.launch.py
+[0.728s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/robot_localizer_outdoor.launch.py
+[0.728s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/slam_launch.py
+[0.728s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/zero.launch.py
+[0.728s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/launch/zero_teleop.launch.py
+[0.729s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/accessories.yaml
+[0.729s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/indoor_configs/plants.yaml
+[0.729s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/localization_ekf.yaml
+[0.729s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/localization_outdoor_ekf.yaml
+[0.729s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/max_100_config.yaml
+[0.729s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/max_130_config.yaml
+[0.729s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/max_150_config.yaml
+[0.729s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/max_65_config.yaml
+[0.729s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/mini_config.yaml
+[0.729s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/miti_65_config.yaml
+[0.729s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/miti_config.yaml
+[0.730s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/nav2_params.yaml
+[0.730s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/pro_config.yaml
+[0.730s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/ps4_controller_config.yaml
+[0.730s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/ps4_controller_config_jp6.yaml
+[0.730s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/ps5_controller_config.yaml
+[0.730s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/ps5_controller_config_jp6.yaml
+[0.730s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/realsense_config.yaml
+[0.730s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/rviz_configs/custom_slam.rviz
+[0.730s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/rviz_configs/nav2_default_view.rviz
+[0.730s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/rviz_configs/realsense_rviz_layout.rviz
+[0.730s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/rviz_configs/slam_rviz_layout.rviz
+[0.730s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/slam_configs/mapper_params_lifelong.yaml
+[0.730s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/slam_configs/mapper_params_localization.yaml
+[0.731s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/slam_configs/mapper_params_offline.yaml
+[0.731s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/slam_configs/mapper_params_online_async.yaml
+[0.731s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/slam_configs/mapper_params_online_sync.yaml
+[0.731s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/topics.yaml
+[0.731s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/config/zero_config.yaml
+[0.731s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab2.data
+[0.731s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab2.pgm
+[0.731s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab2.posegraph
+[0.731s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab2.yaml
+[0.732s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab3.data
+[0.732s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab3.pgm
+[0.732s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab3.posegraph
+[0.732s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab3.yaml
+[0.732s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/maze_map.data
+[0.732s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/maze_map.pgm
+[0.732s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/maze_map.posegraph
+[0.732s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/maze_map.yaml
+[0.732s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/my_map.pgm
+[0.732s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/my_map.yaml
+[0.732s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/lib/roverrobotics_driver/roverrobotics_driver
+[0.732s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/ament_index/resource_index/package_run_dependencies/roverrobotics_driver
+[0.732s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/ament_index/resource_index/parent_prefix_path/roverrobotics_driver
+[0.733s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/environment/ament_prefix_path.sh
+[0.733s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/environment/ament_prefix_path.dsv
+[0.733s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/environment/path.sh
+[0.733s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/environment/path.dsv
+[0.733s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/local_setup.bash
+[0.733s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/local_setup.sh
+[0.733s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/local_setup.zsh
+[0.733s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/local_setup.dsv
+[0.733s] -- Symlinking: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/package.dsv
+[0.739s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/ament_index/resource_index/packages/roverrobotics_driver
+[0.740s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/cmake/roverrobotics_driverConfig.cmake
+[0.740s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/cmake/roverrobotics_driverConfig-version.cmake
+[0.740s] -- Up-to-date symlink: /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/package.xml
+[0.742s] Invoked command in '/home/raz/volcani/rover_volkani/build/roverrobotics_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/raz/volcani/rover_volkani/install/greenhouse_navigation:/opt/ros/humble /usr/bin/cmake --install /home/raz/volcani/rover_volkani/build/roverrobotics_driver

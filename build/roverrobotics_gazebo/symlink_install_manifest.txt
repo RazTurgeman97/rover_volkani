@@ -6,7 +6,6 @@
 /home/raz/volcani/rover_volkani/install/roverrobotics_gazebo/share/roverrobotics_gazebo/launch/mini_gazebo.launch.py
 /home/raz/volcani/rover_volkani/install/roverrobotics_gazebo/share/roverrobotics_gazebo/launch/miti_65_gazebo.launch.py
 /home/raz/volcani/rover_volkani/install/roverrobotics_gazebo/share/roverrobotics_gazebo/launch/miti_gazebo.launch.py
-/home/raz/volcani/rover_volkani/install/roverrobotics_gazebo/share/roverrobotics_gazebo/launch/test_2wd_rover_gazebo.launch.py
 /home/raz/volcani/rover_volkani/install/roverrobotics_gazebo/share/roverrobotics_gazebo/worlds/depot.sdf
 /home/raz/volcani/rover_volkani/install/roverrobotics_gazebo/share/roverrobotics_gazebo/worlds/indoor_lab_world_walled.sdf
 /home/raz/volcani/rover_volkani/install/roverrobotics_gazebo/share/roverrobotics_gazebo/worlds/maze.sdf

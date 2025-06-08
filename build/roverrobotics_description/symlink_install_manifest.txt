@@ -7,8 +7,8 @@
 /home/raz/volcani/rover_volkani/install/roverrobotics_description/share/roverrobotics_description/launch/display_miti.launch.py
 /home/raz/volcani/rover_volkani/install/roverrobotics_description/share/roverrobotics_description/launch/display_miti_65.launch.py
 /home/raz/volcani/rover_volkani/install/roverrobotics_description/share/roverrobotics_description/launch/spawn_rover.launch.py
-/home/raz/volcani/rover_volkani/install/roverrobotics_description/share/roverrobotics_description/launch/test_world_only.launch.py
 /home/raz/volcani/rover_volkani/install/roverrobotics_description/share/roverrobotics_description/meshes/65wheels.dae
+/home/raz/volcani/rover_volkani/install/roverrobotics_description/share/roverrobotics_description/meshes/BNO055.stl
 /home/raz/volcani/rover_volkani/install/roverrobotics_description/share/roverrobotics_description/meshes/castor.dae
 /home/raz/volcani/rover_volkani/install/roverrobotics_description/share/roverrobotics_description/meshes/castor_housing.dae
 /home/raz/volcani/rover_volkani/install/roverrobotics_description/share/roverrobotics_description/meshes/flipper.dae

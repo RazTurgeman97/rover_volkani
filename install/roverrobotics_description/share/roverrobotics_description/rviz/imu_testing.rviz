@@ -4,7 +4,12 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
+        - /RobotModel1
+        - /RobotModel1/Links1
+        - /RobotModel1/Links1/imu_link1
+        - /RobotModel1/Links1/payload_link1
         - /TF1
+        - /TF1/Frames1
       Splitter Ratio: 0.5
     Tree Height: 296
   - Class: rviz_common/Views
@@ -46,7 +51,7 @@ Visualization Manager:
         Value: /robot_description
       Enabled: true
       Links:
-        All Links Enabled: true
+        All Links Enabled: false
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
@@ -63,19 +68,19 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         fl_wheel_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         fr_wheel_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         imu_link:
-          Alpha: 1
+          Alpha: 0.5
           Show Axes: false
           Show Trail: false
           Value: true
@@ -85,7 +90,7 @@ Visualization Manager:
           Show Trail: false
           Value: true
         payload_link:
-          Alpha: 1
+          Alpha: 0.25
           Show Axes: false
           Show Trail: false
           Value: true
@@ -93,22 +98,22 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         rl_castor_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         rr_castor_housing_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
         rr_castor_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
+          Value: false
       Mass Properties:
         Inertia: false
         Mass: false
@@ -121,17 +126,17 @@ Visualization Manager:
       Enabled: true
       Frame Timeout: 15
       Frames:
-        All Enabled: true
+        All Enabled: false
         base_footprint:
           Value: true
         base_link:
-          Value: true
+          Value: false
         chassis_link:
           Value: true
         fl_wheel_link:
-          Value: true
+          Value: false
         fr_wheel_link:
-          Value: true
+          Value: false
         imu_link:
           Value: true
         lidar_link:
@@ -139,14 +144,14 @@ Visualization Manager:
         payload_link:
           Value: true
         rl_castor_housing_link:
-          Value: true
+          Value: false
         rl_castor_link:
-          Value: true
+          Value: false
         rr_castor_housing_link:
-          Value: true
+          Value: false
         rr_castor_link:
-          Value: true
-      Marker Scale: 0.10000000149011612
+          Value: false
+      Marker Scale: 0.5
       Name: TF
       Show Arrows: true
       Show Axes: true
@@ -187,25 +192,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 0.025692075490951538
+      Distance: 0.5922911763191223
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.18298517167568207
-        Y: 0.03682975471019745
-        Z: 0.30884212255477905
+        X: 0.004211231600493193
+        Y: -0.0466630645096302
+        Z: 0.3652484714984894
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.04999995604157448
+      Pitch: -0.10500012338161469
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.3468194007873535
+      Yaw: 5.075012683868408
     Saved: ~
 Window Geometry:
   Displays:
@@ -217,5 +222,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1200
-  X: 1920
-  Y: 27
+  X: 1991
+  Y: 68
