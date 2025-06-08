@@ -1,1 +1,0 @@
-/home/raz/volcani/rover_volkani/src/roverrobotics_driver/launch/miti_65.launch.py

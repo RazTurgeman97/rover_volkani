@@ -1,1 +1,0 @@
-/home/raz/volcani/rover_volkani/src/roverrobotics_driver/launch/nav2_backend.py

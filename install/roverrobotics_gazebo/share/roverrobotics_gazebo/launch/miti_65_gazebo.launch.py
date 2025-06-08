@@ -1,1 +1,0 @@
-/home/raz/volcani/rover_volkani/src/roverrobotics_gazebo/launch/miti_65_gazebo.launch.py

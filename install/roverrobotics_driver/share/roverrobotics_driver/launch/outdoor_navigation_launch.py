@@ -1,1 +1,0 @@
-/home/raz/volcani/rover_volkani/src/roverrobotics_driver/launch/outdoor_navigation_launch.py
