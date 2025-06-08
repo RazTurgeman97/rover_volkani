@@ -26,4 +26,4 @@ Makefile
 **/*.so
 **/*.o
 **/*.a
-ros2_ws/
+**/*.exe
