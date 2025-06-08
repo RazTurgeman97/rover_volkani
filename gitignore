@@ -1,0 +1,29 @@
+# Ignore ROS2 build artifacts inside ros2_ws/
+build/
+install/
+log/
+.colcon/
+
+# Ignore CMake and compiled files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Ignore Python cache
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+
+# Ignore VSCode settings (optional)
+.vscode/
+
+# Ignore ROS2-generated files
+**/*.log
+*.db3
+
+# Ignore compiled binaries and libraries
+**/*.so
+**/*.o
+**/*.a
+ros2_ws/

@@ -48,7 +48,7 @@ def generate_launch_description():
 
     return LaunchDescription([
         exp_arg,
-        zero_launch,
+        # zero_launch,
         nav_launch,
         experiment_node,
     ])

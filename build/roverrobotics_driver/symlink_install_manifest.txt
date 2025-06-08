@@ -61,6 +61,10 @@
 /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab3.pgm
 /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab3.posegraph
 /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab3.yaml
+/home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab_sim.data
+/home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab_sim.pgm
+/home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab_sim.posegraph
+/home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/indoor_abc_lab_sim.yaml
 /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/maze_map.data
 /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/maze_map.pgm
 /home/raz/volcani/rover_volkani/install/roverrobotics_driver/share/roverrobotics_driver/maps/maze_map.posegraph

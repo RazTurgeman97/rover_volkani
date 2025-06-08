@@ -85,14 +85,20 @@ def generate_launch_description():
         default_value='False',
         description='Whether run a SLAM')
 
+    # declare_map_yaml_cmd = DeclareLaunchArgument(
+    #     'map',
+    #     default_value='/home/rover/rover_workspace/src/roverrobotics_driver/maps/indoor_abc_lab2.yaml',
+    #     description='Full path to map yaml file to load')
+    
     declare_map_yaml_cmd = DeclareLaunchArgument(
         'map',
-        default_value='/home/rover/rover_workspace/src/roverrobotics_driver/maps/indoor_abc_lab2.yaml',
+        default_value='/home/rover/rover_workspace/src/roverrobotics_driver/maps/indoor_abc_lab_sim.yaml',
         description='Full path to map yaml file to load')
 
     declare_use_sim_time_cmd = DeclareLaunchArgument(
         'use_sim_time',
-        default_value='false',
+        # default_value='false',
+        default_value='true',
         description='Use simulation (Gazebo) clock if true')
 
     declare_params_file_cmd = DeclareLaunchArgument(
@@ -178,7 +184,8 @@ def generate_launch_description():
     declare_slam_map_file_cmd = DeclareLaunchArgument(
         'map_file_name',
         # default_value='maze_map',
-        default_value='indoor_abc_lab2',
+        # default_value='indoor_abc_lab2',
+        default_value='indoor_abc_lab_sim',
         description='Full path to the ROS2 parameters file to use for the slam_toolbox node')
     
     map_file_arg = PathJoinSubstitution([
