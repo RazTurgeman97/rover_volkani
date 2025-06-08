@@ -1,1 +1,0 @@
-/home/raz/volcani/rover_volkani/src/roverrobotics_description/launch/spawn_rover.launch.py

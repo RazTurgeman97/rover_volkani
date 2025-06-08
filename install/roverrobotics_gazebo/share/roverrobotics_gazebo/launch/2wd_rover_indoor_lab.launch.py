@@ -1,1 +1,0 @@
-/home/raz/volcani/rover_volkani/src/roverrobotics_gazebo/launch/2wd_rover_indoor_lab.launch.py

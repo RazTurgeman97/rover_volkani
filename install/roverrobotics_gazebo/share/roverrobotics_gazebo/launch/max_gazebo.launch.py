@@ -1,1 +1,0 @@
-/home/raz/volcani/rover_volkani/src/roverrobotics_gazebo/launch/max_gazebo.launch.py

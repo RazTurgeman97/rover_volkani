@@ -1,1 +1,0 @@
-/home/raz/volcani/rover_volkani/src/roverrobotics_driver/launch/zero_teleop.launch.py
