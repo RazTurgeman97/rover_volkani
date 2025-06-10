@@ -13,13 +13,14 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='user',
-    maintainer_email='user@example.com',
-    description='Lifecycle node orchestrating greenhouse experiments',
-    license='Apache-2.0',
+    maintainer='raz',
+    maintainer_email='Raz.Turgeman97@gmail.com',
+    description='TODO: Package description',
+    license='TODO: License declaration',
+    tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'experiment_manager = experiment_manager.experiment_manager_node:main',
+          'experiment_manager = experiment_manager.experiment_manager_node:main',
         ],
     },
 )
