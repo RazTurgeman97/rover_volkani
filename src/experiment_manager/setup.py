@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+          'experiment_manager = experiment_manager.experiment_manager_node:main',
         ],
     },
 )
