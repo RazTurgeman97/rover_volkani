@@ -17,10 +17,6 @@ def generate_launch_description():
     
     model_arg = DeclareLaunchArgument(name='model', default_value=str(default_model_path),
                                       description='Absolute path to robot urdf file')
-    use_imu_arg = DeclareLaunchArgument( # Added
-        'use_imu', default_value='true',
-        description='Whether to use IMU in accessories configuration.'
-    )
     robot_description = ParameterValue(Command(['xacro ', LaunchConfiguration('model')]),
                                        value_type=str)
    
@@ -42,7 +38,6 @@ def generate_launch_description():
 
     accessories_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([get_package_share_directory('roverrobotics_driver'), '/launch/accessories.launch.py']),
-        launch_arguments={'use_imu': LaunchConfiguration('use_imu')}.items() # Added
     )
    
     joint_state_publisher_node = Node(
@@ -57,7 +52,6 @@ def generate_launch_description():
     )
     
     ld.add_action(model_arg)
-    ld.add_action(use_imu_arg) # Added
     ld.add_action(robot_driver)
     ld.add_action(accessories_launch)
     ld.add_action(joint_state_publisher_node)

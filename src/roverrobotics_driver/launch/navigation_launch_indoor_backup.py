@@ -44,9 +44,8 @@ def generate_launch_description():
     use_composition = LaunchConfiguration('use_composition')
     use_respawn = LaunchConfiguration('use_respawn')
     log_level = LaunchConfiguration('log_level')
-    slam_params_file = LaunchConfiguration('slam_params_file') # Defined later
-    map_file = LaunchConfiguration('map_file_name') # Defined later
-    use_imu = LaunchConfiguration('use_imu') # Added
+    slam_params_file = LaunchConfiguration('slam_params_file')
+    map_file = LaunchConfiguration('map_file_name')
 
     # Map fully qualified names to relative ones so the node's namespace can be prepended.
     # In case of the transforms (tf), currently, there doesn't seem to be a better alternative
@@ -118,15 +117,10 @@ def generate_launch_description():
     declare_log_level_cmd = DeclareLaunchArgument(
         'log_level', default_value='info',
         description='log level')
-
-    declare_use_imu_cmd = DeclareLaunchArgument( # Added
-        'use_imu', default_value='true',
-        description='Whether to use IMU data for localization.')
     
     rl_launch_path = os.path.join(get_package_share_directory("roverrobotics_driver"), 'launch', 'robot_localizer.launch.py')
     robot_localizer_launch = IncludeLaunchDescription(PythonLaunchDescriptionSource(rl_launch_path),
-        launch_arguments={'use_sim_time': use_sim_time,
-                          'use_imu': use_imu}.items()) # Added use_imu
+        launch_arguments={'use_sim_time': use_sim_time}.items())
 
     # Specify the actions
     bringup_cmd_group = GroupAction([
@@ -225,11 +219,10 @@ def generate_launch_description():
     ld.add_action(declare_use_composition_cmd)
     ld.add_action(declare_use_respawn_cmd)
     ld.add_action(declare_log_level_cmd)
-    ld.add_action(declare_use_imu_cmd) # Added
     
     # Add the actions to launch all of the navigation nodes
     ld.add_action(robot_localizer_launch)
-    # ld.add_action(start_async_slam_toolbox_node) # This seems to be an alternative localization, ensure only one is active or they are compatible
-    ld.add_action(bringup_cmd_group) # This group includes localization_launch.py OR slam_launch.py
+    ld.add_action(start_async_slam_toolbox_node)
+    ld.add_action(bringup_cmd_group)
 
     return ld

@@ -78,23 +78,7 @@ class ExperimentMonitor(Node):
                 'mean_error_m':     df['error_m'].mean(),
                 'success_rate':     df['success'].mean(),
             }
-            # Add new fields to summary - assuming these are constant per attempt/results.csv file
-            if not df.empty:
-                # Pandas might read these as int (0/1 for bool), which is fine for CSV.
-                # If specific bool type is needed later, it can be cast.
-                if 'experiment_type' in df.columns:
-                    summary['experiment_type'] = df['experiment_type'].iloc[0]
-                if 'imu_enabled' in df.columns:
-                    summary['imu_enabled'] = df['imu_enabled'].iloc[0] 
-                if 'param_n' in df.columns:
-                    summary['param_n'] = df['param_n'].iloc[0]
-                if 'predetermined_list' in df.columns:
-                    # Ensure we handle potential NaN if the column exists but value is missing for some reason
-                    summary['predetermined_list'] = df['predetermined_list'].iloc[0] if pd.notna(df['predetermined_list'].iloc[0]) else ""
-
             summaries.append(summary)
-            # Ensure all summary dicts have the same keys for DataFrame creation, even if some are None/NaN
-            # This is implicitly handled if keys are added consistently above.
             pd.DataFrame([summary]).to_csv(os.path.join(d,'summary.csv'), index=False)
             self.get_logger().info(f' Wrote summary.csv in attempt_{n}')
 
