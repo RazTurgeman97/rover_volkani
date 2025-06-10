@@ -89,7 +89,7 @@ class RobotDriver : public rclcpp::Node {
   rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr
       estop_reset_subscriber_;  // listen to estop reset inputs
   rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr
-      robot_info__request_subscriber_;  // listen to robot_info request
+      robot_info_request_subscriber_;  // listen to robot_info request
 
   rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr
       robot_info_publisher;  // publish robot_unique info
