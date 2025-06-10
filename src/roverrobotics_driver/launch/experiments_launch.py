@@ -1,7 +1,4 @@
-# experiments_launch.py
-
 import os
-
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
@@ -12,7 +9,6 @@ from launch.actions import IncludeLaunchDescription
 from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
-    # Launch args
     # Launch args
     use_imu_arg = DeclareLaunchArgument(
         'use_imu', default_value='true',

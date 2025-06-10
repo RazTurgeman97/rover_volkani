@@ -7,7 +7,8 @@ from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, OpaqueFunction
 from launch.actions import LogInfo
-from launch.substitutions import LaunchConfiguration, PythonExpression
+from launch.substitutions import LaunchConfiguration, PythonExpression, PathJoinSubstitution
+from launch.conditions import IfCondition, UnlessCondition
 from launch_ros.actions import Node
 # from math import pi # Not used
 
@@ -26,24 +27,32 @@ def generate_launch_description():
         default_value='true',
         description='Whether to use IMU data for EKF localization.')
 
-    # Conditional EKF configuration path
-    ekf_config_path = PythonExpression([
-        "os.path.join('", pkg_share, "', 'config', 'localization_ekf.yaml') if '", use_imu, "' == 'true' else ",
-        "os.path.join('", pkg_share, "', 'config', 'localization_ekf_no_imu.yaml')"
-    ])
-    
-    localization_node = Node(
+    ekf_config_with_imu = PathJoinSubstitution([pkg_share, 'config', 'localization_ekf.yaml'])
+    ekf_config_no_imu = PathJoinSubstitution([pkg_share, 'config', 'localization_ekf_no_imu.yaml'])
+
+    localization_node_with_imu = Node(
         package='robot_localization',
         executable='ekf_node',
         name='ekf_filter_node',
         output='screen',
-        parameters=[ekf_config_path, {'use_sim_time': use_sim_time}]
+        parameters=[ekf_config_with_imu, {'use_sim_time': use_sim_time}],
+        condition=IfCondition(use_imu)
     )
-    
+
+    localization_node_no_imu = Node(
+        package='robot_localization',
+        executable='ekf_node',
+        name='ekf_filter_node',
+        output='screen',
+        parameters=[ekf_config_no_imu, {'use_sim_time': use_sim_time}],
+        condition=UnlessCondition(use_imu)
+    )
+
     ld = LaunchDescription()
 
     ld.add_action(declare_use_sim_time_argument)
     ld.add_action(declare_use_imu_argument)
-    ld.add_action(localization_node)
+    ld.add_action(localization_node_with_imu)
+    ld.add_action(localization_node_no_imu)
     
     return ld
