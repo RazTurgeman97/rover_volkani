@@ -114,7 +114,7 @@ class ExperimentManager(LifecycleNode):
     # Helper to trigger deactivate transition
     def trigger_deactivate(self):
         self.get_logger().info('Requesting deactivate transition')
-        self.trigger_transition(Transition.TRANSITION_DEACTIVATE)
+        super().trigger_deactivate()
 
 
 def main(args=None):
