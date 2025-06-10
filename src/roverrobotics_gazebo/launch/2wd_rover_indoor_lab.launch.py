@@ -57,9 +57,9 @@ def generate_launch_description():
     gz_sim_share = get_package_share_directory("ros_gz_sim")
     gz_sim = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(gz_sim_share, "launch", "gz_sim.launch.py")),
-        launch_arguments={
-            "gz_args" : gz_world_arg 
-        }.items()
+        launch_arguments=[(
+                "gz_args", [" -r ", gz_world_arg]
+            )]
     )
     
     # Spawn Rover Robot

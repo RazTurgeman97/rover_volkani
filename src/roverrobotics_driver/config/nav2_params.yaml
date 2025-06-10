@@ -134,7 +134,9 @@ controller_server:
     min_theta_velocity_threshold: 0.01
     failure_tolerance: 0.3
     progress_checker_plugin: "progress_checker"
-    goal_checker_plugins: ["general_goal_checker"] # "precise_goal_checker"
+    # goal_checker_plugins: ["general_goal_checker"] # "precise_goal_checker"
+    goal_checker_plugins: ["precise_goal_checker"] # "general_goal_checker"
+    # goal_checker_plugins: ["very_precise_goal_checker"] # "precise_goal_checker"
     controller_plugins: ["FollowPath"]
     odom_topic: "odometry/filtered"
 
@@ -143,17 +145,27 @@ controller_server:
       plugin: "nav2_controller::SimpleProgressChecker"
       required_movement_radius: 0.5
       movement_time_allowance: 10.0
+    ######################################################
     # Goal checker parameters
-    #precise_goal_checker:
-    #  plugin: "nav2_controller::SimpleGoalChecker"
-    #  xy_goal_tolerance: 0.25
-    #  yaw_goal_tolerance: 0.25
-    #  stateful: True
+    precise_goal_checker:
+     plugin: "nav2_controller::SimpleGoalChecker"
+     xy_goal_tolerance: 0.20  # default was 0.25
+     yaw_goal_tolerance: 0.10  # default was 0.25
+     stateful: True
+    # ------------------------------------------------ #
     general_goal_checker:
       stateful: True
       plugin: "nav2_controller::SimpleGoalChecker"
       xy_goal_tolerance: 0.5
-      yaw_goal_tolerance: 0.5
+      yaw_goal_tolerance: 0.25
+      stateful: True
+    # ------------------------------------------------- #
+    very_precise_goal_checker:
+      plugin: "nav2_controller::SimpleGoalChecker"
+      xy_goal_tolerance: 0.05   # default was 0.1
+      yaw_goal_tolerance: 0.01  # default was 0.05
+      stateful: True
+    ######################################################
     # DWB parameters
     FollowPath:
       plugin: "nav2_mppi_controller::MPPIController"
@@ -322,7 +334,8 @@ map_server:
     use_sim_time: False
     # Overridden in launch by the "map" launch configuration or provided default value.
     # To use in yaml, remove the default "map" value in the tb3_simulation_launch.py file & provide full path to map below.
-    yaml_filename: "/home/rover/rover_workspace/office_map.yaml"
+    # yaml_filename: "/home/rover/rover_workspace/office_map.yaml"
+    yaml_filename: "{share_dir}/roverrobotics_driver/maps/indoor_abc_lab_sim.yaml"
 
 map_saver:
   ros__parameters:
