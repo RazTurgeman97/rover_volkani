@@ -282,3 +282,15 @@ We also recommend these ROS2 tutorial playlists from [Articulated Robotics](http
 
 [(2) Various ROS Tutorials from simulation to building a robot to software](https://www.youtube.com/playlist?list=PLunhqkrRNRhYAffV8JDiFOatQXuU-NnxT)
 
+
+## Running Tests
+To run lint tests you need to install some `ament` packages that are not part of a default ROS 2 installation. Install them with:
+```bash
+sudo apt install python3-ament-copyright \
+                 python3-ament-flake8 \
+                 python3-ament-pep257
+```
+Then execute the tests from your workspace:
+```bash
+colcon test
+```
