@@ -13,6 +13,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+"""Lifecycle node for orchestrating a suite of rover experiments.
+
+This module defines :class:`ExperimentManager`, a lifecycle-aware node used to
+launch and manage a set of predefined experiment configurations.  Each
+experiment is started via a ``ros2 launch`` command and can optionally make use
+of IMU data.  The node cycles through the configurations, handling process
+execution and clean up.  The main entry point is :func:`main` which spins the
+node until all experiments complete.
+"""
+
 import subprocess
 import threading
 import time
@@ -25,6 +35,14 @@ from lifecycle_msgs.msg import Transition
 
 
 class ExperimentManager(LifecycleNode):
+    """Lifecycle node that sequentially launches a series of experiments.
+
+    The node exposes standard lifecycle callbacks for configuration,
+    activation and deactivation.  During activation it spawns a thread which
+    calls :meth:`run_all_experiments` to iterate through all experiment
+    configurations.  Each experiment is launched via :meth:`run_single` and the
+    node requests deactivation once all runs are completed.
+    """
     def __init__(self):
         super().__init__('experiment_manager')
 
