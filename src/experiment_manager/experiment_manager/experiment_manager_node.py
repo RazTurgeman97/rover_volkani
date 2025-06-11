@@ -99,7 +99,7 @@ class ExperimentManager(LifecycleNode):
         exp_type = exp_config['type']
         cmd = [self.launch_cmd]
         cmd.append(f'experiment_type:={exp_type}')
-        cmd.append(f'use_imu:={'true' if use_imu else 'false'}')
+        cmd.append(f"use_imu:={'true' if use_imu else 'false'}")
 
         if exp_type == 3:
             cmd.append(f'n_plants:={exp_config["n_val"]}')
