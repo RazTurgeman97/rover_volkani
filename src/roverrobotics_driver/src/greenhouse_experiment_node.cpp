@@ -203,7 +203,6 @@ public:
     RCLCPP_INFO(get_logger(),"Waiting for navigate_through_poses...");
     if (!g2p_client_->wait_for_action_server(std::chrono::seconds(10))) {
       RCLCPP_ERROR(get_logger(),"Action server unavailable");
-      rclcpp::shutdown();
       return;
     }
 
@@ -344,47 +343,25 @@ private:
           visits_to_make.push_back(snake_pattern_visits[i]);
         }
         break;
-      case 4: // Pre-determined infected plants
-        RCLCPP_INFO(get_logger(), "Experiment Type 4: Visiting pre-determined infected plants list: %s", predetermined_list_str_.c_str());
+      case 4: // Pre-determined infected plants, but in snake pattern order
+        RCLCPP_INFO(get_logger(), "Experiment Type 4: Visiting pre-determined infected plants (snake order): %s", predetermined_list_str_.c_str());
         {
-          std::vector<int> infected_plants;
+          // Parse the infected plant IDs into a set for fast lookup
+          std::set<int> infected_set;
           std::stringstream ss(predetermined_list_str_);
           std::string item;
           while (std::getline(ss, item, ',')) {
             try {
-              infected_plants.push_back(std::stoi(item));
-            } catch (const std::invalid_argument& ia) {
+              infected_set.insert(std::stoi(item));
+            } catch (const std::exception& e) {
               RCLCPP_ERROR(get_logger(), "Invalid plant ID in infected_plants_list: %s", item.c_str());
-            } catch (const std::out_of_range& oor) {
-              RCLCPP_ERROR(get_logger(), "Plant ID out of range in infected_plants_list: %s", item.c_str());
             }
           }
-
-          for (int plant_id : infected_plants) {
-            if (plant_data_map_.count(plant_id)) {
-              PlantInfo p_info = get_plant_info(plant_id);
-              double yaw = 0.0;
-              int side = 0;
-              // Determine yaw and side based on row
-              // Row 1 (plants 1-5): yaw = 0.0, side = +1
-              // Row 2 (plants 6-10): yaw = M_PI, side = -1
-              // Row 3 (plants 11-15): yaw = 0.0, side = +1
-              if (p_info.row_number == 1) {
-                yaw = 0.0;
-                side = 1;
-              } else if (p_info.row_number == 2) {
-                yaw = M_PI;
-                side = -1;
-              } else if (p_info.row_number == 3) {
-                yaw = 0.0;
-                side = 1;
-              } else {
-                RCLCPP_WARN(get_logger(), "Plant ID %d has unknown row_number %d. Cannot determine yaw/side.", plant_id, p_info.row_number);
-                continue; // Skip this plant
-              }
-              visits_to_make.emplace_back(plant_id, yaw, side);
-            } else {
-              RCLCPP_WARN(get_logger(), "Infected plant ID %d not found in plant_data_map_.", plant_id);
+          // Visit only the infected plants, but in the same snake pattern order and with the same yaw/side as other experiments
+          for (const auto& visit : snake_pattern_visits) {
+            int plant_id = std::get<0>(visit);
+            if (infected_set.count(plant_id)) {
+              visits_to_make.push_back(visit);
             }
           }
         }

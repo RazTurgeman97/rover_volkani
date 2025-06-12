@@ -39,7 +39,6 @@ class ExperimentMonitor(Node):
         # 4) process everything
         self.process_all_attempts()
         self.get_logger().info('All done, shutting down.')
-        rclpy.shutdown()
 
     def process_all_attempts(self):
         # gather attempt dirs
@@ -128,7 +127,9 @@ class ExperimentMonitor(Node):
             # success → pie chart
             plt.figure()
             counts = df['success'].value_counts().sort_index()
-            labels = ['Fail','OK']
+            # Dynamically set labels to match counts' indices
+            label_map = {0: 'Fail', 1: 'OK'}
+            labels = [label_map.get(idx, str(idx)) for idx in counts.index]
             plt.pie(counts, labels=labels, autopct='%d', startangle=90)
             plt.title(f'Attempt {n} Success Rate')
             plt.tight_layout()

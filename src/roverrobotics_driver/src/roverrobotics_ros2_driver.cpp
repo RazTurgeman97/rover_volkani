@@ -110,7 +110,7 @@ RobotDriver::RobotDriver() : Node("roverrobotics", rclcpp::NodeOptions().use_int
       [=](std_msgs::msg::Bool::ConstSharedPtr msg) {
         estop_reset_event_callback(msg);
       });
-  robot_info__request_subscriber_ = create_subscription<std_msgs::msg::Bool>(
+  robot_info_request_subscriber_ = create_subscription<std_msgs::msg::Bool>(
       estop_reset_topic_, rclcpp::QoS(2),
       [=](std_msgs::msg::Bool::ConstSharedPtr msg) {
         robot_info_request_callback(msg);
