@@ -89,6 +89,11 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        realsense_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         rl_castor_housing_link:
           Alpha: 1
           Show Axes: false
@@ -136,7 +141,13 @@ Visualization Manager:
           Value: true
         lidar_link:
           Value: true
+        map:
+          Value: true
+        odom:
+          Value: true
         payload_link:
+          Value: true
+        realsense_link:
           Value: true
         rl_castor_housing_link:
           Value: true
@@ -152,24 +163,27 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
-        base_footprint:
-          base_link:
-            chassis_link:
-              fl_wheel_link:
+        base_link:
+          base_footprint:
+            {}
+          chassis_link:
+            fl_wheel_link:
+              {}
+            fr_wheel_link:
+              {}
+            payload_link:
+              imu_link:
                 {}
-              fr_wheel_link:
+              lidar_link:
                 {}
-              payload_link:
-                imu_link:
-                  {}
-                lidar_link:
-                  {}
-              rl_castor_housing_link:
-                rl_castor_link:
-                  {}
-              rr_castor_housing_link:
-                rr_castor_link:
-                  {}
+              realsense_link:
+                {}
+            rl_castor_housing_link:
+              rl_castor_link:
+                {}
+            rr_castor_housing_link:
+              rr_castor_link:
+                {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -187,25 +201,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 1.6820999383926392
+      Distance: 0.38341110944747925
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.008766941726207733
-        Y: -0.10620169341564178
-        Z: 0.20043107867240906
+        X: 0.1284169703722
+        Y: 0.019617699086666107
+        Z: 0.2857671082019806
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.41499993205070496
+      Pitch: 1.4156103134155273e-07
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.085002422332764
+      Yaw: 0.011825925670564175
     Saved: ~
 Window Geometry:
   Displays:

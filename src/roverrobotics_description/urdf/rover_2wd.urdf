@@ -19,6 +19,8 @@
     <xacro:include filename="$(find roverrobotics_description)/urdf/accessories/rover_dev_payload.urdf" />
     <xacro:include filename="$(find roverrobotics_description)/urdf/accessories/rplidar_s2.urdf" />
     <xacro:include filename="$(find roverrobotics_description)/urdf/accessories/imu.urdf" />
+    <!-- <xacro:include filename="$(find roverrobotics_description)/urdf/accessories/realsense_camera.urdf" /> -->
+    <xacro:include filename="$(find roverrobotics_description)/urdf/accessories/rgbd_camera.urdf.xacro"/>
 
     <!-- Robot Definition -->
     <link name="base_footprint" />
@@ -230,6 +232,14 @@
         <axis xyz="0 1 0"/>
         <origin xyz="-0.031 0 -0.027" rpy="0 0 0"/>
     </joint>
+
+    <xacro:rgbd_camera
+      prefix=""
+      camera_name="realsense_camera"
+      xyz_offset="0.215 0 0.065"
+      rpy_offset="0 0 0"
+      mesh_rpy_offset="0 0 0"
+    />
 
     <gazebo>
         <plugin name="ignition::gazebo::systems::DiffDrive" filename="ignition-gazebo-diff-drive-system"> 

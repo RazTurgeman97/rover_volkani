@@ -42,15 +42,15 @@ bno055:
 # Realsense D435i Settings
 realsense:
   ros__parameters:
-    active: false
+    active: true
     accel_fps: 100
     accel_info_qos: DEFAULT
     accel_qos: SENSOR_DATA
     align_depth:
-      enable: false
+      enable: true
       frames_queue_size: 16
     angular_velocity_cov: 0.01
-    base_frame_id: "link"
+    base_frame_id: "realsense_link"
     odom_frame_id: "odom"
     camera_name: "camera"
     clip_distance: -1.0
@@ -58,7 +58,7 @@ realsense:
     color_qos: SYSTEM_DEFAULT
     colorizer:
       color_scheme: 0
-      enable: false
+      enable: true
       frames_queue_size: 16
       histogram_equalization_enabled: true
       max_distance: 6.0
@@ -214,6 +214,6 @@ realsense:
     tf_publish_rate: 0.0
     unite_imu_method: 2
     usb_port_id: ''
-    use_sim_time: false
+    use_sim_time: true
     wait_for_device_timeout: -1.0
 

@@ -66,7 +66,20 @@ def generate_launch_description():
             '/joint_states@sensor_msgs/msg/JointState[gz.msgs.Model',
             '/scan@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan',
             '/imu/data@sensor_msgs/msg/Imu@gz.msgs.IMU',
+
+            "/realsense_camera/image@sensor_msgs/msg/Image[ignition.msgs.Image",
+            "/realsense_camera/camera_info@sensor_msgs/msg/CameraInfo[ignition.msgs.CameraInfo",
+            "/realsense_camera/depth_image@sensor_msgs/msg/Image[ignition.msgs.Image",
+            "/realsense_camera/points@sensor_msgs/msg/PointCloud2[ignition.msgs.PointCloudPacked",
         ],
+        output="screen",
+        parameters=[{'use_sim_time': use_sim_time}],
+        # remappings=[
+        #     ('/camera/image_raw', '/camera/color/image_raw'),
+        #     ('/camera/camera_info', '/camera/color/camera_info'),
+        #     # ('/camera/depth_image', '/camera/depth/image_raw'),
+        #     # ('/camera/points', '/camera/depth/points'),
+        # ]
     )
 
     # Robot state publisher
