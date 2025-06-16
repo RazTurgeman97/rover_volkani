@@ -1,0 +1,6 @@
+plant,success,duration_s,error_m,error_x,error_y,experiment_type,imu_enabled,param_n,predetermined_list,is_realtime_target,realtime_trigger_id
+1,1,4.170,0.199,-0.183,0.077,3,1,3,"",0,-1
+4,1,10.131,0.204,-0.104,0.176,3,1,3,"",0,-1
+9,1,20.741,0.079,-0.023,0.075,3,1,3,"",0,-1
+6,1,8.971,0.211,0.138,0.160,3,1,3,"",0,-1
+13,1,78.701,0.181,-0.153,0.097,3,1,3,"",0,-1

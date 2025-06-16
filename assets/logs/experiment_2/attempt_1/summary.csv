@@ -1,0 +1,2 @@
+attempt,total_duration_s,mean_duration_s,mean_error_m,success_rate,experiment_type,imu_enabled,param_n,predetermined_list
+4,250.334,31.29175,0.16625,1.0,2,1,-1,
