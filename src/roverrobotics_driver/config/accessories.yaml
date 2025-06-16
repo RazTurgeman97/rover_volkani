@@ -42,7 +42,7 @@ bno055:
 # Realsense D435i Settings
 realsense:
   ros__parameters:
-    active: true
+    active: false
     accel_fps: 100
     accel_info_qos: DEFAULT
     accel_qos: SENSOR_DATA

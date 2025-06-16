@@ -96,19 +96,31 @@ class ExperimentMonitor(Node):
             # This is implicitly handled if keys are added consistently above.
             pd.DataFrame([summary]).to_csv(os.path.join(d,'summary.csv'), index=False)
             self.get_logger().info(f' Wrote summary.csv in attempt_{n}')
+            
 
             # duration bar + highlight outliers
+            
+            # plt.figure()
+            # bars = df.plot.bar(x='plant', y='duration_s', legend=False).patches
+            # for patch, plant in zip(bars, df['plant']):
+            #     if plant in out:
+            #         patch.set_color('r')
+            # plt.ylabel('Duration (s)')
+            # plt.title(f'Attempt {n} Task Duration')
+            # plt.tight_layout()
+            # p1 = os.path.join(d,'duration.png')
+            # plt.savefig(p1); plt.clf()
+            # self.get_logger().info(f' Wrote {p1}')
+            
             plt.figure()
-            bars = df.plot.bar(x='plant', y='duration_s', legend=False).patches
-            for patch, plant in zip(bars, df['plant']):
-                if plant in out:
-                    patch.set_color('r')
+            df.plot.bar(x='plant', y='duration_s', legend=False, color='tab:blue')
             plt.ylabel('Duration (s)')
             plt.title(f'Attempt {n} Task Duration')
             plt.tight_layout()
             p1 = os.path.join(d,'duration.png')
             plt.savefig(p1); plt.clf()
             self.get_logger().info(f' Wrote {p1}')
+            
 
             # error bar + tolerance line
             plt.figure()
