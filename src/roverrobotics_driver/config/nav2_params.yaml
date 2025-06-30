@@ -264,6 +264,7 @@ local_costmap:
       footprint: "[[0.27305, 0.1778],[0.27305, -0.1778],[-0.27305, -0.1778],[-0.27305, 0.1778]]"
       footprint_padding: 0.01
       plugins: ["voxel_layer", "inflation_layer"]
+      # plugins: ["voxel_layer", "inflation_layer", "plant_detection_layer"]
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
@@ -292,6 +293,12 @@ local_costmap:
         plugin: "nav2_costmap_2d::StaticLayer"
         map_subscribe_transient_local: True
       always_send_full_costmap: True
+      # Custom plant detection layer
+      plant_detection_layer:
+        plugin: "your_custom_namespace::PlantDetectionLayer"
+        enabled: True
+        scan_topic: /scan
+        camera_topic: /camera/image_raw
 
 global_costmap:
   global_costmap:

@@ -42,7 +42,7 @@ bno055:
 # Realsense D435i Settings
 realsense:
   ros__parameters:
-    active: false
+    active: true
     accel_fps: 100
     accel_info_qos: DEFAULT
     accel_qos: SENSOR_DATA
@@ -50,7 +50,7 @@ realsense:
       enable: true
       frames_queue_size: 16
     angular_velocity_cov: 0.01
-    base_frame_id: "realsense_link"
+    base_frame_id: "camera_link"
     odom_frame_id: "odom"
     camera_name: "camera"
     clip_distance: -1.0
@@ -112,7 +112,7 @@ realsense:
     enable_gyro: true
     enable_infra1: true
     enable_infra2: true
-    enable_sync: false
+    enable_sync: true # changed from false to true
     filter_by_sequence_id:
       enable: false
       frames_queue_size: 16
@@ -125,7 +125,7 @@ realsense:
       frames_queue_size: 16
     hold_back_imu_for_frames: false
     hole_filling_filter:
-      enable: false
+      enable: true # changed from false to true
       frames_queue_size: 16
       holes_fill: 1
       stream_filter: 1
@@ -144,7 +144,13 @@ realsense:
       global_time_enabled: true
     pointcloud:
       allow_no_texture_points: false
-      enable: false
+      enable: true # changed from false to true
+      filters:
+        - decimation
+        - spatial
+        - temporal
+        - hole_filling
+        - disparity_to_depth
       filter_magnitude: 2
       frames_queue_size: 16
       ordered_pc: false

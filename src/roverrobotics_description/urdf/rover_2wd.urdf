@@ -19,7 +19,7 @@
     <xacro:include filename="$(find roverrobotics_description)/urdf/accessories/rover_dev_payload.urdf" />
     <xacro:include filename="$(find roverrobotics_description)/urdf/accessories/rplidar_s2.urdf" />
     <xacro:include filename="$(find roverrobotics_description)/urdf/accessories/imu.urdf" />
-    <!-- <xacro:include filename="$(find roverrobotics_description)/urdf/accessories/realsense_camera.urdf" /> -->
+    <xacro:include filename="$(find roverrobotics_description)/urdf/accessories/realsense_camera.urdf" />
     <!-- <xacro:include filename="$(find roverrobotics_description)/urdf/accessories/rgbd_camera.urdf.xacro"/> -->
 
     <!-- Robot Definition -->
