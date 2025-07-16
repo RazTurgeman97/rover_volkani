@@ -16,6 +16,7 @@ find_package(ament_cmake REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(std_srvs REQUIRED)
 #find_package(rover_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
@@ -32,6 +33,16 @@ find_package(nav2_msgs REQUIRED)
 find_package(ament_index_cpp REQUIRED)
 find_package(yaml-cpp REQUIRED)
 
+find_package(rclcpp_action REQUIRED)
+find_package(visualization_msgs REQUIRED)
+# OpenCV and computer vision
+find_package(OpenCV REQUIRED)
+find_package(cv_bridge REQUIRED)
+find_package(image_transport REQUIRED)
+# BehaviorTree (optional)
+# find_package(behaviortree_cpp_v3 REQUIRED)
+find_package(tf2_bullet REQUIRED)
+
 add_executable(greenhouse_experiment_node
   src/greenhouse_experiment_node.cpp
 )
@@ -42,12 +53,14 @@ ament_target_dependencies(greenhouse_experiment_node
   nav2_msgs
   geometry_msgs
   std_msgs
+  std_srvs
   nav_msgs
   sensor_msgs
+  
 
-  # tf2
-  # tf2_ros
-  # tf2_geometry_msgs
+  tf2
+  tf2_ros
+  tf2_geometry_msgs
 
   yaml-cpp
   ament_index_cpp
@@ -58,6 +71,7 @@ ament_target_dependencies(greenhouse_experiment_node
 target_link_libraries(greenhouse_experiment_node
   yaml-cpp
   ${ament_index_cpp_LIBRARIES}
+  ${OpenCV_LIBS}
   tf2::tf2
   tf2_ros::tf2_ros
   tf2_geometry_msgs::tf2_geometry_msgs
@@ -68,10 +82,120 @@ install(TARGETS greenhouse_experiment_node
 )
 
 
+# Plant Detection Node
+add_executable(plant_detection_node
+  src/plant_detection_node.cpp
+)
+
+ament_target_dependencies(plant_detection_node
+  rclcpp
+  sensor_msgs
+  geometry_msgs
+  visualization_msgs
+  cv_bridge
+  tf2_ros
+  tf2_geometry_msgs
+  std_msgs
+)
+
+target_link_libraries(plant_detection_node
+  ${OpenCV_LIBS}
+)
+
+install(TARGETS
+  plant_detection_node
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+# Greenhouse Perception Pipeline
+add_executable(greenhouse_perception_pipeline
+  src/greenhouse_perception_pipeline.cpp
+)
+
+ament_target_dependencies(greenhouse_perception_pipeline
+  rclcpp
+  sensor_msgs
+  geometry_msgs
+  std_msgs
+  cv_bridge
+)
+
+target_link_libraries(greenhouse_perception_pipeline
+  ${OpenCV_LIBS}
+)
+
+# Adaptive Navigation Manager
+add_executable(adaptive_greenhouse_navigator
+  src/adaptive_greenhouse_navigator.cpp
+)
+ament_target_dependencies(adaptive_greenhouse_navigator
+  rclcpp
+  rclcpp_action
+  nav2_msgs
+  geometry_msgs
+  std_msgs
+  tf2
+  tf2_ros
+  tf2_geometry_msgs
+)
+target_link_libraries(adaptive_greenhouse_navigator
+  tf2::tf2
+  tf2_ros::tf2_ros
+  tf2_geometry_msgs::tf2_geometry_msgs
+)
+
+
+# Waypoint Navigation Manager
+add_executable(waypoint_navigation_manager
+  src/waypoint_navigation_manager.cpp
+)
+
+ament_target_dependencies(waypoint_navigation_manager
+  rclcpp
+  rclcpp_action
+  nav2_msgs
+  geometry_msgs
+)
+
+# Adaptive Plant Detector
+add_executable(adaptive_plant_detector
+  src/adaptive_plant_detector.cpp
+)
+
+ament_target_dependencies(adaptive_plant_detector
+  rclcpp
+  sensor_msgs
+  geometry_msgs
+  std_msgs
+  visualization_msgs
+  cv_bridge
+  tf2_ros
+  tf2_geometry_msgs
+)
+
+target_link_libraries(adaptive_plant_detector
+  ${OpenCV_LIBS}
+  yaml-cpp
+)
+
+install(TARGETS adaptive_plant_detector
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 ############### development ###############
 
-#include_directories(include/)
-#file(GLOB_RECURSE AllHeaders ${PROJECT_SOURCE_DIR}/*.hpp)
+include_directories(include)
+#######################################################
+include_directories(
+  ${EIGEN3_INCLUDE_DIR}
+  ${OpenCV_INCLUDE_DIRS}
+)
+install(
+  DIRECTORY include
+  DESTINATION include
+)
+#######################################################
+file(GLOB_RECURSE AllHeaders ${PROJECT_SOURCE_DIR}/*.hpp)
 
 #add_library(librover SHARED IMPORTED)
 #set_target_properties(librover PROPERTIES
@@ -91,7 +215,8 @@ add_executable(roverrobotics_driver
   library/librover/src/vesc.cpp
   library/librover/src/utilities.cpp
   library/librover/src/protocol_zero_2.cpp
-  library/librover/src/differential_robot.cpp)
+  library/librover/src/differential_robot.cpp
+)
 
 #target_link_libraries(roverrobotics_driver librover)
 
@@ -101,7 +226,8 @@ target_include_directories(roverrobotics_driver
   PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/library/librover/include>
-  $<INSTALL_INTERFACE:include>)
+  $<INSTALL_INTERFACE:include>
+)
 
 ament_target_dependencies(roverrobotics_driver
   rclcpp
@@ -112,7 +238,7 @@ ament_target_dependencies(roverrobotics_driver
   tf2_geometry_msgs
   sensor_msgs
   #diagnostic_updater
-  )
+)
 
 install(DIRECTORY
   launch
@@ -122,6 +248,13 @@ install(DIRECTORY
 
 install(TARGETS
   roverrobotics_driver
+
+  greenhouse_experiment_node
+  plant_detection_node
+  greenhouse_perception_pipeline
+  adaptive_greenhouse_navigator
+  waypoint_navigation_manager
+
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()

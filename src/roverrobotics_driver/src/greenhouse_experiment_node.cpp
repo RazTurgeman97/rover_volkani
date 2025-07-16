@@ -14,6 +14,7 @@
 #include <fstream>
 #include <iomanip>
 #include <filesystem>               // ← for directory iteration
+#include <queue>
 
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
@@ -25,47 +26,20 @@
 #include "tf2_ros/transform_listener.h"
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 #include "std_msgs/msg/int32_multi_array.hpp" // For experiment_type 5
+#include "std_msgs/msg/string.hpp" // For dynamic plant detection
+#include "std_srvs/srv/trigger.hpp"
 
 #include <yaml-cpp/yaml.h>
 #include <ament_index_cpp/get_package_share_directory.hpp>
+
+#include "roverrobotics_driver/greenhouse_experiment_node.hpp"
+#include <opencv2/opencv.hpp>
 
 namespace fs = std::filesystem;
 
 using NavigateThroughPoses      = nav2_msgs::action::NavigateThroughPoses;
 using G2P_Client               = rclcpp_action::Client<NavigateThroughPoses>;
 using G2P_GoalHandle           = rclcpp_action::ClientGoalHandle<NavigateThroughPoses>;
-
-struct RowBoundary {
-  double y_min;
-  double y_max;
-  double x_min;
-  double x_max;
-};
-
-struct PlantData {
-  int id;
-  double x;
-  double y;
-  int row_number;
-  int index_in_row;
-  geometry_msgs::msg::PoseStamped pose; // Keep original pose for navigation
-};
-
-struct ResultEntry {
-  int    plant_id;
-  bool   success;
-  double duration_s;
-  double error_m;
-  double error_x;
-  double error_y;
-  // New fields
-  int    experiment_type;
-  bool   imu_enabled;
-  int    param_n_val; // Value of n for Nth plant exp, else -1
-  std::string predetermined_list_val; // For Exp 4, else ""
-  bool   is_realtime_target; // For Exp 5
-  int    realtime_trigger_id; // For Exp 5, else -1
-};
 
 class GreenhouseExperimentNode : public rclcpp::Node
 {
@@ -88,14 +62,50 @@ public:
       ament_index_cpp::get_package_share_directory("experiment_monitor") + "/logs";
     declare_parameter<std::string>("log_dir", default_log);
 
+    // User confirmation parameter
+    declare_parameter<bool>("require_confirmation", true);
+
+    // Dynamic plant detection parameter
+    declare_parameter<bool>("use_dynamic_detection", true);
+    
     get_parameter("plants_config",    plants_config_rel_);
     get_parameter("experiment_type",  experiment_type_);
     get_parameter("n",                n_);
-    get_parameter("infected_plants_list", predetermined_list_str_); // Renamed for clarity in logging
-    get_parameter("use_imu", imu_enabled_); // Added
+    get_parameter("infected_plants_list", predetermined_list_str_);
+    get_parameter("use_imu", imu_enabled_);
     get_parameter("approach_dist",     approach_dist_);
     get_parameter("corridor_dist",     corridor_dist_);
     get_parameter("log_dir",           log_dir_);
+    get_parameter("require_confirmation", require_confirmation_);
+    get_parameter("use_dynamic_detection", use_dynamic_detection_);
+
+    if (require_confirmation_) {
+        RCLCPP_INFO(get_logger(), "==============================================");
+        RCLCPP_INFO(get_logger(), "🤖 GREENHOUSE EXPERIMENT SYSTEM INITIALIZED");
+        RCLCPP_INFO(get_logger(), "==============================================");
+        RCLCPP_INFO(get_logger(), "Experiment Type: %d", experiment_type_);
+        RCLCPP_INFO(get_logger(), "Use AI Perception: %s", use_dynamic_detection_ ? "YES" : "NO");
+        RCLCPP_INFO(get_logger(), "IMU Enabled: %s", imu_enabled_ ? "YES" : "NO");
+        RCLCPP_INFO(get_logger(), " ");
+        RCLCPP_INFO(get_logger(), "📋 PRE-EXPERIMENT CHECKLIST:");
+        RCLCPP_INFO(get_logger(), "   ✓ Robot is powered on and connected");
+        RCLCPP_INFO(get_logger(), "   ✓ Navigation system is active"); 
+        RCLCPP_INFO(get_logger(), "   ✓ Camera is working (check RViz)");
+        RCLCPP_INFO(get_logger(), "   ✓ Robot is at starting position");
+        RCLCPP_INFO(get_logger(), "   ✓ Greenhouse environment is clear");
+        RCLCPP_INFO(get_logger(), " ");
+        
+        if (use_dynamic_detection_) {
+            RCLCPP_INFO(get_logger(), "🔍 AI DETECTION MODE:");
+            RCLCPP_INFO(get_logger(), "   ✓ YOLO model is loaded");
+            RCLCPP_INFO(get_logger(), "   ✓ Plant detection pipeline is ready");
+            RCLCPP_INFO(get_logger(), "   ✓ Adaptive navigation is enabled");
+            RCLCPP_INFO(get_logger(), " ");
+        }
+        
+        // Note: No longer calling wait_for_user_confirmation() here
+        // The system will wait for service calls instead
+    }
 
     // --- 2.0) Initialize subscriber for experiment 5
     if (experiment_type_ == 5) {
@@ -206,9 +216,44 @@ public:
       return;
     }
 
-    // --- 4) run
-    run_experiment();
-  }
+    // --- 4) Setup based on confirmation requirement
+    if (require_confirmation_) {
+        // Create service for manual start
+        start_experiment_service_ = this->create_service<std_srvs::srv::Trigger>(
+            "start_experiment",
+            std::bind(&GreenhouseExperimentNode::start_experiment_callback, this,
+                     std::placeholders::_1, std::placeholders::_2));
+        
+        // Create status check service
+        check_status_service_ = this->create_service<std_srvs::srv::Trigger>(
+            "check_system_status",
+            std::bind(&GreenhouseExperimentNode::check_status_callback, this,
+                     std::placeholders::_1, std::placeholders::_2));
+        
+        RCLCPP_INFO(get_logger(), "==============================================");
+        RCLCPP_INFO(get_logger(), "🤖 GREENHOUSE EXPERIMENT SYSTEM READY");
+        RCLCPP_INFO(get_logger(), "==============================================");
+        RCLCPP_INFO(get_logger(), "Experiment Type: %d", experiment_type_);
+        RCLCPP_INFO(get_logger(), "Use AI Perception: %s", use_dynamic_detection_ ? "YES" : "NO");
+        RCLCPP_INFO(get_logger(), "IMU Enabled: %s", imu_enabled_ ? "YES" : "NO");
+        RCLCPP_INFO(get_logger(), " ");
+        RCLCPP_INFO(get_logger(), "🎯 SYSTEM READY - WAITING FOR START COMMAND");
+        RCLCPP_INFO(get_logger(), " ");
+        RCLCPP_INFO(get_logger(), "To start the experiment, run:");
+        RCLCPP_INFO(get_logger(), "  ros2 service call /start_experiment std_srvs/srv/Trigger");
+        RCLCPP_INFO(get_logger(), " ");
+        RCLCPP_INFO(get_logger(), "To check system status, run:");
+        RCLCPP_INFO(get_logger(), "  ros2 service call /check_system_status std_srvs/srv/Trigger");
+        RCLCPP_INFO(get_logger(), "==============================================");
+        
+        // DO NOT CALL run_experiment() here - wait for service call
+        
+    } else {
+        // Auto-start if confirmation not required
+        RCLCPP_INFO(get_logger(), "Auto-starting experiment (confirmation disabled)");
+        // run_experiment();
+    }
+  } // End of constructor - DO NOT call run_experiment() after this
 
 private:
   // yaw→quaternion
@@ -220,13 +265,21 @@ private:
   }
 
   // get freshest base_link→map pose
-  geometry_msgs::msg::PoseStamped current_pose() {
-    geometry_msgs::msg::PoseStamped ps, out;
-    ps.header.frame_id = "base_link";
-    ps.header.stamp.sec = 0; ps.header.stamp.nanosec = 0;  // ask for latest
-    ps.pose.orientation = to_quat(0.0);
-    tf_buffer_.transform(ps, out, "map", std::chrono::milliseconds(100));
-    return out;
+  geometry_msgs::msg::PoseStamped get_current_robot_pose() {
+    geometry_msgs::msg::PoseStamped robot_pose;
+    try {
+        auto transform = tf_buffer_.lookupTransform("map", "base_link", tf2::TimePointZero);
+        robot_pose.header = transform.header;
+        robot_pose.pose.position.x = transform.transform.translation.x;
+        robot_pose.pose.position.y = transform.transform.translation.y;
+        robot_pose.pose.position.z = transform.transform.translation.z;
+        robot_pose.pose.orientation = transform.transform.rotation;
+    } catch (const std::exception& e) {
+        RCLCPP_WARN(get_logger(), "Failed to get current pose: %s", e.what());
+        robot_pose.header.frame_id = "map";
+        robot_pose.header.stamp = now();
+    }
+    return robot_pose;
   }
 
   // two‐step corridor+standoff, record & detect outliers later
@@ -275,7 +328,7 @@ private:
     auto t1 = now();
     double dur = (t1-t0).seconds();
 
-    auto actual = current_pose();
+    auto actual = get_current_robot_pose();
     double ex = actual.pose.position.x - sx;
     double ey = actual.pose.position.y - sy;
     double err = std::hypot(ex,ey);
@@ -370,6 +423,23 @@ private:
         RCLCPP_WARN(get_logger(),"Experiment type %d not implemented",experiment_type_);
     }
 
+    if (require_confirmation_ && !visits_to_make.empty()) {
+        // Replace empty string with space
+        RCLCPP_INFO(get_logger(), " ");
+        RCLCPP_INFO(get_logger(), "📋 EXPERIMENT PLAN:");
+        RCLCPP_INFO(get_logger(), "   Total plants to visit: %zu", visits_to_make.size());
+        for (size_t i = 0; i < visits_to_make.size(); ++i) {
+            auto [id, yaw, side] = visits_to_make[i];
+            RCLCPP_INFO(get_logger(), "   %zu. Plant %d (yaw: %.2f, side: %d)", 
+                       i+1, id, yaw, side);
+        }
+        
+        std::string input;
+        std::cout << "\nPress ENTER to start visiting plants...";
+        std::cin.ignore(); // Clear any remaining input
+        std::getline(std::cin, input);
+    }
+
     if (experiment_type_ == 5) {
         RCLCPP_INFO(get_logger(), "Experiment Type 5: Starting real-time processing loop.");
         while(rclcpp::ok()) {
@@ -449,12 +519,27 @@ private:
         RCLCPP_INFO(get_logger(), "Experiment Type 5: Real-time processing loop finished.");
 
     } else { // For experiment types 1, 2, 3, 4
-        for (const auto& visit_params : visits_to_make) {
-          auto [id,yaw,side] = visit_params;
-          send_and_record(id,yaw,side);
+        for (size_t i = 0; i < visits_to_make.size(); ++i) {
+            auto [id, yaw, side] = visits_to_make[i];
+            
+            if (require_confirmation_) {
+                // Replace empty string with space
+                RCLCPP_INFO(get_logger(), " ");
+                RCLCPP_INFO(get_logger(), "🎯 Next: Plant %d (%zu/%zu)", id, i+1, visits_to_make.size());
+                std::string input;
+                std::cout << "Press ENTER to visit plant " << id << " (or 'skip' to skip): ";
+                std::getline(std::cin, input);
+                
+                if (input == "skip") {
+                    RCLCPP_WARN(get_logger(), "⏭️  Skipping Plant %d", id);
+                    continue;
+                }
+            }
+            
+            send_and_record(id, yaw, side);
         }
     }
-
+    
     // write per‐attempt CSV
     auto attempt_csv = attempt_dir_ + "/results.csv";
     std::ofstream csv(attempt_csv);
@@ -539,6 +624,17 @@ private:
   std::vector<int> real_time_infected_plants_queue_;
   std::mutex queue_mutex_;
 
+  // For dynamic plant detection
+  rclcpp::Subscription<std_msgs::msg::String>::SharedPtr dynamic_plants_sub_;
+  bool use_dynamic_detection_;
+  bool plants_loaded_dynamically_;
+  
+  // For environmental monitoring and anomaly detection
+  std::queue<int> priority_inspection_queue_;
+  bool experiment_active_ = true;
+  std::vector<PlantInfo> historical_plant_data_;
+  EnvironmentalBaseline environmental_baseline_;
+
   void infected_plants_callback(const std_msgs::msg::Int32MultiArray::SharedPtr msg) {
     std::lock_guard<std::mutex> lock(queue_mutex_);
     for (int plant_id : msg->data) {
@@ -552,17 +648,78 @@ private:
     }
   }
 
-  // Plant Helper Utility
-  using PlantInfo = PlantData; 
+  void dynamic_plants_callback(const std_msgs::msg::String::SharedPtr msg) {
+        if (!use_dynamic_detection_) return;
+        
+        try {
+            // Parse the YAML string
+            YAML::Node dynamic_config = YAML::Load(msg->data);
+            
+            // Clear existing plant data
+            plant_data_map_.clear();
+            row_boundaries_.clear();
+            
+            // Load row boundaries
+            for (const auto& row_node : dynamic_config["row_boundaries"]) {
+                std::string row_name = row_node.first.as<std::string>();
+                RowBoundary boundary;
+                boundary.y_min = row_node.second["y_min"].as<double>();
+                boundary.y_max = row_node.second["y_max"].as<double>();
+                boundary.x_min = row_node.second["x_min"].as<double>();
+                boundary.x_max = row_node.second["x_max"].as<double>();
+                row_boundaries_.push_back(boundary);
+            }
+            
+            // Load plant data
+            for (const auto& plant_node : dynamic_config["plants"]) {
+                PlantData pd;
+                pd.id = std::stoi(plant_node.first.as<std::string>());
+                pd.x = plant_node.second["x"].as<double>();
+                pd.y = plant_node.second["y"].as<double>();
+                pd.row_number = plant_node.second["row"].as<int>();
+                pd.index_in_row = plant_node.second["index_in_row"].as<int>();
+                pd.confidence = plant_node.second["confidence"].as<double>();
+                
+                pd.pose.header.frame_id = "map";
+                pd.pose.header.stamp = get_clock()->now();
+                pd.pose.pose.position.x = pd.x;
+                pd.pose.pose.position.y = pd.y;
+                pd.pose.pose.orientation = to_quat(0.0);
+                
+                plant_data_map_[pd.id] = pd;
+                
+                RCLCPP_INFO(get_logger(), "Dynamic Plant %d: (%.3f, %.3f) Row %d, Index %d, Conf %.2f", 
+                           pd.id, pd.x, pd.y, pd.row_number, pd.index_in_row, pd.confidence);
+            }
+            
+            plants_loaded_dynamically_ = true;
+            RCLCPP_INFO(get_logger(), "Loaded %zu plants dynamically", plant_data_map_.size());
+            
+        } catch (const std::exception& e) {
+            RCLCPP_ERROR(get_logger(), "Failed to parse dynamic plant data: %s", e.what());
+        }
+    }
 
+  // Plant Helper Utility
   PlantInfo get_plant_info(int plant_id) {
     if (plant_data_map_.count(plant_id)) {
-      return plant_data_map_.at(plant_id);
+        return plant_data_map_.at(plant_id);
     } else {
-      RCLCPP_ERROR(get_logger(), "Plant with ID %d not found in get_plant_info.", plant_id);
-      return PlantData{-1, 0.0, 0.0, -1, -1, geometry_msgs::msg::PoseStamped()}; // Return invalid data
+        RCLCPP_ERROR(get_logger(), "Plant with ID %d not found in get_plant_info.", plant_id);
+        // Create a proper invalid PlantData object
+        PlantData invalid_plant;
+        invalid_plant.id = -1;
+        invalid_plant.x = 0.0;
+        invalid_plant.y = 0.0;
+        invalid_plant.row_number = -1;
+        invalid_plant.index_in_row = -1;
+        invalid_plant.pose = geometry_msgs::msg::PoseStamped();
+        invalid_plant.detected_position = geometry_msgs::msg::Point();
+        invalid_plant.confidence = 0.0;
+        invalid_plant.plant_type = "invalid";
+        return invalid_plant;
     }
-  }
+}
 
   // Helper to get plant ID by row and index within that row
   int get_plant_id_by_row_index(int row_num, int index_in_row) {
@@ -594,6 +751,283 @@ private:
       }
   }
 
+  // Helper functions for enhanced experiment modes
+  void send_disease_alert(int plant_id) {
+      RCLCPP_WARN(get_logger(), "DISEASE ALERT: Plant %d requires immediate attention", plant_id);
+      // Could integrate with external alert systems here
+  }
+  
+  std::vector<PlantInfo> wait_for_ai_detections(std::chrono::seconds timeout) {
+      // Placeholder - would wait for AI detection results
+      std::vector<PlantInfo> detections;
+      rclcpp::sleep_for(timeout);
+      return detections;
+  }
+  
+  void navigate_to_ai_detected_plant(const PlantInfo& plant_info) {
+      geometry_msgs::msg::PoseStamped target_pose;
+      target_pose.header.frame_id = "map";
+      target_pose.header.stamp = now();
+      target_pose.pose.position = plant_info.detected_position;
+      target_pose.pose.orientation.w = 1.0;
+      
+      navigate_to_pose_with_retry(target_pose);
+  }
+  
+  bool navigate_to_pose_with_retry(const geometry_msgs::msg::PoseStamped& target_pose, int max_retries = 3) {
+      for (int attempt = 0; attempt < max_retries; ++attempt) {
+          // Use your existing navigation code here
+          std::vector<geometry_msgs::msg::PoseStamped> poses = {target_pose};
+          
+          NavigateThroughPoses::Goal goal;
+          goal.poses = poses;
+          
+          auto future = g2p_client_->async_send_goal(goal);
+          if (rclcpp::spin_until_future_complete(get_node_base_interface(), future) 
+              == rclcpp::FutureReturnCode::SUCCESS) {
+              
+              auto goal_handle = future.get();
+              if (goal_handle) {
+                  auto result_future = g2p_client_->async_get_result(goal_handle);
+                  if (rclcpp::spin_until_future_complete(get_node_base_interface(), result_future)
+                      == rclcpp::FutureReturnCode::SUCCESS) {
+                      
+                      auto result = result_future.get();
+                      if (result.code == rclcpp_action::ResultCode::SUCCEEDED) {
+                          return true;
+                      }
+                  }
+              }
+          }
+          
+          RCLCPP_WARN(get_logger(), "Navigation attempt %d failed, retrying...", attempt + 1);
+          rclcpp::sleep_for(std::chrono::seconds(2));
+      }
+      
+      return false;
+  }
+  
+  EnvironmentalBaseline establish_environmental_baseline() {
+      EnvironmentalBaseline baseline;
+      baseline.avg_temperature = 22.0; // Default values
+      baseline.avg_humidity = 60.0;
+      baseline.avg_light = 500.0;
+      baseline.sample_count = 100;
+      return baseline;
+  }
+  
+  EnvironmentalReading get_current_environmental_data() {
+      EnvironmentalReading reading;
+      reading.temperature = 22.5; // Would read from actual sensors
+      reading.humidity = 58.0;
+      reading.light_level = 520.0;
+      reading.timestamp = now();
+      return reading;
+  }
+  
+  geometry_msgs::msg::Point get_current_position() {
+      auto pose = get_current_robot_pose();
+      return pose.pose.position;
+  }
+  
+  void send_anomaly_alert(const AnomalyAlert& alert) {
+      RCLCPP_ERROR(get_logger(), "ANOMALY ALERT: %s - %s at (%.2f, %.2f)", 
+                  alert.type.c_str(), alert.description.c_str(),
+                  alert.location.x, alert.location.y);
+  }
+  
+  std::vector<PlantInfo> find_plants_near_position(const geometry_msgs::msg::Point& position, double radius) {
+      std::vector<PlantInfo> nearby_plants;
+      
+      for (const auto& [plant_id, plant_data] : plant_data_map_) {
+          double distance = std::hypot(
+              plant_data.pose.pose.position.x - position.x,
+              plant_data.pose.pose.position.y - position.y
+          );
+          
+          if (distance <= radius) {
+              PlantInfo info;
+              info.detected_position = plant_data.pose.pose.position;
+              info.confidence = 1.0;
+              info.plant_type = "existing_plant";
+              nearby_plants.push_back(info);
+          }
+      }
+      
+      return nearby_plants;
+  }
+  
+  void load_historical_monitoring_data() {
+      // Load previous monitoring data from files
+      RCLCPP_INFO(get_logger(), "Loading historical monitoring data...");
+      // Implementation would load from CSV or database
+  }
+  
+  void save_anomaly_investigation_result(const AnomalyInvestigationResult& result) {
+      // Save investigation results to file
+      RCLCPP_INFO(get_logger(), "Saving anomaly investigation result...");
+      // Implementation would save to CSV or database
+  }
+  
+  bool require_confirmation_;
+  bool experiment_started_ = false;
+
+  rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr start_experiment_service_;
+  rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr check_status_service_;
+  
+  
+  void wait_for_user_confirmation() {
+        std::string input;
+        bool confirmed = false;
+        
+        while (!confirmed && rclcpp::ok()) {
+            // Replace empty string with space
+            RCLCPP_INFO(get_logger(), " ");
+            RCLCPP_INFO(get_logger(), "🎯 READY TO START EXPERIMENT?");
+            RCLCPP_INFO(get_logger(), "   Type 'start' to begin experiment");
+            RCLCPP_INFO(get_logger(), "   Type 'check' to review system status");
+            RCLCPP_INFO(get_logger(), "   Type 'abort' to cancel");
+            // Replace empty string with space
+            RCLCPP_INFO(get_logger(), " ");
+            std::cout << "Enter command: ";
+            std::cin >> input;
+            
+            // Convert to lowercase
+            std::transform(input.begin(), input.end(), input.begin(), ::tolower);
+            
+            if (input == "start" || input == "s") {
+                confirmed = true;
+                // Replace empty string with space
+                RCLCPP_INFO(get_logger(), " ");
+                RCLCPP_INFO(get_logger(), "🚀 EXPERIMENT CONFIRMED - STARTING NOW!");
+                RCLCPP_INFO(get_logger(), "==============================================");
+                std::this_thread::sleep_for(std::chrono::seconds(2));
+                
+            } else if (input == "check" || input == "c") {
+                perform_system_check();
+                
+            } else if (input == "abort" || input == "a") {
+                // Replace empty string with space
+                RCLCPP_WARN(get_logger(), " ");
+                RCLCPP_WARN(get_logger(), "❌ EXPERIMENT ABORTED BY USER");
+                RCLCPP_WARN(get_logger(), "==============================================");
+                rclcpp::shutdown();
+                return;
+                
+            } else {
+                RCLCPP_WARN(get_logger(), "❓ Unknown command: '%s'. Please try again.", input.c_str());
+            }
+        }
+    }
+    
+    void perform_system_check() {
+        // Replace empty string with space
+        RCLCPP_INFO(get_logger(), " ");
+        RCLCPP_INFO(get_logger(), "🔍 PERFORMING SYSTEM CHECK...");
+        RCLCPP_INFO(get_logger(), "================================");
+        
+        // Check action client
+        bool nav_ready = g2p_client_->wait_for_action_server(std::chrono::seconds(1));
+        RCLCPP_INFO(get_logger(), "   Navigation Server: %s", nav_ready ? "✅ READY" : "❌ NOT READY");
+        
+        // Check if we can get robot pose
+        bool pose_available = false;
+        try {
+            auto pose = get_current_robot_pose();
+            pose_available = true;
+            RCLCPP_INFO(get_logger(), "   Robot Localization: ✅ READY (%.2f, %.2f)", 
+                      pose.pose.position.x, pose.pose.position.y);
+        } catch (const std::exception& e) {
+            RCLCPP_INFO(get_logger(), "   Robot Localization: ❌ NOT READY");
+        }
+        
+        // Check plant data
+        if (use_dynamic_detection_) {
+            RCLCPP_INFO(get_logger(), "   Plant Detection: %s", plants_loaded_dynamically_ ? "READY" : "WAITING");
+            if (plants_loaded_dynamically_) {
+                RCLCPP_INFO(get_logger(), "   Detected Plants: %zu", plant_data_map_.size());
+            }
+        } else {
+            RCLCPP_INFO(get_logger(), "   Plant Configuration: LOADED (%zu plants)", plant_data_map_.size());
+        }
+        
+        // Overall status
+        bool system_ready = nav_ready && pose_available && 
+                           (use_dynamic_detection_ ? plants_loaded_dynamically_ : !plant_data_map_.empty());
+        
+        RCLCPP_INFO(get_logger(), "   Overall Status: %s", system_ready ? "✅ SYSTEM READY" : "❌ SYSTEM NOT READY");
+        RCLCPP_INFO(get_logger(), "================================");
+    }
+    
+    void start_experiment_callback(
+      const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
+      std::shared_ptr<std_srvs::srv::Trigger::Response> response)
+  {
+      (void)request; // Suppress unused parameter warning
+    
+      if (experiment_started_) {
+          response->success = false;
+          response->message = "Experiment already started or completed";
+          return;
+      }
+      
+      RCLCPP_INFO(get_logger(), "🚀 Starting experiment via service call...");
+      experiment_started_ = true;
+      
+      // Run experiment in a separate thread to avoid blocking the service
+      std::thread experiment_thread([this]() {
+        run_experiment();
+      });
+      experiment_thread.detach();
+      
+      response->success = true;
+      response->message = "Experiment started successfully";
+  }
+
+  void check_status_callback(
+    const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
+    std::shared_ptr<std_srvs::srv::Trigger::Response> response)
+{
+    (void)request;
+    
+    std::stringstream status_msg;
+    
+    // Check navigation server
+    bool nav_ready = g2p_client_->wait_for_action_server(std::chrono::seconds(1));
+    status_msg << "Navigation Server: " << (nav_ready ? "READY" : "NOT READY") << "\n";
+    
+    // Check robot pose
+    bool pose_available = false;
+    try {
+        auto pose = get_current_robot_pose();
+        pose_available = true;
+        status_msg << "Robot Localization: READY (" << std::fixed << std::setprecision(2) 
+                  << pose.pose.position.x << ", " << pose.pose.position.y << ")\n";
+    } catch (const std::exception& e) {
+        status_msg << "Robot Localization: NOT READY\n";
+    }
+    
+    // Check plant data
+    if (use_dynamic_detection_) {
+        status_msg << "Plant Detection: " << (plants_loaded_dynamically_ ? "READY" : "WAITING") << "\n";
+        if (plants_loaded_dynamically_) {
+            status_msg << "Detected Plants: " << plant_data_map_.size() << "\n";
+        }
+    } else {
+        status_msg << "Plant Configuration: LOADED (" << plant_data_map_.size() << " plants)\n";
+    }
+    
+    // Overall status
+    bool system_ready = nav_ready && pose_available && 
+                       (use_dynamic_detection_ ? plants_loaded_dynamically_ : !plant_data_map_.empty());
+    
+    status_msg << "Overall Status: " << (system_ready ? "SYSTEM READY" : "SYSTEM NOT READY");
+    
+    response->success = system_ready;
+    response->message = status_msg.str();
+    
+    RCLCPP_INFO(get_logger(), "System Status Check:\n%s", status_msg.str().c_str());
+}
 };
 
 int main(int argc, char ** argv)

@@ -22,6 +22,7 @@
   <depend>diagnostic_updater</depend>
   <depend>nav_msgs</depend>
   <depend>sensor_msgs</depend>
+  <depend>libopencv-dev</depend>
 
   <!-- development -->
 
@@ -31,9 +32,29 @@
   <depend>geometry_msgs</depend>
   <depend>tf2_ros</depend>
   <depend>ament_index_cpp</depend>
+  <depend>tf2</depend>
+  <depend>tf2_bullet</depend>
 
   <!-- YAML-CPP for config parsing -->
   <depend>yaml-cpp</depend>
+
+  <!-- Core ROS2 dependencies -->
+  <depend>visualization_msgs</depend>
+  
+  <!-- Computer vision dependencies -->
+  <depend>cv_bridge</depend>
+  <depend>opencv4</depend>
+  
+  <!-- Configuration and utilities -->
+  <depend>yaml-cpp-vendor</depend>
+  
+  <!-- Eigen for mathematical operations -->
+  <depend>eigen3_cmake_module</depend>
+
+  <depend>std_srvs</depend>
+
+  <!-- BehaviorTree (optional - uncomment if using) -->
+  <!-- <depend>behaviortree_cpp_v3</depend> -->
 
 
   <export>

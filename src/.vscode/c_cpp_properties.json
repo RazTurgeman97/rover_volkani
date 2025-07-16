@@ -7,7 +7,8 @@
             },
             "includePath": [
                 "/opt/ros/humble/include/**",
-                "/home/raz/volcani/rover_volkani/src/roverrobotics_driver/include/**",
+                "/home/rover/rover_workspace/src/roverrobotics_driver/include/**",
+                "/home/rover/rover_workspace/src/rplidar_ros/include/**",
                 "/usr/include/**"
             ],
             "name": "ROS",

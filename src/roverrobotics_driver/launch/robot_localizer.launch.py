@@ -19,7 +19,8 @@ def generate_launch_description():
 
     declare_use_sim_time_argument = DeclareLaunchArgument(
         'use_sim_time',
-        default_value='true', # Typically true if simulating
+        # default_value='true', # Typically true if simulating
+        default_value='false',  # Default to false for real robot
         description='Use simulation/Gazebo clock')
 
     declare_use_imu_argument = DeclareLaunchArgument(

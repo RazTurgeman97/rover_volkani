@@ -1,0 +1,50 @@
+<root main_tree_to_execute="GreenhouseInspection">
+  <BehaviorTree ID="GreenhouseInspection">
+    <!-- Main sequence: do everything in order -->
+    <Sequence>
+      <!-- 1. Initialize inspection -->
+      <Action ID="InitializeInspection"/>
+      
+      <!-- 2. Scan for plants -->
+      <Action ID="ScanForPlants"/>
+      
+      <!-- 3. For each detected plant, do inspection -->
+      <ForEach plants="{detected_plants}">
+        <Sequence>
+          <!-- Try to approach plant -->
+          <Fallback>
+            <!-- First try: direct approach -->
+            <Action ID="ApproachPlant" plant="{plant}" distance="0.5"/>
+            
+            <!-- If that fails, try alternative approach -->
+            <Sequence>
+              <Action ID="FindAlternativeApproach" plant="{plant}"/>
+              <Action ID="ApproachPlant" plant="{plant}" distance="0.8"/>
+            </Sequence>
+            
+            <!-- If both fail, skip this plant -->
+            <Action ID="SkipPlant" plant="{plant}"/>
+          </Fallback>
+          
+          <!-- If we successfully approached, do inspection -->
+          <Sequence>
+            <Action ID="InspectPlant" plant="{plant}"/>
+            <Action ID="RecordData" plant="{plant}"/>
+            
+            <!-- If plant looks diseased, take extra photos -->
+            <Fallback>
+              <Condition ID="IsPlantHealthy" plant="{plant}"/>
+              <Action ID="TakeDetailedPhotos" plant="{plant}"/>
+            </Fallback>
+          </Sequence>
+        </Sequence>
+      </ForEach>
+      
+      <!-- 4. Return to base -->
+      <Action ID="ReturnToBase"/>
+      
+      <!-- 5. Upload collected data -->
+      <Action ID="UploadData"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

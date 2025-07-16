@@ -102,5 +102,6 @@
         "valarray": "cpp",
         "variant": "cpp",
         "expected": "cpp"
-    }
+    },
+    "files.autoSave": "afterDelay"
 }

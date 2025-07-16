@@ -1,0 +1,56 @@
+# Create this file: /home/rover/rover_workspace/src/roverrobotics_driver/config/plant_detection.yaml
+plant_detection:
+  # YOLO Model Settings
+  model_settings:
+    confidence_threshold: 0.6
+    nms_threshold: 0.4
+    input_size: [640, 640]
+    
+  # Plant-specific filtering
+  plant_filters:
+    # Size constraints (in meters when projected to 3D)
+    min_plant_diameter: 0.08  # 8cm minimum
+    max_plant_diameter: 0.35  # 35cm maximum
+    
+    # Height constraints (assuming camera height known)
+    min_plant_height: 0.05   # 5cm minimum
+    max_plant_height: 0.40   # 40cm maximum
+    
+    # Color filtering for green plants
+    color_filter:
+      enabled: true
+      hue_range: [35, 85]      # Green hue range
+      saturation_min: 50       # Minimum saturation
+      value_min: 30           # Minimum brightness
+    
+    # Shape filtering
+    shape_filter:
+      enabled: true
+      min_circularity: 0.3     # Plants tend to be roughly circular from above
+      max_aspect_ratio: 2.5    # Width to height ratio
+    
+  # Clustering parameters
+  clustering:
+    spatial_threshold: 0.25    # 25cm - plants should be well separated
+    temporal_window: 2.0       # 2 seconds
+    min_confirmations: 2       # Need at least 2 detections
+    
+  # Region of Interest (ROI) - only look in plant areas
+  roi_filter:
+    enabled: true
+    regions:
+      - name: "row_1"
+        x_min: 0.5
+        x_max: 5.5
+        y_min: 0.5
+        y_max: 1.5
+      - name: "row_2" 
+        x_min: 0.5
+        x_max: 5.5
+        y_min: 1.8
+        y_max: 2.8
+      - name: "row_3"
+        x_min: 0.5
+        x_max: 5.5
+        y_min: 3.5
+        y_max: 4.5

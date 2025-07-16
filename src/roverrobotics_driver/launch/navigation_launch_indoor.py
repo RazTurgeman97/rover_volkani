@@ -88,7 +88,7 @@ def generate_launch_description():
 
     declare_map_yaml_cmd = DeclareLaunchArgument(
         'map',
-        default_value='/home/rover/rover_workspace/src/roverrobotics_driver/maps/indoor_abc_lab3.yaml',
+        default_value='/home/rover/rover_workspace/src/roverrobotics_driver/maps/indoor_abc_lab_new.yaml',
         # default_value='/home/raz/volcani/rover_volkani/src/roverrobotics_driver/maps/indoor_abc_lab_sim.yaml',
         description='Full path to map yaml file to load')
 
@@ -186,7 +186,7 @@ def generate_launch_description():
     declare_slam_map_file_cmd = DeclareLaunchArgument(
         'map_file_name',
         # default_value='maze_map',
-        default_value='indoor_abc_lab3',
+        default_value='indoor_abc_lab_new',
         # default_value='indoor_abc_lab_sim',
         description='Full path to the ROS2 parameters file to use for the slam_toolbox node')
     
