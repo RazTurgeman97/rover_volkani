@@ -136,7 +136,7 @@ std::vector<Detection> PlantDetectionNode::detect_plants_yolo(const cv::Mat& ima
     try {
         // Prepare input blob
         cv::Mat blob;
-        cv::dnn::blobFromImage(image, blob, 1/255.0, cv::Size(640, 640), cv::Scalar(0,0,0), true, false);
+        cv::dnn::blobFromImage(image, blob, 1/255.0, cv::Size(480, 640), cv::Scalar(0,0,0), true, false);
         yolo_net_.setInput(blob);
         
         // Run inference
