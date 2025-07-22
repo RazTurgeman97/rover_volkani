@@ -176,15 +176,15 @@ def generate_launch_description():
             'enable_temporal_consistency': True,
             
             # Plant-specific settings
-            'target_classes': ['potted plant', 'plant'],  # Only detect plant-related classes
-            'min_plant_pixels': 500,    # Minimum size in pixels
-            'max_plant_pixels': 10000,  # Maximum size in pixels
+            'target_classes': ['potted plant'],  # Only detect plant-related classes
+            # 'min_plant_pixels': 500,    # Minimum size in pixels
+            # 'max_plant_pixels': 10000,  # Maximum size in pixels
             
-            # Clustering for multiple detections of same plant
-            'enable_clustering': True,
-            'cluster_distance_threshold': 0.2,  # 20cm
-            'cluster_min_detections': 2,
-            'temporal_window': 3.0,
+            # # Clustering for multiple detections of same plant
+            # 'enable_clustering': True,
+            # 'cluster_distance_threshold': 0.2,  # 20cm
+            # 'cluster_min_detections': 2,
+            # 'temporal_window': 3.0,
         }],
         condition=IfCondition(use_perception),
     )
